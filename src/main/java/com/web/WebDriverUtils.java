@@ -89,7 +89,7 @@ public class WebDriverUtils {
     }
 
     public static void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 
 }
