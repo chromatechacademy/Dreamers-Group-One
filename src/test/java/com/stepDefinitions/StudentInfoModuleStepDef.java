@@ -24,14 +24,14 @@ public class StudentInfoModuleStepDef {
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
 
-    @Given("I open site login page")
+    @Given("User is on the home page")
     public void openSiteLoginPage() throws IOException {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
         // CucumberLogUtils.logScreenShot();
         // CucumberLogUtils.logExtentScreenshot();
     }
 
-    @When("I fill user login data")
+    @When("User logs in with username and password")
     public void iFillUserLoginData() throws InterruptedException {
         loginPage.usernameTextBox.sendKeys("general@teacher.com");
         loginPage.passwordTextBox.sendKeys("123456");
@@ -39,19 +39,19 @@ public class StudentInfoModuleStepDef {
         System.out.println("");
     }
 
-    @And("I wait while dashboard page loaded")
+    @And("User wait while dashboard page loaded")
     public void iWaitWhileDashboardPageLoaded() throws InterruptedException {
         Thread.sleep(7000);
         Assert.assertTrue("Calendar should be visible on dashboard page", dashboardPage.calendar.isDisplayed());
     }
 
-    @And("I click on Student information item on left navigation menu")
+    @And("User click on Student information item on left navigation menu")
     public void iClickOnStudentInformationItemOnLeftNavigationMenu() throws InterruptedException {
         dashboardPage.studentInfoItem.click();
         Thread.sleep(1500);
     }
 
-    @Then("I collect Student information items to list and verify them")
+    @Then("User collect Student information items to list and verify them")
     public void iCollectStudentInformationItemsToList() throws IOException {
         List<String> expected = Arrays.asList("Student Details", "Student Admission", "Disabled Students",
                 "Bulk Delete", "Student Categories", "Student House", "Disable Reason");
