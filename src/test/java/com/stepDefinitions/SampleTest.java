@@ -24,19 +24,12 @@ public class SampleTest {
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
 
-    @Given("this step can be used to specify a pre-condition")
-    public void this_step_can_be_used_to_specify_a_pre_condition() throws IOException {
-
-        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
-        loginPage.usernameTextBox.sendKeys("keysToSend");
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
-    }
+    
     @Given("I open site login page")
     public void openSiteLoginPage() throws IOException {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
-        CucumberLogUtils.logScreenShot();
-        CucumberLogUtils.logExtentScreenshot();
+        //CucumberLogUtils.logScreenShot();
+        //CucumberLogUtils.logExtentScreenshot();
     }
 
     @When("I fill user login data")
@@ -60,11 +53,13 @@ public class SampleTest {
     }
 
     @Then("I collect Student information items to list and verify them")
-    public void iCollectStudentInformationItemsToList() {
+    public void iCollectStudentInformationItemsToList() throws IOException {
         List<String> expected = Arrays.asList("Student Details", "Student Admission", "Disabled Students", "Bulk Delete", "Student Categories", "Student House", "Disable Reason");
         List<String> studentInfoItems = dashboardPage.getStudentInfoItems(driver);
         System.out.println(studentInfoItems);
         Assert.assertEquals("Student items size should be equal to 7", 7, studentInfoItems.size());
         Assert.assertEquals(expected,studentInfoItems);
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 }
