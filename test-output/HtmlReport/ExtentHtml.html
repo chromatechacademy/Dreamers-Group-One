@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 11, 2022 02:50:35 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 11, 2022 04:21:50 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -69,6 +69,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -80,8 +81,8 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@modules</a></li>
-					<li><a href='#'>@Smoke</a></li>
+					<li><a href='#'>@expenses</a></li>
+					<li><a href='#'>@Ex</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -122,10 +123,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped
                 </div>
             </div>
         </div>
@@ -136,12 +137,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
                 </div>
             </div>
         </div>
@@ -152,12 +153,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='40%'><span class='strong'>2</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='60%'>3</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='60%'>0</span> others
                 </div>
             </div>
         </div>
@@ -175,11 +176,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Navigation Modules</span>
-						<span class='test-time'>Aug 11, 2022 02:50:38 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>Expense Module</span>
+						<span class='test-time'>Aug 11, 2022 04:21:50 PM</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -189,26 +190,33 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='test-desc'>Feature Description</div>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='skip'>
 	<div class='category-list'>
-		<span class='category label'>@modules</span>
-		<span class='category label'>@Smoke</span>
+		<span class='category label'>@expenses</span>
+		<span class='category label'>@Ex</span>
 	</div>
-	<span class='duration right label'>0h 0m 2s+762ms</span>
+	<span class='duration right label'>0h 0m 0s+39ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Navigating to the modules</div>
+		<div class="scenario-name"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span> Scenario: Navigating to the expenses modules</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='4' class='node given pass' status='pass'>
-			<div class="step-name" title="Modules.user_has_logged_in_with_valid_credentials()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has logged in with valid credentials</div>
-			<div class="node-step"></div>
+		<li test-id='3' class='node * skip' status='skip'>
+			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.start(Scenario)</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='5' class='node then pass' status='pass'>
-			<div class="step-name" title="Modules.the_navigation_modules_should_be_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the navigation modules should be displayed</div>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_11082022_145040.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
-			<div class="node-step"></div>
+		<li test-id='4' class='node given skip' status='skip'>
+			<div class="step-name" title="Modules.user_has_logged_in_with_valid_credentials()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given user has logged in with valid credentials</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='5' class='node and pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks on the Expenses module</div>
+		</li>
+		<li test-id='6' class='node then pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Expenses module will be displayed</div>
+		</li>
+		<li test-id='7' class='node * skip' status='skip'>
+			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.end(Scenario)</div>
+			<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -254,16 +262,16 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@modules</span>
+						<span class='category-name'>@expenses</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label others'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
+							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -276,9 +284,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 11, 2022 02:50:38 PM</td>
-										<td class='linked' test-id='2'>Navigating to the modules</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Aug 11, 2022 04:21:50 PM</td>
+										<td class='linked' test-id='2'>Navigating to the expenses modules</td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -287,16 +295,16 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Smoke</span>
+						<span class='category-name'>@Ex</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label others'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
+							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -309,9 +317,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 11, 2022 02:50:38 PM</td>
-										<td class='linked' test-id='2'>Navigating to the modules</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Aug 11, 2022 04:21:50 PM</td>
+										<td class='linked' test-id='2'>Navigating to the expenses modules</td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -347,25 +355,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 11, 2022 02:50:35 PM</div>
+					<div class='panel-lead'>Aug 11, 2022 04:21:50 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 11, 2022 02:50:40 PM</div>
+			 		<div class='panel-lead'>Aug 11, 2022 04:21:50 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 5s+510ms</div>
+					<div class='panel-lead'>0h 0m 0s+376ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -381,21 +389,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@modules</td>
+							<td>@expenses</td>
+							<td>0</td>
+							<td>0</td>
 							<td>1</td>
-							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
-							<td>@Smoke</td>
+							<td>@Ex</td>
+							<td>0</td>
+							<td>0</td>
 							<td>1</td>
-							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -410,38 +418,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
+				passParent: 0,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 0,
+				skipParent: 1,
+				exceptionsParent: 1,
 				childCount: 1,
-				passChild: 1,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 1,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 2,
+				exceptionsChild: 1,
+				grandChildCount: 5,
 				passGrandChild: 2,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 3,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 3,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Navigation Modules":2.762
+			        "Expense Module":0.039
 			};
 		</script>
 	
