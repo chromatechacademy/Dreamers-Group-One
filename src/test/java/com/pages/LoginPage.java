@@ -28,5 +28,5 @@ public class LoginPage {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 
-    //Anzalla Test 8/10/22
+    //Hanzal Push Test 8/10/22
 }
