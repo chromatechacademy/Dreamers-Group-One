@@ -34,6 +34,3 @@ Feature: Sample
             | general1@teacher.com | 123456   |
             | general@teacher.com  | 123456   |
             | general1@teacher.com | 123456   |
-
-
-
