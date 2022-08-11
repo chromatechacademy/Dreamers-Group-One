@@ -24,7 +24,9 @@ public WebElement searchExpenseModule;
 @FindBy(xpath = "//a[normalize-space()='Expense Head']")
 public WebElement expenseHeadModule;
 
-
+/* Expense Drop down button */
+@FindBy(xpath = "//li[4]//a[1]//i[2]")
+public WebElement expenseDropDown;
 
 
 
