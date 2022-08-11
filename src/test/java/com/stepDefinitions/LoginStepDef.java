@@ -39,12 +39,17 @@ public class LoginStepDef {
 
     @Then("the teacher should be succesfully logged in")
     public void the_teacher_should_be_succesfully_logged_in() {
+        
+        // Attaching screenshot to Extent report
         try {
             CucumberLogUtils.logExtentScreenshot();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
+
+        // Attaching screenshot to Cucumber HTML report
+        CucumberLogUtils.logScreenShot();
+
     }
 
 }
