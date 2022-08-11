@@ -1,9 +1,13 @@
 package com.stepDefinitions;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
 import com.constants.ApplicationConstants;
 import com.pages.LoginPage;
+import com.utils.CucumberLogUtils;
+import com.utils.ScreenShots;
 import com.web.WebDriverUtils;
 
 import cucumber.api.java.en.Given;
@@ -20,8 +24,8 @@ public class LoginStepDef {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
     }
 
-    @When("the teacher logs in with username {string} and password {string}")
-    public void the_teacher_logs_in_with_username_and_password(String username, String password) {
+    @When("the teacher logs in with username and password")
+    public void the_teacher_logs_in_with_username_and_password() {
         loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
         loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
         loginPage.signInButton.click();
@@ -33,9 +37,14 @@ public class LoginStepDef {
         }
     }
 
-    @Then("the teacher should be succesfully logged in and page title is {string}")
-    public void the_teacher_should_be_succesfully_logged_in_and_page_title_is(String string) {
-
+    @Then("the teacher should be succesfully logged in")
+    public void the_teacher_should_be_succesfully_logged_in() {
+        try {
+            CucumberLogUtils.logExtentScreenshot();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
 }

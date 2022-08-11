@@ -6,8 +6,8 @@ Feature: Login Scenarios
     @jomir @Smoke
     Scenario: Login with valid credentials
         Given a teacher is on the CTSMS login page
-        When the teacher logs in with username "<username>" and password "<password>"
-        Then the teacher should be succesfully logged in and page title is "Chroma Tech Academy"
+        When the teacher logs in with username and password
+        Then the teacher should be succesfully logged in
 
     # @jomir @Smoke
     # Scenario: Invalid Credentials login attempt
