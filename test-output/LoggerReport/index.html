@@ -51,14 +51,6 @@
 							</a>
 						</li>
 						<li>
-							<a href="exception.html">
-							<span class="nav-icon">
-							<i class="fa fa-warning"></i>
-							</span>
-							<span class="nav-text">Exceptions</span>
-							</a>
-						</li>
-						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -102,12 +94,12 @@
 									</span>
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-										
-										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
 										
 										
-										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
+										
+										
+										
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -121,6 +113,7 @@
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 						    	        <a class="dropdown-item" href="#"><span class="cf">@jomir</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@DG1-1</span></a>
 						    	        <a class="dropdown-item" href="#"><span class="cf">@Smoke</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
@@ -138,23 +131,24 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="fail">
-											<div class="st fail test l0" 
+											<div class="tsc" status="pass">
+											<div class="st pass test l0" 
 												tags=""
 												devices="">
-												<span class="tt">08.11.2022 14:34:36</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">08.11.2022 21:20:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">[Login Scenarios] started</span>
 												
 											</div>
-											<div class="st fail test l1" 
-												tags="@jomir @Smoke"
+											<div class="st pass test l1" 
+												tags="@jomir @DG1-1 @Smoke"
 												devices="">
-												<span class="tt">08.11.2022 14:34:36</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tt">08.11.2022 21:20:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">|---[Login with valid credentials] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @jomir</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @DG1-1</span>
 													<span class="category badge"><i class="fa fa-tag"></i> @Smoke</span>
 												</span>
 												<span class="author-list">
@@ -163,72 +157,49 @@
 												</span>
 												
 											</div>
-											<div class="st fail test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.11.2022 14:34:36</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given a teacher is on the CTSMS login page] started</span>
+												<span class="tt">08.11.2022 21:20:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given a user is on the CTSMS login page] started</span>
 												
-												<div class="st fail">
-													<span class="tt">08.11.2022 14:34:50</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given a teacher is on the CTSMS login page]</span>
+												<div class="st pass">
+													<span class="tt">08.11.2022 21:20:50</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given a user is on the CTSMS login page]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=104.0.5112.81)
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'DESKTOP-UAB4HEA', ip: '192.168.1.56', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [afb11183ddefd75b1a95a47eb0897d29, get {url=https://chroma.mexil.it/site/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.81, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\jomir\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63684}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63684/devtoo..., se:cdpVersion: 104.0.5112.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: afb11183ddefd75b1a95a47eb0897d29
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:332)
-	at com.stepDefinitions.LoginStepDef.a_a_teacher_is_on_the_CTSMS_login_page(LoginStepDef.java:26)
-	at ?.a teacher is on the CTSMS login page(file:src/test/java/com/features/login.feature:8)
-</textarea></span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.11.2022 14:34:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When the teacher logs in with username and password] started</span>
+												<span class="tt">08.11.2022 21:20:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When the user logs in with username and password] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.11.2022 14:34:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When the teacher logs in with username and password]</span>
+												<div class="st pass">
+													<span class="tt">08.11.2022 21:20:52</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When the user logs in with username and password]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.11.2022 14:34:50</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the teacher should be succesfully logged in and page title is "Chroma Tech Academy"] started</span>
+												<span class="tt">08.11.2022 21:20:52</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the user should be succesfully logged in and page title is "Chroma Tech Academy"] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.11.2022 14:34:50</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the teacher should be succesfully logged in and page title is "Chroma Tech Academy"]</span>
-													
-													<span class="td">Step skipped</span>
+												<div class="st info">
+													<span class="tt">08.11.2022 21:20:52</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the user should be succesfully logged in and page title is "Chroma Tech Academy"]</span>
+													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded1.png' src='test-output/embedded1.png'></span>
+													<span class="td"></span>
 												</div>
 											</div>
 											</div>
