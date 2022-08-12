@@ -23,6 +23,8 @@ public class StudentInfoModuleStepDef {
     WebDriver driver = WebDriverUtils.driver;
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
+    
+   // TwoDashboardPage twoDashboardPage = new TwoDashboardPage();
 
     @Given("User is on the home page")
     public void openSiteLoginPage() throws IOException {
@@ -62,4 +64,5 @@ public class StudentInfoModuleStepDef {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
+
 }

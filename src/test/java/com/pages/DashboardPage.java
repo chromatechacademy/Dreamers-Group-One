@@ -20,12 +20,15 @@ public class DashboardPage {
     public WebElement studentInfoItem;
 
 
+
     public List<String> getStudentInfoItems(WebDriver driver) {
         List<String> items = new ArrayList<>();
         for (WebElement element : driver.findElements(By.xpath("//*[@id=\"sibe-box\"]/ul[2]/li[1]/ul/li"))) {
             items.add(element.getText());
         }
         return items;
+
+    
     }
 
     public DashboardPage() {

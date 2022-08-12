@@ -108,12 +108,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchWindowException</a>
+							<a href="#" class="item-title _500">java.lang.NullPointerException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchWindowException</h5>
+								<h5 class="mb-4">java.lang.NullPointerException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -127,8 +127,8 @@
 	
 <tr class="s-fail" test-id="6" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And I wait while dashboard page loaded <br/><span class="text-muted text-sm">Verify that student information list is reflected properly</span></td>
-	<td>0h 0m 7s+44msc</td>
+	<td class="_600">Then User click on Human Resource Module item on left navigation menu <br/><span class="text-muted text-sm">Example of hardcoding in scenario</span></td>
+	<td>0h 0m 0s+4msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -137,32 +137,9 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'MBP-macbook.home', ip: 'fe80:0:0:0:1cd1:f4bf:eefe:9d8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.4', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [70e03e7f-4f46-4174-9f3f-a85c92fef7aa, findElement {using=xpath, value=//*[@id='calendar']}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 103.0.2, moz:accessibilityChecks: false, moz:buildID: 20220808125904, moz:debuggerAddress: localhost:65096, moz:geckodriverVersion: 0.31.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 3869, moz:profile: /var/folders/w7/bbx47cf51nn..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:65096/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 70e03e7f-4f46-4174-9f3f-a85c92fef7aa
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.isDisplayed(Unknown Source)
-	at com.stepDefinitions.StudentInfoModuleStepDef.iWaitWhileDashboardPageLoaded(StudentInfoModuleStepDef.java:45)
-	at ✽.I wait while dashboard page loaded(file:src/test/java/com/features/juliaTest.feature:7)
+		<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "this.twoDashboardPage.humanResource" is null
+	at com.stepDefinitions.HumanResourceModuleStepDef.user_click_on_Human_Resource_Module_item_on_left_navigation_menu(HumanResourceModuleStepDef.java:41)
+	at ✽.User click on Human Resource Module item on left navigation menu(file:src/test/java/com/features/juliaTest.feature:15)
 </textarea>
 	</td>
 </tr>
@@ -190,7 +167,7 @@ Session ID: 70e03e7f-4f46-4174-9f3f-a85c92fef7aa
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 11, 2022 04:02:43 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 12, 2022 04:49:20 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>
