@@ -17,8 +17,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class Modules {
-    LoginPage loginPage = new LoginPage();
     CTMSHomePage ctmsHomePage = new CTMSHomePage();
+    
     @Then("the navigation modules should be displayed")
     public void the_navigation_modules_should_be_displayed() throws IOException {
 

@@ -40,11 +40,11 @@ public class Expenses {
         String ExpectedExpenseModule = "Expenses";
         Assert.assertEquals(ActualExpenseModule, ExpectedExpenseModule);
 
-        CommonUtils.waitForVisibility(expensePage.addExpenseModule);
         String ActualAddExpenseModule = expensePage.addExpenseModule.getText();
         String ExpectedAddExpenseModule = "Add Expense";
         Assert.assertEquals(ActualAddExpenseModule, ExpectedAddExpenseModule);
 
+        CommonUtils.waitForVisibility(expensePage.searchExpenseModule);
         String ActualSearchExpenseModule = expensePage.searchExpenseModule.getText();
         String ExpectedSearchExpenseModule = "Search Expense";
         Assert.assertEquals(ActualSearchExpenseModule, ExpectedSearchExpenseModule);

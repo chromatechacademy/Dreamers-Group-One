@@ -4,6 +4,7 @@ package com.runners;
 
 
 import org.junit.runner.RunWith;
+import org.openqa.selenium.devtools.v103.audits.model.TrustedWebActivityIssueDetails;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -17,8 +18,8 @@ import cucumber.api.junit.Cucumber;
 		"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  }, 
 		features = "src/test/java/com/features", 
 		glue = "com.stepDefinitions", 
-		tags = "@Ex", 
-		dryRun = false, 
+		tags = "@DG1-8", 
+		dryRun = true, 
 		monochrome = true, 
 		strict = true
 )

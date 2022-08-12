@@ -9,12 +9,12 @@ import com.web.WebDriverUtils;
 
 public class AcademicsModulePage {
 
-    /* Academics drop down button */
-    @FindBy(xpath = "//li[@class='treeview']//a[@href='#']//i[@class='fa fa-angle-left pull-right']")
-    public WebElement academicsDropDown;
+    /* Academics Module */
+    @FindBy(xpath = "//a[normalize-space()='Academics']")
+    public WebElement academicsModule;
 
     /* Class Timetable Module */
-    @FindBy(xpath = "//a[normalize-space()='Class Timetable']")
+    @FindBy(xpath = "(//a[normalize-space()='Class Timetable'])[2]")
     public WebElement classTimeTableModule;
 
     /* Teacher Timetable Module */

@@ -13,7 +13,7 @@ public class ExpenseModulePage {
 public WebElement expensesModule;
 
 /* Add Expense Module */
-@FindBy(xpath = "//a[normalize-space()='Add Expense']")
+@FindBy(xpath = "(//a[normalize-space()='Add Expense'])[2]")
 public WebElement addExpenseModule;
 
 /* Search Expense Module */

@@ -12,25 +12,27 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class Academic {
-    LoginPage loginPage = new LoginPage();
     AcademicsModulePage academicsPage = new AcademicsModulePage();
     
     @Given("clicks on the Academics module")
     public void clicks_on_the_Academics_module() {
 
-        CommonUtils.selectDropDownValue("Academics", academicsPage.academicsDropDown);
-
+        academicsPage.academicsModule.click();
         
     }
 
     @Then("Academics module will be displayed")
     public void academics_module_will_be_displayed(){
-
+    
+    String ActualAcademicsModule = academicsPage.academicsModule.getText();
+    String ExpectedAcademicsModule = "Academics";
+    Assert.assertEquals(ActualAcademicsModule, ExpectedAcademicsModule);
 
     String ActualClassTimetableModule = academicsPage.classTimeTableModule.getText();
     String ExpectedClassTimetableModule = "Class Timetable";
     Assert.assertEquals(ActualClassTimetableModule, ExpectedClassTimetableModule);
 
+    CommonUtils.waitForVisibility(academicsPage.teacherTimetableModule);
     String ActualTeacherTimetableModule = academicsPage.teacherTimetableModule.getText();
     String ExpectedTeacherTimetableModule = "Teachers Timetable";
     Assert.assertEquals(ActualTeacherTimetableModule, ExpectedTeacherTimetableModule);
