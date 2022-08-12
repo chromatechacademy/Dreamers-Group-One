@@ -21,13 +21,17 @@ public class LoginStepDef {
     LoginPage loginPage = new LoginPage();
 
     @Given("a user is on the CTSMS login page")
-    public void a_user_is_on_the_CTSMS_login_page() {
+    public void a_user_is_on_the_CTSMS_login_page() throws IOException {
 
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
+
+        CucumberLogUtils.logExtentScreenshot();
+
+        CucumberLogUtils.logScreenShot();
     }
 
     @When("the user logs in with username and password")
-    public void the_user_logs_in_with_username_and_password() {
+    public void the_user_logs_in_with_username_and_password() throws IOException {
         loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
         loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
         loginPage.signInButton.click();
@@ -38,6 +42,10 @@ public class LoginStepDef {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
+       
+        CucumberLogUtils.logExtentScreenshot();
+
+        CucumberLogUtils.logScreenShot();
     }
 
     @Then("the user should be succesfully logged in and page title is {string}")
@@ -50,10 +58,8 @@ public class LoginStepDef {
         // Assertion to check if actual page title is the same as expected page title
         Assert.assertTrue(actualPageTitle.contentEquals(ApplicationConstants.EXPECTED_PAGE_TITLE));
 
-        // Attaching screenshot to Extent report
         CucumberLogUtils.logExtentScreenshot();
 
-        // Attaching screenshot to Cucumber HTML report
         CucumberLogUtils.logScreenShot();
 
     }
