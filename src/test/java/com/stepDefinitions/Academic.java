@@ -14,23 +14,17 @@ import cucumber.api.java.en.Then;
 public class Academic {
     LoginPage loginPage = new LoginPage();
     AcademicsModulePage academicsPage = new AcademicsModulePage();
-
-    @Given("user has logged in with valid credentials")
-    public void user_has_logged_in_with_valid_credentials() {
-        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
-        loginPage.usernameTextBox.sendKeys("general@teacher.com");
-        loginPage.passwordTextBox.sendKeys("123456");
-        loginPage.signInButton.click();
-    }
-
+    
     @Given("clicks on the Academics module")
     public void clicks_on_the_Academics_module() {
+
+        CommonUtils.selectDropDownValue("Academics", academicsPage.academicsDropDown);
 
         
     }
 
     @Then("Academics module will be displayed")
-    public void academics_module_will_be_displayed()
+    public void academics_module_will_be_displayed(){
 
 
     String ActualClassTimetableModule = academicsPage.classTimeTableModule.getText();

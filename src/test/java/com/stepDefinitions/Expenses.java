@@ -17,7 +17,7 @@ public class Expenses {
     LoginPage loginPage = new LoginPage();
     ExpenseModulePage expensePage = new ExpenseModulePage();
 
-    @Given("user has logged in with valid credentiasl")
+    @Given("user has logged in with valid credentials")
     public void user_has_logged_in_with_valid_credentials() {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
         loginPage.usernameTextBox.sendKeys("general@teacher.com");
@@ -27,12 +27,9 @@ public class Expenses {
 
     @Given("clicks on the Expenses module")
     public void clicks_on_the_Expenses_module() {
-    
-    // String expenseDropDown = new expenseDrop
-    // public static void selectDropDownValue(String  , WebElement expensePage) {
-    //     Select select = new Select();
-    //     select.selectByVisibleText();
-    
+
+       expensePage.expensesModule.click();
+
     }
 
     @Then("Expenses module will be displayed")
@@ -43,6 +40,7 @@ public class Expenses {
         String ExpectedExpenseModule = "Expenses";
         Assert.assertEquals(ActualExpenseModule, ExpectedExpenseModule);
 
+        CommonUtils.waitForVisibility(expensePage.addExpenseModule);
         String ActualAddExpenseModule = expensePage.addExpenseModule.getText();
         String ExpectedAddExpenseModule = "Add Expense";
         Assert.assertEquals(ActualAddExpenseModule, ExpectedAddExpenseModule);

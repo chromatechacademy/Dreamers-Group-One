@@ -13,7 +13,7 @@ public class ExpenseModulePage {
 public WebElement expensesModule;
 
 /* Add Expense Module */
-@FindBy(xpath = "//a[normalize-space()='Add Expense']//i[contains(@class,'fa fa-angle-double-right')]")
+@FindBy(xpath = "//a[normalize-space()='Add Expense']")
 public WebElement addExpenseModule;
 
 /* Search Expense Module */
@@ -23,17 +23,6 @@ public WebElement searchExpenseModule;
 /* Expense Head Module */
 @FindBy(xpath = "//a[normalize-space()='Expense Head']")
 public WebElement expenseHeadModule;
-
-/* Expense Drop down button */
-@FindBy(xpath = "//li[4]//a[1]//i[2]")
-public WebElement expenseDropDown;
-
-
-
-
-
-
-
 
     public ExpenseModulePage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

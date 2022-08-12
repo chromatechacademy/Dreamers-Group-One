@@ -14,7 +14,7 @@ public class AcademicsModulePage {
     public WebElement academicsDropDown;
 
     /* Class Timetable Module */
-    @FindBy(xpath = "//a[contains(@href,'https://chroma.mexil.it/admin/timetable/classreport')]")
+    @FindBy(xpath = "//a[normalize-space()='Class Timetable']")
     public WebElement classTimeTableModule;
 
     /* Teacher Timetable Module */
