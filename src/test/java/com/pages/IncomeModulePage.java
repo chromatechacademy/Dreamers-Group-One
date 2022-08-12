@@ -15,7 +15,7 @@ public class IncomeModulePage {
     @FindBy(xpath = "//a[normalize-space()='Add Income']")
     public WebElement AddIncomeButton;
 
-    // @FindBy(xpath = "//a[normalize-space()='Search Income']")
+    @FindBy(xpath = "//a[normalize-space()='Search Income']")
     public WebElement SearchIncomeButton;
 
     @FindBy(xpath = "//a[normalize-space()='Income Head']")
