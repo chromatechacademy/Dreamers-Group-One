@@ -30,7 +30,6 @@ public class Modules {
         String ActualFeesModule = ctmsHomePage.feesCollectionModule.getText();
         String ExpectedFeesModule = "Fees Collection";
         Assert.assertEquals(ActualFeesModule, ExpectedFeesModule);
-        CucumberLogUtils.logExtentScreenshot();
 
         String ActualIncomeModule = ctmsHomePage.incomeModule.getText();
         String ExpectedIncomeModule = "Income";
@@ -56,5 +55,6 @@ public class Modules {
         String ExpectedReportsModule = "Reports";
         Assert.assertEquals(ActualReportsModule, ExpectedReportsModule);
 
-    }
+        CucumberLogUtils.logExtentScreenshot();
+    }   
 }

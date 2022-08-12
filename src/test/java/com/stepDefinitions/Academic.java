@@ -1,10 +1,13 @@
 package com.stepDefinitions;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
 import com.constants.ApplicationConstants;
 import com.pages.AcademicsModulePage;
 import com.pages.LoginPage;
+import com.utils.CucumberLogUtils;
 import com.web.CommonUtils;
 import com.web.WebDriverUtils;
 
@@ -22,7 +25,7 @@ public class Academic {
     }
 
     @Then("Academics module will be displayed")
-    public void academics_module_will_be_displayed(){
+    public void academics_module_will_be_displayed() throws IOException{
     
     String ActualAcademicsModule = academicsPage.academicsModule.getText();
     String ExpectedAcademicsModule = "Academics";
@@ -60,7 +63,8 @@ public class Academic {
     String ActualSectionsModule = academicsPage.sectionsModule.getText();
     String ExpectedSectionsModule = "Sections";
     Assert.assertEquals(ActualSectionsModule, ExpectedSectionsModule);
-        
+    CucumberLogUtils.logExtentScreenshot();
+
 
 
     }

@@ -1,5 +1,7 @@
 package com.stepDefinitions;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -7,6 +9,7 @@ import org.testng.Assert;
 import com.constants.ApplicationConstants;
 import com.pages.ExpenseModulePage;
 import com.pages.LoginPage;
+import com.utils.CucumberLogUtils;
 import com.web.CommonUtils;
 import com.web.WebDriverUtils;
 
@@ -33,7 +36,7 @@ public class Expenses {
     }
 
     @Then("Expenses module will be displayed")
-    public void expenses_module_will_be_displayed() {
+    public void expenses_module_will_be_displayed() throws IOException {
 
         CommonUtils.waitForVisibility(expensePage.expensesModule);
         String ActualExpenseModule = expensePage.expensesModule.getText();
@@ -52,6 +55,8 @@ public class Expenses {
         String ActualExpenseHeadModule = expensePage.expenseHeadModule.getText();
         String ExpectedExpenseHeadModule = "Expense Head";
         Assert.assertEquals(ActualExpenseHeadModule, ExpectedExpenseHeadModule);
+        CucumberLogUtils.logExtentScreenshot();
+
     }
 
 }
