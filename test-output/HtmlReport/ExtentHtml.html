@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 13, 2022 01:33:44 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 13, 2022 04:34:41 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -68,7 +68,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -122,10 +122,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped
                 </div>
             </div>
         </div>
@@ -136,12 +136,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
                 </div>
             </div>
         </div>
@@ -152,12 +152,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>8</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
                 </div>
             </div>
         </div>
@@ -175,11 +175,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Student Admission unique admission number</span>
-						<span class='test-time'>Aug 13, 2022 01:33:47 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Aug 13, 2022 04:34:41 PM</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -189,39 +189,47 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='test-desc'>Feature Description</div>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='2' status='skip'>
 	<div class='category-list'>
 		<span class='category label'>@victor</span>
 		<span class='category label'>@DG1-13</span>
 	</div>
-	<span class='duration right label'>0h 0m 6s+233ms</span>
+	<span class='duration right label'>0h 0m 0s+35ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: CTSMS - Student Admission unique admission number</div>
+		<div class="scenario-name"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span> Scenario: CTSMS - Student Admission unique admission number</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='4' class='node given pass' status='pass'>
-			<div class="step-name" title="Expenses.user_has_logged_in_with_valid_credentials()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has logged in with valid credentials</div>
-			<div class="node-step"></div>
+		<li test-id='3' class='node * skip' status='skip'>
+			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.start(Scenario)</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='5' class='node and pass' status='pass'>
-			<div class="step-name" title="StudentAdmissionUniqueNumber.clicks_on_the_Student_Information_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks on the Student Information module</div>
-			<div class="node-step"></div>
+		<li test-id='4' class='node given skip' status='skip'>
+			<div class="step-name" title="Expenses.user_has_logged_in_with_valid_credentials()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given user has logged in with valid credentials</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='6' class='node and pass' status='pass'>
-			<div class="step-name" title="StudentAdmissionUniqueNumber.clicks_on_Student_Admission_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks on Student Admission module</div>
-			<div class="node-step"></div>
+		<li test-id='5' class='node and skip' status='skip'>
+			<div class="step-name" title="StudentAdmission.clicks_on_the_Student_Information_module()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And clicks on the Student Information module</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='7' class='node when pass' status='pass'>
-			<div class="step-name" title="StudentAdmissionUniqueNumber.user_is_on_Students_Admission_page_and_enters_in_a_existing_Admission_No()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user is on Students Admission page and enters in a existing Admission No.</div>
-			<div class="node-step"></div>
+		<li test-id='6' class='node and skip' status='skip'>
+			<div class="step-name" title="StudentAdmission.clicks_on_Student_Admission_module()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And clicks on Student Admission module</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='8' class='node and pass' status='pass'>
-			<div class="step-name" title="StudentAdmissionUniqueNumber.all_other_required_information_is_filled_in()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And all other required information is filled in</div>
-			<div class="node-step"></div>
+		<li test-id='7' class='node and skip' status='skip'>
+			<div class="step-name" title="StudentAdmissionUniqueNumber.fills_in_an_existing_Admission_No()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And fills in an existing Admission No.</div>
+			<div class="node-step">Step skipped</div>
 		</li>
-		<li test-id='9' class='node then pass' status='pass'>
-			<div class="step-name" title="StudentAdmissionUniqueNumber.the_user_will_not_be_able_to_admit_a_student_with_an_already_existing_admission_number()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the user will not be able to admit a student with an already existing admission number</div>
-			<div class="node-step"></div>
+		<li test-id='8' class='node and skip' status='skip'>
+			<div class="step-name" title="StudentAdmission.clicks_Save()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And clicks Save</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='9' class='node then skip' status='skip'>
+			<div class="step-name" title="StudentAdmissionUniqueNumber.the_user_will_get_a_message_saying(String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then the user will get a message saying "The Admission No field must contain a unique value"</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='10' class='node * skip' status='skip'>
+			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.end(Scenario)</div>
+			<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -269,14 +277,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@victor</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label others'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
+							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -289,9 +297,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 13, 2022 01:33:47 PM</td>
+										<td>Aug 13, 2022 04:34:41 PM</td>
 										<td class='linked' test-id='2'>CTSMS - Student Admission unique admission number</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -302,14 +310,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@DG1-13</span>
 						<span class='category-status right'>
-						<span class='label pass'>1</span>
+						<span class='label others'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
+							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -322,9 +330,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 13, 2022 01:33:47 PM</td>
+										<td>Aug 13, 2022 04:34:41 PM</td>
 										<td class='linked' test-id='2'>CTSMS - Student Admission unique admission number</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -360,25 +368,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>6</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 13, 2022 01:33:44 PM</div>
+					<div class='panel-lead'>Aug 13, 2022 04:34:41 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 13, 2022 01:33:53 PM</div>
+			 		<div class='panel-lead'>Aug 13, 2022 04:34:41 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 9s+29ms</div>
+					<div class='panel-lead'>0h 0m 0s+291ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -395,20 +403,20 @@
 						</tr>
 						<tr>
 							<td>@victor</td>
+							<td>0</td>
+							<td>0</td>
 							<td>1</td>
-							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
 							<td>@DG1-13</td>
+							<td>0</td>
+							<td>0</td>
 							<td>1</td>
-							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -423,38 +431,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
+				passParent: 0,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 0,
+				skipParent: 1,
+				exceptionsParent: 1,
 				childCount: 1,
-				passChild: 1,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 1,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 6,
-				passGrandChild: 6,
+				exceptionsChild: 1,
+				grandChildCount: 8,
+				passGrandChild: 0,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 8,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 8,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Student Admission unique admission number":6.233
+			        "Student Admission unique admission number":0.035
 			};
 		</script>
 	

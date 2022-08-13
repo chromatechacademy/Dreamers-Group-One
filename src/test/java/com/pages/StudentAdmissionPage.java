@@ -60,6 +60,10 @@ public class StudentAdmissionPage {
     @FindBy(xpath = "//p[contains(text(),'The Admission No field must contain a unique value')]")
     public WebElement admissionNoUniquevalueMessage;
 
+    /* Student Saved Successfully */
+    @FindBy(xpath = "//div[@class='alert alert-success']")
+    public WebElement studentSavedSuccessfully;
+
     public StudentAdmissionPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
