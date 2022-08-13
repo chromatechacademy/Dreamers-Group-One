@@ -9,8 +9,10 @@ Feature: JuliaSimpleTest
     Then User collect Student information items to list and verify them
 
   @Julia @DG1-9 @Smoke
-  Scenario: Example of hardcoding in scenario
+  Scenario:  Verify that Human Resource Module list is reflected properly
     Given user is on the home page
     When user logs in with username "general@teacher.com" and password "123456"
     Then User click on Human Resource Module item on left navigation menu
+
+  @Julia @DG1-14 @Smoke
 
