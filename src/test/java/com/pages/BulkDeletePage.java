@@ -1,5 +1,6 @@
 package com.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -25,7 +26,10 @@ public class BulkDeletePage {
     public WebElement studentToDelete;
 
     /* Common xpath for Student to Delete  */
-   
+    public WebElement deleteStudentDynamicXPATH(String student) {
+
+        return WebDriverUtils.driver.findElement(By.xpath("xpathExpression"))
+    }
 
     /* Delete Button */
     @FindBy(xpath = "//button[normalize-space()='Delete']")
