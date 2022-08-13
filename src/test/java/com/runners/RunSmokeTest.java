@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 		"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  }, 
 		features = "src/test/java/com/features", 
 		glue = "com.stepDefinitions", 
-		tags = "@HumanResourceModule", 
+		tags = "@DG1-9", 
 		dryRun = false, 
 		monochrome = true, 
 		strict = true

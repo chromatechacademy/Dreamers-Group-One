@@ -1,12 +1,17 @@
 package com.stepDefinitions;
 
+import java.io.IOException;
+
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import com.constants.ApplicationConstants;
 import com.pages.LoginPage;
 import com.pages.TwoDashboardPage;
+import com.utils.CucumberLogUtils;
 import com.web.WebDriverUtils;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -30,11 +35,18 @@ public class HumanResourceModuleStepDef {
         loginPage.signInButton.click();
 
     }
+    
+    
+
 
     @Then("User click on Human Resource Module item on left navigation menu")
-    public void user_click_on_Human_Resource_Module_item_on_left_navigation_menu() {
+    public void user_click_on_Human_Resource_Module_item_on_left_navigation_menu() throws InterruptedException, IOException {
         twoDashboardPage.humanResource.click();
+        Thread.sleep(10000);
         System.out.println("");
+
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
 }

@@ -7,12 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import com.web.WebDriverUtils;
 
 public class TwoDashboardPage {
-     
+
+
 
     public static Object HumanResourceModule;
     @FindBy(xpath = "//span[normalize-space()='Human Resource']")
     public WebElement humanResource;
-
 
 
 
