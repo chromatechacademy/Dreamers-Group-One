@@ -51,6 +51,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -95,7 +103,7 @@
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
@@ -113,7 +121,8 @@
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 						    	        <a class="dropdown-item" href="#"><span class="cf">@Angel</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@SecondRun</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@DG1-15</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Smoke</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -130,24 +139,25 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="skip">
-											<div class="st skip test l0" 
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
 												tags=""
 												devices="">
-												<span class="tt">08.11.2022 12:28:15</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.12.2022 18:32:06</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">[Disable Student] started</span>
 												
 											</div>
-											<div class="st skip test l1" 
-												tags="@Angel @SecondRun"
+											<div class="st fail test l1" 
+												tags="@Angel @DG1-15 @Smoke"
 												devices="">
-												<span class="tt">08.11.2022 12:28:15</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.12.2022 18:32:06</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">|---[Disable Student scenario] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @Angel</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @SecondRun</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @DG1-15</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Smoke</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -155,55 +165,61 @@
 												</span>
 												
 											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.11.2022 12:28:15</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.start(Scenario)] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.11.2022 12:28:15</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.start(Scenario)]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.11.2022 12:28:15</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given a user is logged into the CTSMS website] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.11.2022 12:28:15</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given a user is logged into the CTSMS website]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
 											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.11.2022 12:28:15</span>&nbsp;
+												<span class="tt">08.12.2022 18:32:06</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given a user is logged into the CTSMS website] started</span>
+												
+												<div class="st pass">
+													<span class="tt">08.12.2022 18:32:10</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given a user is logged into the CTSMS website]</span>
+													
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st fail test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.12.2022 18:32:10</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user disables a student] started</span>
 												
+												<div class="st fail">
+													<span class="tt">08.12.2022 18:32:21</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When user disables a student]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.partialLinkText: TestStudent
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'MICHELADASDANKA', ip: '10.0.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy21.click(Unknown Source)
+	at com.stepDefinitions.DisableStudent.user_disables_a_student(DisableStudent.java:103)
+	at ✽.user disables a student(file:src/test/java/com/features/disableStudent.feature:6)
+</textarea></span>
+												</div>
 											</div>
 											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.11.2022 12:28:15</span>&nbsp;
+												<span class="tt">08.12.2022 18:32:21</span>&nbsp;
 												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.end(Scenario)] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user will appear as disabled <"disabledStudent">] started</span>
 												
 												<div class="st skip">
-													<span class="tt">08.11.2022 12:28:15</span>&nbsp;
+													<span class="tt">08.12.2022 18:32:21</span>&nbsp;
 													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.end(Scenario)]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user will appear as disabled <"disabledStudent">]</span>
 													
 													<span class="td">Step skipped</span>
 												</div>

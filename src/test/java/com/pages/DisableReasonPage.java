@@ -9,7 +9,7 @@ import com.web.WebDriverUtils;
 public class DisableReasonPage {
     
     /* Add Disable Reason Name Textbox */
-    @FindBy(xpath = "//input[@class='form-control']")
+    @FindBy(xpath = "//input[@name='name']")
     public WebElement disableReasonNameTextbox;
 
     /* Disable Reason Save Button */

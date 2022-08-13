@@ -12,6 +12,18 @@ public class DisabledStudentsPage {
     @FindBy(xpath = "//input[@class='form-control']")
     public WebElement disableStudentSearchByKeywordTextbox;
 
+    /* Disable Student Search Button */
+    @FindBy(xpath = "//button[@value='search_full']")
+    public WebElement disableStudentSearchButton;
+
+    /* Disable Student */
+    @FindBy(partialLinkText = "TestStudent")
+    public WebElement disabledStudent;
+
+    /* Enable Button */
+    @FindBy(xpath = "//i[@class='fa fa-thumbs-o-up']")
+    public WebElement enableButton;
+
     public DisabledStudentsPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }

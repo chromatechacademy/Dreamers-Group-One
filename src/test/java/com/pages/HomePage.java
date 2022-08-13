@@ -17,7 +17,7 @@ public class HomePage {
     public WebElement studentAdmissionTab;
 
     //* Student Details Tab */
-    @FindBy(xpath = "//ul[@class='treeview-menu menu-open']//a[normalize-space()='Student Details']")
+    @FindBy(xpath = "(//a[normalize-space()='Student Details'])[2]")
     public WebElement studentDetailsTab;
 
     //* Disabled Students Tab*/
@@ -27,6 +27,10 @@ public class HomePage {
     //* Disable Reason Tab */
     @FindBy(xpath = "//a[normalize-space()='Disable Reason']")
     public WebElement disableReasonTab;
+
+    //* Bulk Delete Tab */
+    @FindBy(xpath = "//a[normalize-space()='Bulk Delete']")
+    public WebElement bulkDeleteTab;
 
     public HomePage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

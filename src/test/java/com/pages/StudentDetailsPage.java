@@ -17,7 +17,7 @@ public class StudentDetailsPage {
     public WebElement studentDetailsSearchButton;
 
     /* Select Student Button */
-    @FindBy(xpath = "//tr[@role='row']//a[contains(text(),'TestStudent')]")
+    @FindBy(partialLinkText = "TestStudent")
     public WebElement selectStudentButton;
 
     /* Disable Student Button */
@@ -33,7 +33,8 @@ public class StudentDetailsPage {
     public WebElement disableStudentNoteTextbox;
 
     /* Disable Student Save Button */
-    
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[5]/div[1]/div[1]/form[1]/div[2]/div[1]/button[1]")
+    public WebElement disableStudentSaveButton;
 
     public StudentDetailsPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
