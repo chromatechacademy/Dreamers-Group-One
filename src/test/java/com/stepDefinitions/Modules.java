@@ -55,6 +55,7 @@ public class Modules {
         String ExpectedReportsModule = "Reports";
         Assert.assertEquals(ActualReportsModule, ExpectedReportsModule);
 
+        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
     }   
 }
