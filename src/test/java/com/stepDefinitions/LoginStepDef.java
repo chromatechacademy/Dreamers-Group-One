@@ -30,16 +30,15 @@ public class LoginStepDef {
         CucumberLogUtils.logScreenShot();
     }
 
-    @When("the user logs in with username and password")
-    public void the_user_logs_in_with_username_and_password() throws IOException {
-        loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
-        loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
+    @When("the user logs in with username {string} and password {string}")
+    public void the_user_logs_in_with_username_and_password(String username, String password) throws IOException {
+        loginPage.usernameTextBox.sendKeys(username);
+        loginPage.passwordTextBox.sendKeys(password);
         loginPage.signInButton.click();
         try {
             // Thread.sleep(3000);
             CommonUtils.getWaitObject();
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
        

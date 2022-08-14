@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 
 import com.constants.ApplicationConstants;
-import com.pages.IncomeModulePage;
+import com.pages.HomePage;
 import com.pages.LoginPage;
 import com.utils.CucumberLogUtils;
 import com.web.CommonUtils;
@@ -18,7 +18,7 @@ import cucumber.api.java.en.When;
 public class IncomeModuleStepDef {
 
     LoginPage loginPage = new LoginPage();
-    IncomeModulePage incomeModulePage = new IncomeModulePage();
+    HomePage homePage = new HomePage();
 
 
     @Given("a user is logged into the CTSMS portal")
@@ -54,10 +54,10 @@ public class IncomeModuleStepDef {
     public void the_user_clicks_Income_on_the_sidebar_navigation_menu() throws InterruptedException, IOException {
 
         // Wait for sidenav to become clickable
-        CommonUtils.waitForClickability(incomeModulePage.IncomeModuleNavButton);
+        CommonUtils.waitForClickability(homePage.IncomeModuleNavButton);
 
         // // Click "Income" on sidenav
-        incomeModulePage.IncomeModuleNavButton.click();
+        homePage.IncomeModuleNavButton.click();
 
         Thread.sleep(3000);
         
@@ -69,7 +69,7 @@ public class IncomeModuleStepDef {
     @Then("the page displays the following menu buttons: {string}, {string}, {string}")
     public void the_page_displays_the_following_menu_buttons(String addIncome, String searchIncome, String incomeHead) throws IOException {
     
-        addIncome = incomeModulePage.AddIncomeButton.getText();
+        addIncome = homePage.AddIncomeButton.getText();
 
         Assert.assertTrue(addIncome.contentEquals("Add Income"));
         Assert.assertTrue(searchIncome.contentEquals("Search Income"));
