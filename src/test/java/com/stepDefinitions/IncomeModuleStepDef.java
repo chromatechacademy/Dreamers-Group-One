@@ -50,8 +50,8 @@ public class IncomeModuleStepDef {
        
     }
 
-    @When("the user clicks {string} on the sidebar navigation menu")
-    public void the_user_clicks_on_the_sidebar_navigation_menu(String string) throws InterruptedException, IOException {
+    @When("the user clicks Income on the sidebar navigation menu")
+    public void the_user_clicks_Income_on_the_sidebar_navigation_menu() throws InterruptedException, IOException {
 
         // Wait for sidenav to become clickable
         CommonUtils.waitForClickability(incomeModulePage.IncomeModuleNavButton);
@@ -66,8 +66,8 @@ public class IncomeModuleStepDef {
         
     }
 
-    @Then("the page displays the following menu items: {string}, {string}, {string}")
-    public void the_page_displays_the_following_menu_items(String addIncome, String searchIncome, String incomeHead) throws IOException {
+    @Then("the page displays the following menu buttons: {string}, {string}, {string}")
+    public void the_page_displays_the_following_menu_buttons(String addIncome, String searchIncome, String incomeHead) throws IOException {
     
         addIncome = incomeModulePage.AddIncomeButton.getText();
 
