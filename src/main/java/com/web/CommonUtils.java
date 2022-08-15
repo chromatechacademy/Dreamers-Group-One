@@ -278,6 +278,16 @@ public class CommonUtils extends WebDriverUtils {
 	}
 
 	/**
+	 * This method will create an Object of WebDriverWait with specified duration
+	 * 
+	 * @return WebDriverWait
+	 */
+    public static WebDriverWait getWaitObject(int timeSeconds) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeSeconds));
+		return wait;
+	}
+
+	/**
 	 * This method will wait until element becomes clickable
 	 * 
 	 * @param element
