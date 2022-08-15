@@ -125,10 +125,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="6" parent-id="1">
+<tr class="s-fail" test-id="8" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then User click on Human Resource Module item on left navigation menu <br/><span class="text-muted text-sm">Example of hardcoding in scenario</span></td>
-	<td>0h 0m 10s+139msc</td>
+	<td class="_600">Then User collect Student information items to list and verify them <br/><span class="text-muted text-sm">Verify that student information list is reflected properly</span></td>
+	<td>0h 0m 0s+38msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -140,11 +140,11 @@
 		<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
   (Session info: chrome=104.0.5112.79)
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'MBP-macbook.home', ip: 'fe80:0:0:0:1cd1:f4bf:eefe:9d8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.4', java.version: '18.0.1.1'
+System info: host: 'MBP-macbook.home', ip: 'fe80:0:0:0:18ff:b7b3:e47c:65d2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [615b549dcbd8742a18661ae183b61196, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/w7/bbx47cf51nn...}, goog:chromeOptions: {debuggerAddress: localhost:54524}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:54524/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 615b549dcbd8742a18661ae183b61196
+Command: [fdf4e74af01ff39f64858f236aeb4b28, findElements {using=xpath, value=//*[@id="sibe-box"]/ul[2]/li[1]/ul/li}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/w7/bbx47cf51nn...}, goog:chromeOptions: {debuggerAddress: localhost:51695}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51695/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fdf4e74af01ff39f64858f236aeb4b28
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
@@ -155,13 +155,13 @@ Session ID: 615b549dcbd8742a18661ae183b61196
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:624)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:628)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:353)
-	at com.utils.CucumberLogUtils.getScreenShot(CucumberLogUtils.java:41)
-	at com.utils.CucumberLogUtils.logExtentScreenshot(CucumberLogUtils.java:56)
-	at com.stepDefinitions.HumanResourceModuleStepDef.user_click_on_Human_Resource_Module_item_on_left_navigation_menu(HumanResourceModuleStepDef.java:48)
-	at ✽.User click on Human Resource Module item on left navigation menu(file:src/test/java/com/features/juliaTest.feature:15)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:179)
+	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:102)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:402)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:394)
+	at com.pages.DashboardPage.getStudentInfoItems(DashboardPage.java:26)
+	at com.stepDefinitions.StudentInfoModuleStepDef.iCollectStudentInformationItemsToList(StudentInfoModuleStepDef.java:59)
+	at ✽.User collect Student information items to list and verify them(file:src/test/java/com/features/juliaTest.feature:9)
 </textarea>
 	</td>
 </tr>
@@ -189,7 +189,7 @@ Session ID: 615b549dcbd8742a18661ae183b61196
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 13, 2022 12:25:36 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 14, 2022 10:37:06 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

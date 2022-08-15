@@ -23,34 +23,42 @@ public class StudentInfoModuleStepDef {
     WebDriver driver = WebDriverUtils.driver;
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
-    
-   // TwoDashboardPage twoDashboardPage = new TwoDashboardPage();
+
 
     @Given("User is on the home page")
     public void openSiteLoginPage() throws IOException {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
-        // CucumberLogUtils.logScreenShot();
-        // CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 
-    @When("User logs in with username and password")
-    public void iFillUserLoginData() throws InterruptedException {
-        loginPage.usernameTextBox.sendKeys("general@teacher.com");
-        loginPage.passwordTextBox.sendKeys("123456");
+    @When("User logs in with username {string} and password {string}")
+    public void user_logs_in_with_username_and_password(String username, String password) throws InterruptedException, IOException {
+        loginPage.usernameTextBox.sendKeys(username);
+        loginPage.passwordTextBox.sendKeys(password);
         loginPage.signInButton.click();
+        Thread.sleep(1000);
         System.out.println("");
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
+
+ 
     }
 
     @And("User wait while dashboard page loaded")
-    public void iWaitWhileDashboardPageLoaded() throws InterruptedException {
+    public void iWaitWhileDashboardPageLoaded() throws InterruptedException, IOException {
         Thread.sleep(7000);
         Assert.assertTrue("Calendar should be visible on dashboard page", dashboardPage.calendar.isDisplayed());
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
     @And("User click on Student information item on left navigation menu")
-    public void iClickOnStudentInformationItemOnLeftNavigationMenu() throws InterruptedException {
+    public void iClickOnStudentInformationItemOnLeftNavigationMenu() throws InterruptedException, IOException {
         dashboardPage.studentInfoItem.click();
         Thread.sleep(1500);
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
     @Then("User collect Student information items to list and verify them")
