@@ -29,7 +29,7 @@ public class FeesCollectionModuleTest {
         loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
         loginPage.signInButton.click();
 
-        Thread.sleep(3000);
+        Thread.sleep(2000);
 
     }
 
@@ -37,8 +37,6 @@ public class FeesCollectionModuleTest {
     public void the_user_selects_Fees_Collection_module() throws InterruptedException {
 
         feesCollection.feesCollectionModule.click();
-
-        Thread.sleep(2000);
 
     }
 

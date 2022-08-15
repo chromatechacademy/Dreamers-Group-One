@@ -17,7 +17,7 @@ import cucumber.api.junit.Cucumber;
 		"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  }, 
 		features = "src/test/java/com/features", 
 		glue = "com.stepDefinitions", 
-		tags = "@DG1-5", 
+		tags = "@DG1-11", 
 		dryRun = false, 
 		monochrome = true, 
 		strict = true
