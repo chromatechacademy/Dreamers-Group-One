@@ -51,6 +51,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,12 +102,12 @@
 									</span>
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
+										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
 										
-										
-										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -113,7 +121,7 @@
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 						    	        <a class="dropdown-item" href="#"><span class="cf">@victor</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@DG1-13</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@DG1-12</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -130,24 +138,24 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="skip">
-											<div class="st skip test l0" 
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.15.2022 16:21:22</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">[Student Admission unique admission number] started</span>
 												
 											</div>
-											<div class="st skip test l1" 
-												tags="@victor @DG1-13"
+											<div class="st fail test l1" 
+												tags="@victor @DG1-12"
 												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">|---[CTSMS - Student Admission unique admission number] started</span>
+												<span class="tt">08.15.2022 16:21:22</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[CTSMS - Student Admission] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @victor</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @DG1-13</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @DG1-12</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -155,124 +163,108 @@
 												</span>
 												
 											</div>
-											<div class="st skip test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.start(Scenario)] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.start(Scenario)]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.15.2022 16:21:22</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has logged in with valid credentials] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.15.2022 16:21:24</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given user has logged in with valid credentials]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.15.2022 16:21:24</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the Student Information module] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.15.2022 16:21:26</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on the Student Information module]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.15.2022 16:21:26</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Student Admission module] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.15.2022 16:21:27</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks on Student Admission module]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And fills in an existing Admission No.] started</span>
+												<span class="tt">08.15.2022 16:21:27</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And fills in all required Information] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And fills in an existing Admission No.]</span>
+												<div class="st pass">
+													<span class="tt">08.15.2022 16:21:27</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And fills in all required Information]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l2" 
+											<div class="st pass test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tt">08.15.2022 16:21:27</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
 												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Save] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
+												<div class="st pass">
+													<span class="tt">08.15.2022 16:21:28</span>&nbsp;
+													<span class="ts">pass</span>&nbsp;&nbsp; 
 													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And clicks Save]</span>
 													
-													<span class="td">Step skipped</span>
+													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st skip test l2" 
+											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the user will get a message saying "The Admission No field must contain a unique value"] started</span>
+												<span class="tt">08.15.2022 16:21:28</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user will have created a Student] started</span>
 												
-												<div class="st skip">
-													<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then the user will get a message saying "The Admission No field must contain a unique value"]</span>
+												<div class="st fail">
+													<span class="tt">08.15.2022 16:21:32</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user will have created a Student]</span>
 													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.end(Scenario)] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.13.2022 16:34:41</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.end(Scenario)]</span>
-													
-													<span class="td">Step skipped</span>
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[@class='alert alert-success']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'VIC-DESKTOP', ip: '192.168.86.27', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy20.getText(Unknown Source)
+	at com.stepDefinitions.StudentAdmission.user_will_have_created_a_Student(StudentAdmission.java:56)
+	at ✽.user will have created a Student(file:src/test/java/com/features/studentAdmission.feature:12)
+</textarea></span>
 												</div>
 											</div>
 											</div>
