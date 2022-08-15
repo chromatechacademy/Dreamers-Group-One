@@ -1,18 +1,25 @@
 package com.stepDefinitions;
 
-import org.openqa.selenium.WebDriver;
 
+
+import com.pages.DashboardPage;
 import com.pages.LoginPage;
-import com.pages.SearchingStudent;
-import com.web.WebDriverUtils;
+import com.pages.SearchingStudentPage;
 
 import cucumber.api.java.en.When;
 
 public class SearchingStudentDetailStepDef {
 
-    WebDriver driver = WebDriverUtils.driver;
     LoginPage loginPage = new LoginPage();
-    SearchingStudent searchingStudent = new SearchingStudent();
+    SearchingStudentPage searchingStudentPage = new SearchingStudentPage();
+    DashboardPage dashboardPage = new DashboardPage();
 
- 
+
+    @When("User click on Student Addmission Section")
+    public void user_click_on_Student_Addmission_Section() throws InterruptedException {
+        searchingStudentPage.studentAddmisioElement.click();
+        Thread.sleep(2000);
+
+    }
+
 }

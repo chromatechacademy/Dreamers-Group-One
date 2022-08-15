@@ -108,12 +108,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchWindowException</a>
+							<a href="#" class="item-title _500">java.lang.NullPointerException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchWindowException</h5>
+								<h5 class="mb-4">java.lang.NullPointerException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -127,8 +127,8 @@
 	
 <tr class="s-fail" test-id="8" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then User collect Student information items to list and verify them <br/><span class="text-muted text-sm">Verify that student information list is reflected properly</span></td>
-	<td>0h 0m 0s+38msc</td>
+	<td class="_600">And User click on Student Addmission Section <br/><span class="text-muted text-sm">Chroma Tech faculty user, should be able to edit student records by searching student details.</span></td>
+	<td>0h 0m 0s+5msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -137,31 +137,9 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
-  (Session info: chrome=104.0.5112.79)
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'MBP-macbook.home', ip: 'fe80:0:0:0:18ff:b7b3:e47c:65d2%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.4', java.version: '18.0.1.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fdf4e74af01ff39f64858f236aeb4b28, findElements {using=xpath, value=//*[@id="sibe-box"]/ul[2]/li[1]/ul/li}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.79, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: /var/folders/w7/bbx47cf51nn...}, goog:chromeOptions: {debuggerAddress: localhost:51695}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51695/devtoo..., se:cdpVersion: 104.0.5112.79, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: fdf4e74af01ff39f64858f236aeb4b28
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:179)
-	at org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:102)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:402)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:394)
-	at com.pages.DashboardPage.getStudentInfoItems(DashboardPage.java:26)
-	at com.stepDefinitions.StudentInfoModuleStepDef.iCollectStudentInformationItemsToList(StudentInfoModuleStepDef.java:59)
-	at ✽.User collect Student information items to list and verify them(file:src/test/java/com/features/juliaTest.feature:9)
+		<textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.click()" because "com.pages.SearchingStudentPage.studentAddmisioElement" is null
+	at com.stepDefinitions.SearchingStudentDetailStepDef.user_click_on_Student_Addmission_Section(SearchingStudentDetailStepDef.java:45)
+	at ✽.User click on Student Addmission Section(file:src/test/java/com/features/juliaTest.feature:25)
 </textarea>
 	</td>
 </tr>
@@ -189,7 +167,7 @@ Session ID: fdf4e74af01ff39f64858f236aeb4b28
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 14, 2022 10:37:06 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 15, 2022 05:21:13 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

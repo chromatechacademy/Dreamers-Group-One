@@ -32,17 +32,21 @@ public class StudentInfoModuleStepDef {
         CucumberLogUtils.logExtentScreenshot();
     }
 
-    @When("User logs in with username {string} and password {string}")
-    public void user_logs_in_with_username_and_password(String username, String password) throws InterruptedException, IOException {
+    @When("User enters username {string} and password {string}")
+    public void user_enters_username_and_password(String username, String password) throws IOException {
         loginPage.usernameTextBox.sendKeys(username);
         loginPage.passwordTextBox.sendKeys(password);
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
+ 
+    }
+
+    @When("User click on a button SingIn")
+    public void user_click_on_a_button_SingIn() throws IOException {
         loginPage.signInButton.click();
-        Thread.sleep(1000);
-        System.out.println("");
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
 
- 
     }
 
     @And("User wait while dashboard page loaded")
