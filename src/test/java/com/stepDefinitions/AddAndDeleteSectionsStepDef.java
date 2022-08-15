@@ -66,12 +66,14 @@ public class AddAndDeleteSectionsStepDef {
     }
 
     @Then("the {string} section should be deleted")
-    public void the_section_should_be_deleted(String sectionName) {
+    public void the_section_should_be_deleted(String sectionName) throws IOException {
         
         for (int i = 0; i < academicsSectionPage.allSectionNames.size();i++) {
             academicsSectionPage.allSectionNames.get(i);
 
             Assert.assertFalse(academicsSectionPage.allSectionNames.get(i).getText().contentEquals(sectionName));
         }
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
     }
 }

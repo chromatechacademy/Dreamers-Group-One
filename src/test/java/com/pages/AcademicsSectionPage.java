@@ -23,6 +23,10 @@ public class AcademicsSectionPage {
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement sectionsSaveButton;
 
+    // All remove buttons
+    // @FindBy(xpath = "//*[@class='btn btn-default btn-xs']")
+    // public List<WebElement> allSectionRemoveButtons;
+
     @FindBy(xpath = "//*[@class='mailbox-name']")
     public List<WebElement> allSectionNames;
 

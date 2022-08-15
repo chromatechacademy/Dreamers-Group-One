@@ -7,14 +7,12 @@ import org.testng.Assert;
 import com.constants.ApplicationConstants;
 import com.pages.LoginPage;
 import com.utils.CucumberLogUtils;
-import com.utils.ScreenShots;
 import com.web.CommonUtils;
 import com.web.WebDriverUtils;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.junit.Cucumber;
 
 public class LoginStepDef {
 
@@ -26,7 +24,6 @@ public class LoginStepDef {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
 
         CucumberLogUtils.logExtentScreenshot();
-
         CucumberLogUtils.logScreenShot();
     }
 
@@ -43,7 +40,6 @@ public class LoginStepDef {
         }
        
         CucumberLogUtils.logExtentScreenshot();
-
         CucumberLogUtils.logScreenShot();
     }
 
@@ -58,7 +54,6 @@ public class LoginStepDef {
         Assert.assertTrue(actualPageTitle.contentEquals(ApplicationConstants.EXPECTED_PAGE_TITLE));
 
         CucumberLogUtils.logExtentScreenshot();
-
         CucumberLogUtils.logScreenShot();
 
     }

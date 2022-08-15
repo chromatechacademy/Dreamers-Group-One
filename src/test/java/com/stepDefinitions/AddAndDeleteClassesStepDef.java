@@ -1,11 +1,14 @@
 package com.stepDefinitions;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
 import com.pages.AcademicsClassesPage;
 import com.pages.AcademicsSectionPage;
 import com.pages.HomePage;
 import com.pages.LoginPage;
+import com.utils.CucumberLogUtils;
 import com.web.CommonUtils;
 
 import cucumber.api.java.en.Given;
@@ -26,7 +29,7 @@ public class AddAndDeleteClassesStepDef {
     }
 
     @Given("adds class {string}")
-    public void adds_class(String newClassName) throws InterruptedException {
+    public void adds_class(String newClassName) throws InterruptedException, IOException {
 
         academicsClassesPage.classTextBox.sendKeys(newClassName);
 
@@ -36,10 +39,13 @@ public class AddAndDeleteClassesStepDef {
 
         CommonUtils.getWaitObject(60);
 
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+
     }
 
     @Given("deletes class {string}")
-    public void deletes_class(String newClassName) {
+    public void deletes_class(String newClassName) throws IOException {
 
         academicsClassesPage.removeClassButton.click();
 
@@ -47,16 +53,22 @@ public class AddAndDeleteClassesStepDef {
 
         CommonUtils.getWaitObject(60);
 
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+
     }
 
     @Then("the {string} class should be deleted")
-    public void the_class_should_be_deleted(String newClassName) {
+    public void the_class_should_be_deleted(String newClassName) throws IOException {
 
         for (int i = 0; i < academicsSectionPage.allSectionNames.size();i++) {
             academicsClassesPage.allClassNames.get(i);
 
             Assert.assertFalse(academicsSectionPage.allSectionNames.get(i).getText().contentEquals(newClassName));
         }
+
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
 
     }
 
