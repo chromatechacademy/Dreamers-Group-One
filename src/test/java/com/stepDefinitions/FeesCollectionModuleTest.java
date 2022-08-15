@@ -38,6 +38,8 @@ public class FeesCollectionModuleTest {
 
         feesCollection.feesCollectionModule.click();
 
+        Thread.sleep(2000);
+
     }
 
     @Then("the Fees Collection module contains {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
