@@ -4,7 +4,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.web.CommonUtils;
 import com.web.WebDriverUtils;
 
 public class StudentAdmissionPage {
@@ -48,6 +47,10 @@ public class StudentAdmissionPage {
     /* Save Button */
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public WebElement saveButton;
+
+    /* Sucessful Student Admission Message */
+    @FindBy(xpath = "//div[@class='alert alert-success']")
+    public WebElement sucessfulStudentAdmissionMessage;
 
     public StudentAdmissionPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);

@@ -17,8 +17,12 @@ public class DisabledStudentsPage {
     public WebElement disableStudentSearchButton;
 
     /* Disable Student */
-    @FindBy(partialLinkText = "TestStudent")
+    @FindBy(partialLinkText = "Test Student")
     public WebElement disabledStudent;
+
+    /* Displayed Disabled Reason */
+    @FindBy(xpath = "//span[normalize-space()='Test Reason']")
+    public WebElement displayedTestReason;
 
     /* Enable Button */
     @FindBy(xpath = "//i[@class='fa fa-thumbs-o-up']")

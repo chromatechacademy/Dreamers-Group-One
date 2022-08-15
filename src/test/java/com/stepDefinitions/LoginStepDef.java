@@ -7,14 +7,11 @@ import org.testng.Assert;
 import com.constants.ApplicationConstants;
 import com.pages.LoginPage;
 import com.utils.CucumberLogUtils;
-import com.utils.ScreenShots;
-import com.web.CommonUtils;
 import com.web.WebDriverUtils;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.api.junit.Cucumber;
 
 public class LoginStepDef {
 
@@ -35,13 +32,6 @@ public class LoginStepDef {
         loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
         loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
         loginPage.signInButton.click();
-        try {
-            // Thread.sleep(3000);
-            CommonUtils.getWaitObject();
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
        
         CucumberLogUtils.logExtentScreenshot();
 

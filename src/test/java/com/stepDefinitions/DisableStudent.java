@@ -1,5 +1,8 @@
 package com.stepDefinitions;
 
+import java.io.IOException;
+import org.testng.Assert;
+
 import com.constants.ApplicationConstants;
 import com.pages.BulkDeletePage;
 import com.pages.DisableReasonPage;
@@ -8,7 +11,7 @@ import com.pages.HomePage;
 import com.pages.LoginPage;
 import com.pages.StudentAdmissionPage;
 import com.pages.StudentDetailsPage;
-import com.utils.CucumberLogUtils;
+// import com.utils.CucumberLogUtils;
 import com.web.CommonUtils;
 import com.web.WebDriverUtils;
 
@@ -26,164 +29,344 @@ public class DisableStudent {
     DisabledStudentsPage disabledStudentsPage = new DisabledStudentsPage();
     BulkDeletePage bulkDeletePage = new BulkDeletePage();
 
-    @Given("a user is logged into the CTSMS website")
-    public void a_user_is_logged_into_the_CTSMS_website() {
+    /* Student Creation */
 
-        /* Navigating to CTSMS Login Page */
-        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
+    @When("navigates to Student Information menu")
+    public void navigates_to_Student_Information_menu() {
 
-        /* Enter Username */
-        loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
-
-        /* Enter Password */
-        loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
-
-        /* Click the Sign In Button */
-        loginPage.signInButton.click();
+        homePage.studentInfoModule.click();
     }
 
-    @When("user disables a student")
-    public void user_disables_a_student() {
+    @When("clicks on Student Admission")
+    public void clicks_on_Student_Admission() {
 
-        /* Click on Student Information */
-        homePage.studentInfoModule.click();
-
-        /* Navigate to Student Admission */
         homePage.studentAdmissionTab.click();
+    }
 
-        /* Enter Admission Number */
-        studentAdmissionPage.admissionNoTextbox.sendKeys("234567");
+    @When("enters Admission No {string}")
+    public void enters_Admission_No(String admissionNo) {
 
-        /* Selecting Class */
-        CommonUtils.selectDropDownValue("SDET", studentAdmissionPage.classDropdown);
+        studentAdmissionPage.admissionNoTextbox.sendKeys(admissionNo);
+    }
 
-        /* Selecting Section */
-        CommonUtils.selectDropDownValue("Testing Fundamentals", studentAdmissionPage.sectionDropdown);
+    @When("select Class {string} from Class dropdown")
+    public void select_Class_from_Class_dropdown(String classAdmission) {
 
-        /* Entering Students Name */
-        studentAdmissionPage.firstNameTextbox.sendKeys("TestStudent");
+        CommonUtils.selectDropDownValue(classAdmission, studentAdmissionPage.classDropdown);
+    }
 
-        /* Selecting Student Gender */
-        CommonUtils.selectDropDownValue("Male", studentAdmissionPage.genderDropdown);
+    @When("selects Section {string} from Section dropdown")
+    public void selects_Section_from_Section_dropdown(String sectionAdmission) {
 
-        /* Entering Student Date of Birth */
-        studentAdmissionPage.dateOfBirthCalendar.sendKeys("11/24/2000");
+        CommonUtils.selectDropDownValue(sectionAdmission, studentAdmissionPage.sectionDropdown);
+    }
 
-        /* Selecting Guardian */
+    @When("enters students name {string} in First Name textbox")
+    public void enters_students_name_in_First_Name_textbox(String firstName) {
+
+        studentAdmissionPage.firstNameTextbox.sendKeys(firstName);
+    }
+
+    @When("selects gender {string} from Gender dropdown")
+    public void selects_gender_from_Gender_dropdown(String gender) {
+
+        CommonUtils.selectDropDownValue(gender, studentAdmissionPage.genderDropdown);
+    }
+
+    @When("enters date of birth {string}")
+    public void enters_date_of_birth(String dob) {
+
+        studentAdmissionPage.dateOfBirthCalendar.sendKeys(dob);
+    }
+
+    @When("clicks radio button Father in If Guardian is,")
+    public void clicks_radio_button_Father_in_If_Guardian_is() {
+
         studentAdmissionPage.fatherGuardianRadioButton.click();
+    }
 
-        /* Entering Guardian Name */
-        studentAdmissionPage.guardianNameTextbox.sendKeys("TestFather");
+    @When("enters guardian name {string} into Guardian Name textbox")
+    public void enters_guardian_name_into_Guardian_Name_textbox(String guardianName) {
 
-        /* Entering Guardian Textbox */
-        studentAdmissionPage.guardianPhoneTextbox.sendKeys("1112223333");
+        studentAdmissionPage.guardianNameTextbox.sendKeys(guardianName);
+    }
 
-        /* Clicking on the Save Button */
+    @When("enters guardian phone {string}")
+    public void enters_guardian_phone(String guardianPhone) throws IOException {
+
+        studentAdmissionPage.guardianPhoneTextbox.sendKeys(guardianPhone);
+
+        // CucumberLogUtils.logExtentScreenshot();
+        // CucumberLogUtils.logScreenShot();
+    }
+
+    @When("user clicks on the save button")
+    public void user_clicks_on_the_save_button() {
+
         studentAdmissionPage.saveButton.click();
+    }
 
-        /* Navigate to Disable Reason */
+    @Then("sucessful student admission message will display {string}")
+    public void sucessful_student_admission_message_will_display(String expectedResults) throws IOException {
+
+        String actualResults = studentAdmissionPage.sucessfulStudentAdmissionMessage.getText();
+        Assert.assertTrue(actualResults.contentEquals(expectedResults));
+
+        // CucumberLogUtils.logExtentScreenshot();
+        // CucumberLogUtils.logScreenShot();
+    }
+
+    /* Creation of Disable Reason */
+
+    @Given("a teacher is on the Disable Reason page")
+    public void a_teacher_is_on_the_Disable_Reason_page() throws IOException {
+
+        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
+        loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
+        loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
+        loginPage.signInButton.click();
+        homePage.studentInfoModule.click();
         homePage.disableReasonTab.click();
 
-        /* Entering Disable Reason Name */
-        disableReasonPage.disableReasonNameTextbox.sendKeys("TestReason");
+        // CucumberLogUtils.logExtentScreenshot();
+        // CucumberLogUtils.logScreenShot();
+    }
 
-        /* Click on Save Button */
+    @When("a teacher enters disable reason name {string} into the add name textbox")
+    public void a_teacher_enters_disable_reason_name_into_the_add_name_textbox(String disableReasonName) {
+
+        disableReasonPage.disableReasonNameTextbox.sendKeys(disableReasonName);
+    }
+
+    @When("clicks on the add reason save button")
+    public void clicks_on_the_add_reason_save_button() throws IOException {
+
         disableReasonPage.disableReasonSaveButton.click();
 
-        /* Navigate to Student Details */
+        // CucumberLogUtils.logExtentScreenshot();
+        // CucumberLogUtils.logScreenShot();
+    }
+
+    @Then("a Disable Reason is created {string} and will display the added test reason {string}")
+    public void a_Disable_Reason_is_created_and_will_display_the_added_test_reason(String disableReason,
+            String expectedResult) {
+
+        String actualResult = disableReasonPage.testReasonDynamicXPATH(disableReason).getText();
+        Assert.assertTrue(actualResult.contentEquals(expectedResult));
+    }
+
+    /* Disable Student */
+
+    @Given("a teacher is on the Student Details page")
+    public void a_teacher_is_on_the_Student_Details_page() throws IOException {
+
+        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
+        loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
+        loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
+        loginPage.signInButton.click();
+        homePage.studentInfoModule.click();
         homePage.studentDetailsTab.click();
 
-        /* Search for Created Student */
-        studentDetailsPage.studentDetailsSearchByKeywordTextbox.sendKeys("TestStudent");
+        // CucumberLogUtils.logExtentScreenshot();
+        // CucumberLogUtils.logScreenShot();
+    }
 
-        /* Click Search */
+    @When("the teacher enters student name {string} into the keyword search textbox")
+    public void the_teacher_enters_student_name_into_the_keyword_search_textbox(String studentName) {
+
+        studentDetailsPage.studentDetailsSearchByKeywordTextbox.sendKeys(studentName);
+    }
+
+    @When("clicks on the keyword search button")
+    public void clicks_on_the_keyword_search_button() throws IOException {
+
         studentDetailsPage.studentDetailsSearchButton.click();
 
-        /* Click on Test Student */
+        // CucumberLogUtils.logExtentScreenshot();
+        // CucumberLogUtils.logScreenShot();
+    }
+
+    @When("clicks on student")
+    public void clicks_on_student() {
+
+        CommonUtils.waitForClickability(studentDetailsPage.selectStudentButton);
         studentDetailsPage.selectStudentButton.click();
+    }
 
-        /* Click on Disble Student */
+    @When("clicks the red thumbs down icon")
+    public void clicks_the_red_thumbs_down_icon() {
+
         studentDetailsPage.disableStudentButton.click();
+    }
 
-        /* Select Yes to Disable Student */
+    @When("accepts the chrome alert")
+    public void accepts_the_chrome_alert() {
+
         CommonUtils.acceptAlert();
+    }
 
-        /* Adding a wait for visibility */
+    @When("selects disable reason")
+    public void selects_disable_reason() throws IOException {
+
         CommonUtils.waitForVisibility(studentDetailsPage.selectReasonDropdown);
+        CommonUtils.selectDropDownValue("Test Reason", studentDetailsPage.selectReasonDropdown);
 
-        /* Select Disabled Reason */
-        CommonUtils.selectDropDownValue("TestReason", studentDetailsPage.selectReasonDropdown);
+        // CucumberLogUtils.logExtentScreenshot();
+        // CucumberLogUtils.logScreenShot();
+    }
 
-        /* Enter Disable Reason Note */
-        studentDetailsPage.disableStudentNoteTextbox.sendKeys("Testing");
+    @When("clicks on the disable student save button")
+    public void clicks_on_the_disable_student_save_button() {
 
-        /* Click on Save */
         studentDetailsPage.disableStudentSaveButton.click();
-
     }
 
-    @Then("user will appear as disabled <{string}>")
-    public void user_will_appear_as_disabled(String expectedDisabledStudent) {
-       
-        /* Wait for visibility */
-        CommonUtils.waitForVisibility(homePage.disableStudentTab);
+    @Then("the student record will be disabled and display Disable Reason {string}")
+    public void the_student_record_will_be_disabled_and_display_Disable_Reason(String expectedResult) {
 
-        /* Navigate to Disable  */
+        String actualResult = disabledStudentsPage.displayedTestReason.getText();
+        Assert.assertTrue(actualResult.contentEquals(expectedResult));
+    }
+
+    /* Enable Student */
+
+    @Given("a teacher is on the Disabled Students page")
+    public void a_teacher_is_on_the_Disabled_Students_page() {
+
+        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
+        loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
+        loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
+        loginPage.signInButton.click();
+        homePage.studentInfoModule.click();
         homePage.disableStudentTab.click();
+    }
 
-        /* Search Disabled Student */
-        disabledStudentsPage.disableStudentSearchByKeywordTextbox.sendKeys("TestStudent");
+    @When("a teacher enters disabled student {string} into the keyword textbox")
+    public void a_teacher_enters_disabled_student_into_the_keyword_textbox(String disabledStudent) {
 
-        /* CLick Search Button */
+        disabledStudentsPage.disableStudentSearchByKeywordTextbox.sendKeys(disabledStudent);
+
+        // CucumberLogUtils.logExtentScreenshot();
+        // CucumberLogUtils.logScreenShot();
+    }
+
+    @When("clicks on the disabled student keyword search button")
+    public void clicks_on_the_disabled_student_keyword_search_button() {
+
         disabledStudentsPage.disableStudentSearchButton.click();
+    }
 
-        /* Click on Disabled Student */
+    @When("clicks on disabled student while on the Disabled Students page")
+    public void clicks_on_disabled_student_while_on_the_Disabled_Students_page() {
+
         disabledStudentsPage.disabledStudent.click();
+    }
 
-        /* Taking Screenshot */
-        CucumberLogUtils.logScreenShot();
+    @When("clicks on the green thumbs up icon")
+    public void clicks_on_the_green_thumbs_up_icon() {
 
-        /* Click on Enable Button */
         disabledStudentsPage.enableButton.click();
+    }
 
-        /* Select Yes to Enable Student */
+    @When("accepts the alert")
+    public void accepts_the_alert() {
+
         CommonUtils.acceptAlert();
+    }
 
-        /* Wait for visibility */
-        CommonUtils.waitForVisibility(homePage.studentDetailsTab);
+    @When("navigates to the Student Details")
+    public void navigates_to_the_Student_Details() {
 
-        /* Navigate to Student Details */
         homePage.studentDetailsTab.click();
+    }
 
-        /* Search for Created Student */
-        studentDetailsPage.studentDetailsSearchByKeywordTextbox.sendKeys("TestStudent");
+    @When("enters student name {string} into the keyword search textbox")
+    public void enters_student_name_into_the_keyword_search_textbox(String studentName) {
 
-        /* Click Search */
-        studentDetailsPage.studentDetailsSearchButton.click();
+        CommonUtils.waitForVisibility(studentDetailsPage.studentDetailsSearchByKeywordTextbox);
+        studentDetailsPage.studentDetailsSearchByKeywordTextbox.sendKeys(studentName);
+    }
 
-        /* Taking Screenshot */
-        CucumberLogUtils.logScreenShot();
+    @Then("the student will display on the Student Details page {string}")
+    public void the_student_will_display_on_the_Student_Details_page(String expectedResult) {
 
-        /* Wait for visibility */
-        CommonUtils.waitForVisibility(homePage.bulkDeleteTab);
-        
-        /* Navigate to Bulk Delete */
-        homePage.bulkDeleteTab.click();
+        String actualResult = studentDetailsPage.selectStudentButton.getText();
 
-        /* Select Class */
-        CommonUtils.selectDropDownValue("SDET", bulkDeletePage.bulkDeleteClassDropdown);
+        Assert.assertTrue(actualResult.contentEquals(expectedResult));
+    }
 
-        /* Select Section */
-        CommonUtils.selectDropDownValue("Testing Fundamentals", bulkDeletePage.bulkDeleteSectionDropdown);
+    /* Delete Disable Reason */
 
-        /* Click Search Button */
-        bulkDeletePage.bulkDeleteSearchButton.click();
+    @Given("a teacher is on the Disable Reason Page")
+    public void a_teacher_is_on_the_Disable_Reason_Page() {
 
-        /* Select Student to Delete */
-        bulkDeletePage.selectStudentToDelete.click();
+        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
+        loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
+        loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
+        loginPage.signInButton.click();
+        homePage.studentInfoModule.click();
+        homePage.disableReasonTab.click();
+    }
 
-        /* Click Delete Button */
-        bulkDeletePage.deleteButton.click();
+    @When("a teacher clicks on the delete button associated to the Disable Reason {string}")
+    public void a_teacher_clicks_on_the_delete_button_associated_to_the_Disable_Reason(String disableReason) {
+
+        disableReasonPage.deleteDisableReasonDynamicXPATH(disableReason).click();
+    }
+
+    @When("accepts alert")
+    public void accepts_alert() {
+
+        CommonUtils.acceptAlert();
+    }
+
+    @Then("the page will not display disable reason “Disable Reason”")
+    public void the_page_will_not_display_disable_reason_Disable_Reason() {
 
     }
+
+    /* Delete Student */
+
+    @Given("a teacher is on the Bulk Delete page")
+    public void a_teacher_is_on_the_Bulk_Delete_page() {
+
+        WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
+        loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
+        loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
+        loginPage.signInButton.click();
+        homePage.studentInfoModule.click();
+        homePage.bulkDeleteTab.click();
+    }
+
+    @When("a teacher selectts the Class {string} and Section {string} of the desired student")
+    public void a_teacher_selectts_the_Class_and_Section_of_the_desired_student(String studentClass,
+            String studentSection) {
+
+        CommonUtils.selectDropDownValue(studentClass, bulkDeletePage.bulkDeleteClassDropdown);
+        CommonUtils.selectDropDownValue(studentSection, bulkDeletePage.bulkDeleteSectionDropdown);
+    }
+
+    @When("clicks on the bulk delete search button")
+    public void clicks_on_the_bulk_delete_search_button() {
+
+        bulkDeletePage.bulkDeleteSearchButton.click();
+    }
+
+    @When("selects student with admission number {string} to delete")
+    public void selects_student_with_admission_number_to_delete(String studentRecordAdmissionNo) {
+        
+        bulkDeletePage.bulkDeleteDynamicXpath(studentRecordAdmissionNo).click();
+    }
+
+    @When("clicks on the delete button")
+    public void clicks_on_the_delete_button() {
+
+        bulkDeletePage.deleteButton.click();
+    }
+
+    @Then("the Bulk Delete page wont display selected student {string}")
+    public void the_Bulk_Delete_page_wont_display_selected_student(String string) {
+
+    }
+
 }

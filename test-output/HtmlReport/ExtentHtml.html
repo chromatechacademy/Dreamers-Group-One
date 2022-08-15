@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 12, 2022 09:52:19 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 15, 2022 01:32:30 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -68,7 +68,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -80,9 +80,12 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@jomir</a></li>
+					<li><a href='#'>@DG1-6</a></li>
+					<li><a href='#'>@Smoke</a></li>
 					<li><a href='#'>@Angel</a></li>
-					<li><a href='#'>@DG1-15</a></li>
-					<li><a href='#'>@Progression</a></li>
+					<li><a href='#'>@DG1-2</a></li>
+					<li><a href='#'>@DG1-1</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -123,10 +126,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -137,12 +140,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -153,12 +156,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>10</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>3</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -176,11 +179,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Disable Student</span>
-						<span class='test-time'>Aug 12, 2022 09:52:19 PM</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='test-name'>CTSMS - Income module</span>
+						<span class='test-time'>Aug 15, 2022 01:32:33 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -189,28 +192,140 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='skip'>
+<div class='test-desc'>Description: This feature file contains Chroma Tech School Management System Income Module Menu Items</div>
+<div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label'>@Angel</span>
-		<span class='category label'>@DG1-15</span>
-		<span class='category label'>@Progression</span>
+		<span class='category label'>@jomir</span>
+		<span class='category label'>@DG1-6</span>
+		<span class='category label'>@Smoke</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+43ms</span>
+	<span class='duration right label'>0h 0m 7s+423ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span> Scenario: Disable Student scenario</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Income Module to include:</div>
+		"""
+            - Add Income
+            - Search Income
+            - Income Head
+            """
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node * skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.start(Scenario)</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='4' class='node given pass' status='pass'>
+			<div class="step-name" title="IncomeModuleStepDef.a_user_is_logged_into_the_CTSMS_portal()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given a user is logged into the CTSMS portal</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\angel\Desktop\Dreamers-Group-One/test-output/screenshots/image_15082022_133236.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='4' class='node given skip' status='skip'>
-			<div class="step-name" title="InvalidLogin.a_user_is_on_the_CTSMS_web_page()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given a user is on the CTSMS web page</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='5' class='node and pass' status='pass'>
+			<div class="step-name" title="IncomeModuleStepDef.the_user_is_on_the_CTSMS_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And the user is on the CTSMS home page</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\angel\Desktop\Dreamers-Group-One/test-output/screenshots/image_15082022_133236.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='5' class='node * skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.end(Scenario)</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='6' class='node when pass' status='pass'>
+			<div class="step-name" title="IncomeModuleStepDef.the_user_clicks_on_the_sidebar_navigation_menu(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When the user clicks "Income" on the sidebar navigation menu</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\angel\Desktop\Dreamers-Group-One/test-output/screenshots/image_15082022_133240.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='7' class='node then pass' status='pass'>
+			<div class="step-name" title="IncomeModuleStepDef.the_page_displays_the_following_menu_items(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the page displays the following menu items: "Add Income", "Search Income", "Income Head"</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\angel\Desktop\Dreamers-Group-One/test-output/screenshots/image_15082022_133240.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Invalid Login</span>
+						<span class='test-time'>Aug 15, 2022 01:32:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='10' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@Angel</span>
+		<span class='category label'>@DG1-2</span>
+		<span class='category label'>@Smoke</span>
+	</div>
+	<span class='duration right label'>0h 0m 2s+34ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Invalid Login scenario</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='12' class='node given pass' status='pass'>
+			<div class="step-name" title="InvalidLogin.a_user_is_on_the_CTSMS_web_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given a user is on the CTSMS web page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='13' class='node when pass' status='pass'>
+			<div class="step-name" title="InvalidLogin.user_attempts_logs_in_with_invalid_username_and_invalid_password(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user attempts logs in with invalid username "general1@teacher.com" and invalid password "234567"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='14' class='node then pass' status='pass'>
+			<div class="step-name" title="InvalidLogin.the_user_should_see_message(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the user should see message "Invalid Username or Password"</div>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Login Scenarios</span>
+						<span class='test-time'>Aug 15, 2022 01:32:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='test-desc'>Description: This feature file contains Chroma Tech School Management System Login Scenarios</div>
+<div class='scenario node' test-id='17' status='pass'>
+	<div class='category-list'>
+		<span class='category label'>@jomir</span>
+		<span class='category label'>@DG1-1</span>
+		<span class='category label'>@Smoke</span>
+	</div>
+	<span class='duration right label'>0h 0m 3s+932ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Login with valid credentials</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='19' class='node given pass' status='pass'>
+			<div class="step-name" title="LoginStepDef.a_user_is_on_the_CTSMS_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given a user is on the CTSMS login page</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\angel\Desktop\Dreamers-Group-One/test-output/screenshots/image_15082022_133245.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='20' class='node when pass' status='pass'>
+			<div class="step-name" title="LoginStepDef.the_user_logs_in_with_username_and_password()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When the user logs in with username and password</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\angel\Desktop\Dreamers-Group-One/test-output/screenshots/image_15082022_133248.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='21' class='node then pass' status='pass'>
+			<div class="step-name" title="LoginStepDef.the_user_should_be_succesfully_logged_in_and_page_title_is(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the user should be succesfully logged in and page title is "Chroma Tech Academy"</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\angel\Desktop\Dreamers-Group-One/test-output/screenshots/image_15082022_133248.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
 		</li>
 	</ul>
 </div>
@@ -256,16 +371,130 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
+						<span class='category-name'>@jomir</span>
+						<span class='category-status right'>
+						<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 15, 2022 01:32:33 PM</td>
+										<td class='linked' test-id='2'>Income Module to include:</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 15, 2022 01:32:44 PM</td>
+										<td class='linked' test-id='17'>Login with valid credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@DG1-6</span>
+						<span class='category-status right'>
+						<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 15, 2022 01:32:33 PM</td>
+										<td class='linked' test-id='2'>Income Module to include:</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Smoke</span>
+						<span class='category-status right'>
+						<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 15, 2022 01:32:33 PM</td>
+										<td class='linked' test-id='2'>Income Module to include:</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 15, 2022 01:32:41 PM</td>
+										<td class='linked' test-id='10'>Invalid Login scenario</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Aug 15, 2022 01:32:44 PM</td>
+										<td class='linked' test-id='17'>Login with valid credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
 						<span class='category-name'>@Angel</span>
 						<span class='category-status right'>
-						<span class='label others'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
-							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -278,9 +507,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2022 09:52:19 PM</td>
-										<td class='linked' test-id='2'>Disable Student scenario</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td>Aug 15, 2022 01:32:41 PM</td>
+										<td class='linked' test-id='10'>Invalid Login scenario</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -289,16 +518,16 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@DG1-15</span>
+						<span class='category-name'>@DG1-2</span>
 						<span class='category-status right'>
-						<span class='label others'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
-							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -311,9 +540,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2022 09:52:19 PM</td>
-										<td class='linked' test-id='2'>Disable Student scenario</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td>Aug 15, 2022 01:32:41 PM</td>
+										<td class='linked' test-id='10'>Invalid Login scenario</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -322,16 +551,16 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Progression</span>
+						<span class='category-name'>@DG1-1</span>
 						<span class='category-status right'>
-						<span class='label others'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
-							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -344,9 +573,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2022 09:52:19 PM</td>
-										<td class='linked' test-id='2'>Disable Student scenario</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td>Aug 15, 2022 01:32:44 PM</td>
+										<td class='linked' test-id='17'>Login with valid credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -370,37 +599,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>2</div>
-				</div>
-			</div>
-			<div class='col s2'>
-				<div class='card-panel r'>
-					Scenarios
-					<div class='panel-lead'>2</div>
-				</div>
-			</div>
-			<div class='col s2'>
-				<div class='card-panel r'>
-					Steps
 					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>10</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 12, 2022 09:52:19 PM</div>
+					<div class='panel-lead'>Aug 15, 2022 01:32:30 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 12, 2022 09:52:19 PM</div>
+			 		<div class='panel-lead'>Aug 15, 2022 01:32:48 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 0s+350ms</div>
+					<div class='panel-lead'>0h 0m 18s+183ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -416,34 +645,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@Angel</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@DG1-15</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@Progression</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@Smoke</td>
+							<td>@jomir</td>
 							<td>2</td>
 							<td>0</td>
 							<td>0</td>
@@ -452,29 +654,48 @@
 							</td>
 						</tr>
 						<tr>
+							<td>@DG1-6</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Smoke</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Angel</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@DG1-2</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
 							<td>@DG1-1</td>
->>>>>>> 1b6c044b51ffe573a59dce49f66cd4431e17ec2b
 							<td>1</td>
+							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@DG1-15</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-							<td>
-									0%
-							</td>
-						</tr>
-						<tr>
-							<td>@Progression</td>
-							<td>0</td>
-							<td>0</td>
-							<td>1</td>
-							<td>
-									0%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -488,39 +709,39 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 0,
+                parentCount: 3,
+				passParent: 3,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 1,
-				exceptionsParent: 1,
-				childCount: 1,
-				passChild: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 3,
+				passChild: 3,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 1,
+				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 1,
-				grandChildCount: 3,
-				passGrandChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 10,
+				passGrandChild: 10,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 3,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 3,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Disable Student":0.043
+			        "CTSMS - Income module":7.423,"Invalid Login":2.034,"Login Scenarios":3.932
 			};
 		</script>
 	

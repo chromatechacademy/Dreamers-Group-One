@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.web.WebDriverUtils;
 
 public class BulkDeletePage {
-    
+
     /* Class Dropdown */
     @FindBy(xpath = "//select[@name='class_id']")
     public WebElement bulkDeleteClassDropdown;
@@ -21,14 +21,19 @@ public class BulkDeletePage {
     @FindBy(xpath = "//button[normalize-space()='Search']")
     public WebElement bulkDeleteSearchButton;
 
-    /* Student to Delete */
-    @FindBy(partialLinkText = "TestStudent")
-    public WebElement studentToDelete;
+    // /* Student to Delete */
+    // @FindBy(partialLinkText = "TestStudent")
+    // public WebElement studentToDelete;
 
-    /* Common xpath for Student to Delete  */
-    public WebElement deleteStudentDynamicXPATH(String student) {
+    /* Common xpath for Student to Delete */
+    public WebElement bulkDeleteDynamicXpath(String studentRecordAdmissionNumber) {
 
-        return WebDriverUtils.driver.findElement(By.xpath("xpathExpression"))
+        return WebDriverUtils.driver.findElement(
+
+                By.xpath("//*[contains(text(),'" + studentRecordAdmissionNumber
+
+                        + "')]/preceding-sibling::td/input[@type='checkbox']"));
+
     }
 
     /* Delete Button */

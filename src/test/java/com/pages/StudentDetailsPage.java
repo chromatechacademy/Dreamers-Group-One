@@ -17,7 +17,7 @@ public class StudentDetailsPage {
     public WebElement studentDetailsSearchButton;
 
     /* Select Student Button */
-    @FindBy(partialLinkText = "TestStudent")
+    @FindBy(partialLinkText = "Test Student")
     public WebElement selectStudentButton;
 
     /* Disable Student Button */
