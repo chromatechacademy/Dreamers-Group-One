@@ -108,12 +108,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
+							<a href="#" class="item-title _500">java.lang.AssertionError</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
+								<h5 class="mb-4">java.lang.AssertionError</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -127,30 +127,29 @@
 	
 <tr class="s-fail" test-id="9" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then user will have created a Student <br/><span class="text-muted text-sm">CTSMS - Student Admission</span></td>
-	<td>0h 0m 4s+625msc</td>
+	<td class="_600">Then the user will get a message saying "The Admission No field must contain a unique value" <br/><span class="text-muted text-sm">CTSMS - Student Admission unique admission number</span></td>
+	<td>0h 0m 0s+305msc</td>
 	<td></td>
 	<td>
+		<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_170040.png' src='C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_170040.png'>
+		<img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded6.png' src='test-output/embedded6.png'>
 	</td>
 	<td class="static"><i class="static fa fa-external-link"></i></td>
 </tr>
 <tr class="details">
 	<td colspan="5">
+		<textarea disabled class="code-block"></textarea>
 		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //div[@class='alert alert-success']
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.3.0', revision: 'a4995e2c09*'
-System info: host: 'VIC-DESKTOP', ip: '192.168.86.27', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy20.getText(Unknown Source)
-	at com.stepDefinitions.StudentAdmission.user_will_have_created_a_Student(StudentAdmission.java:56)
-	at ✽.user will have created a Student(file:src/test/java/com/features/studentAdmission.feature:12)
+		
+		<textarea disabled class="code-block">java.lang.AssertionError: expected [The Admission No field must contain a unique value] but found [The Admission No field must contain a unique value.]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.stepDefinitions.StudentAdmissionUniqueNumber.the_user_will_get_a_message_saying(StudentAdmissionUniqueNumber.java:33)
+	at ✽.the user will get a message saying "The Admission No field must contain a unique value"(file:src/test/java/com/features/studentAdmission.feature:21)
 </textarea>
 	</td>
 </tr>
@@ -178,7 +177,7 @@ Driver info: driver.version: RemoteWebDriver
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 15, 2022 04:21:19 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 15, 2022 05:00:32 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

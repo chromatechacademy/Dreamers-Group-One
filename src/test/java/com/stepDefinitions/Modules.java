@@ -18,7 +18,7 @@ import cucumber.api.java.en.Then;
 
 public class Modules {
     CTMSHomePage ctmsHomePage = new CTMSHomePage();
-    
+
     @Then("the navigation modules should be displayed")
     public void the_navigation_modules_should_be_displayed() throws IOException {
 
@@ -57,5 +57,5 @@ public class Modules {
 
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
-    }   
+    }
 }

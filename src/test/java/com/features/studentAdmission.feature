@@ -18,4 +18,4 @@ Feature: Student Admission unique admission number
      And clicks on Student Admission module
      And fills in an existing Admission No.
      And clicks Save
-     Then the user will get a message saying "The Admission No field must contain a unique value"
+     Then the user will get a message saying "The Admission No field must contain a unique value."

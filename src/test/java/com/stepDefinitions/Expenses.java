@@ -21,17 +21,21 @@ public class Expenses {
     ExpenseModulePage expensePage = new ExpenseModulePage();
 
     @Given("user has logged in with valid credentials")
-    public void user_has_logged_in_with_valid_credentials() {
+    public void user_has_logged_in_with_valid_credentials() throws IOException {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
         loginPage.usernameTextBox.sendKeys("general@teacher.com");
         loginPage.passwordTextBox.sendKeys("123456");
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
         loginPage.signInButton.click();
     }
 
     @Given("clicks on the Expenses module")
-    public void clicks_on_the_Expenses_module() {
+    public void clicks_on_the_Expenses_module() throws IOException {
 
-       expensePage.expensesModule.click();
+        CucumberLogUtils.logScreenShot();
+        CucumberLogUtils.logExtentScreenshot();
+        expensePage.expensesModule.click();
 
     }
 
@@ -55,8 +59,8 @@ public class Expenses {
         String ActualExpenseHeadModule = expensePage.expenseHeadModule.getText();
         String ExpectedExpenseHeadModule = "Expense Head";
         Assert.assertEquals(ActualExpenseHeadModule, ExpectedExpenseHeadModule);
+        CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
-
     }
 
 }
