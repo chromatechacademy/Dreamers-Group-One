@@ -17,7 +17,7 @@ public class DisabledStudentsPage {
     public WebElement disableStudentSearchButton;
 
     /* Disable Student */
-    @FindBy(partialLinkText = "Test Student")
+    @FindBy(linkText = "Test Student")
     public WebElement disabledStudent;
 
     /* Displayed Disabled Reason */

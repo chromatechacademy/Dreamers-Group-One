@@ -17,7 +17,7 @@ public class HomePage {
     public WebElement studentAdmissionTab;
 
     //* Student Details Tab */
-    @FindBy(xpath = "(//a[normalize-space()='Student Details'])[2]")
+    @FindBy(xpath = "//ul[@class='treeview-menu']//a[normalize-space()='Student Details']")
     public WebElement studentDetailsTab;
 
     //* Disabled Students Tab*/

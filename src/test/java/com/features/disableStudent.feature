@@ -1,4 +1,4 @@
-Feature: Disable Student
+Feature: Disable and Enable Student
 
     @Angel @DG1-15a @Progression
     Scenario: Create Student scenario
@@ -30,14 +30,14 @@ Feature: Disable Student
         Given a teacher is on the Student Details page
         When the teacher enters student name "Test Student" into the keyword search textbox
         And clicks on the keyword search button
-        And clicks on student 
+        And clicks on student
         And clicks the red thumbs down icon
         And accepts the chrome alert
         And selects disable reason
         And clicks on the disable student save button
         Then the student record will be disabled and display Disable Reason "Test Reason"
 
-    @Angel @DG1-16a @Progression
+    @Angel @DG1-16 @Progression
     Scenario: Enable Student scenario
         Given a teacher is on the Disabled Students page
         When a teacher enters disabled student "Test Student" into the keyword textbox
@@ -49,20 +49,5 @@ Feature: Disable Student
         And enters student name "Test Student" into the keyword search textbox
         And clicks on the keyword search button
         Then the student will display on the Student Details page "Test Student"
-
-    @Angel @DG1-16b @Progression
-    Scenario: Delete Disable Reason
-        Given a teacher is on the Disable Reason Page
-        When a teacher clicks on the delete button associated to the Disable Reason "Test Reason"
-        And accepts alert
-        Then the page will not display disable reason “Disable Reason”
-
-    @Angel @DG1-16c @Progression
-    Scenario: Delete Selected Student
-        Given a teacher is on the Bulk Delete page
-        When a teacher selectts the Class "SDET" and Section "Testing Fundamentals" of the desired student
-        And clicks on the bulk delete search button
-        And selects student with admission number "0240" to delete
-        And clicks on the delete button
-        And accepts the alert
-        Then the Bulk Delete page wont display selected student "Test Student"
+        And the teacher deletes Disable Reason "Test Reason"
+        And deletes student record with class "SDET" and section "Testing Fundamentals" and admission number "0240"
