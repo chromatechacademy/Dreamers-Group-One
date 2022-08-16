@@ -125,23 +125,19 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="12" parent-id="1">
+<tr class="s-fail" test-id="13" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">Then the user will get a message saying "The Admission No field must contain a unique value." <br/><span class="text-muted text-sm">CTSMS - Student Admission unique admission number</span></td>
-	<td>0h 0m 14s+236msc</td>
+	<td class="_600">And user deletes student records with class "SDET" and section "Testing Fundamentals" and admission no "1343456" <br/><span class="text-muted text-sm">CTSMS - Student Admission unique admission number</span></td>
+	<td>0h 0m 3s+691msc</td>
 	<td></td>
 	<td>
-		<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_225156.png' src='C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_225156.png'>
-		<img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded6.png' src='test-output/embedded6.png'>
 	</td>
 	<td class="static"><i class="static fa fa-external-link"></i></td>
 </tr>
 <tr class="details">
 	<td colspan="5">
-		<textarea disabled class="code-block"></textarea>
 		
-		
-		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //p[contains(text(),'The Admission No field must contain a unique value')]
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //*[contains(text(),'1343456')]/preceding-sibling::td/input[@type='checkbox']
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
 System info: host: 'VIC-DESKTOP', ip: '192.168.86.27', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
@@ -150,11 +146,9 @@ Driver info: driver.version: RemoteWebDriver
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-	at com.sun.proxy.$Proxy21.getText(Unknown Source)
-	at com.stepDefinitions.StudentAdmissionUniqueNumber.the_user_will_get_a_message_saying(StudentAdmissionUniqueNumber.java:53)
-	at ✽.the user will get a message saying "The Admission No field must contain a unique value."(file:src/test/java/com/features/StudentAdmissionUniqueNumber.feature:14)
+	at com.pages.BulkDeletePage.bulkDeletePageDynamicXpath(BulkDeletePage.java:35)
+	at com.stepDefinitions.StudentAdmission.user_deletes_student_records_with_class_and_section_and_admission_no(StudentAdmission.java:87)
+	at ✽.user deletes student records with class "SDET" and section "Testing Fundamentals" and admission no "1343456"(file:src/test/java/com/features/StudentAdmissionUniqueNumber.feature:15)
 </textarea>
 	</td>
 </tr>
@@ -182,7 +176,7 @@ Driver info: driver.version: RemoteWebDriver
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 15, 2022 10:51:47 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 16, 2022 07:47:24 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

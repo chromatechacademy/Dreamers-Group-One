@@ -1,8 +1,7 @@
 Feature: Navigation Modules
 
-    Feature Description
 
-    @DG1-3
+    @Victor @DG1-3 @Regression
     Scenario: Navigating to the modules
         Given is on the CTSMS login page
         When user logs in with username "general@teacher.com" and password "123456" and logs in

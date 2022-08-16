@@ -1,7 +1,7 @@
 Feature: Student Admission
 
 
-    @DG1-12
+    @Victor @DG1-12 @Regression
     Scenario: CTSMS - Student Admission
         Given is on the CTSMS login page
         When user logs in with username "general@teacher.com" and password "123456" and logs in

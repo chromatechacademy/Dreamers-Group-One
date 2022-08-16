@@ -4,7 +4,6 @@ package com.runners;
 
 
 import org.junit.runner.RunWith;
-import org.openqa.selenium.devtools.v103.audits.model.TrustedWebActivityIssueDetails;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 

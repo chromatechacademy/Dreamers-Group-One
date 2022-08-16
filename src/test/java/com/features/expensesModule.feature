@@ -1,9 +1,7 @@
-
 Feature: Expense Module
 
-    Feature Description
 
-    @DG1-7
+    @Victor @DG1-7 @Regression
     Scenario: Navigating to the expenses modules
         Given is on the CTSMS login page
         When user logs in with username "general@teacher.com" and password "123456" and logs in

@@ -1,8 +1,7 @@
 Feature: Academics Module
 
-    Feature Description
 
-    @DG1-8
+    @Victor @DG1-8 @Regression
     Scenario: Navigating to the Academics module
         Given is on the CTSMS login page
         When user logs in with username "general@teacher.com" and password "123456" and logs in
