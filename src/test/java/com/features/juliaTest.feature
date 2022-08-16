@@ -13,23 +13,26 @@ Feature: JuliaSimpleTest
   Scenario:  Verify that Human Resource Module list is reflected properly
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"
-     And User click on a button SingIn
+    And User click on a button SingIn
     Then User click on Human Resource Module item on left navigation menu
 
-    @Julia @DG1-14 @Smoke
-  Scenario: Chroma Tech faculty user, should be able to edit student records by searching student details.
+  @Julia @DG1-14 @Smoke
+  Scenario Outline:Chroma Tech faculty user, should be able to edit student records by searching student details.
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"
     And User click on a button SingIn
     And User click on Student information item on left navigation menu
     And User click on Student Addmission Section
-    
-    
-    
-    
+    And User enters his data "<admissionNo>","<class>","<section>","<firstName>","<gender>","<dateOfBirth>","<ifGuardianIs>","<guardianName>","<guardianPhone>"
+    And User click on a button SAVE
+    And User click on a searching and enters firstName "Julia"
+    And User click on search button
+    And User click on Edit button
+    And User changes admission number "123098"
+    Then User click on a button SAVE
 
 
-
-
-    
+    Examples:
+      | admissionNo | class | section    | firstName | gender | dateOfBirth | ifGuardianIs | guardianName | guardianPhone |
+      | 123678      | SDET  | Git/GitHub | Julia     | female | 06/18/1992  | Other        | Katja        | 1234567       |
 

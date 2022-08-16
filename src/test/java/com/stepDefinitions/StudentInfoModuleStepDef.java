@@ -60,7 +60,7 @@ public class StudentInfoModuleStepDef {
     @And("User click on Student information item on left navigation menu")
     public void iClickOnStudentInformationItemOnLeftNavigationMenu() throws InterruptedException, IOException {
         dashboardPage.studentInfoItem.click();
-        Thread.sleep(1500);
+        Thread.sleep(1000);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
@@ -76,5 +76,5 @@ public class StudentInfoModuleStepDef {
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
-
+  
 }
