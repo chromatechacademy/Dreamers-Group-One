@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 15, 2022 05:12:26 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 15, 2022 10:53:09 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -80,8 +80,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@academic</a></li>
-					<li><a href='#'>@DG1-8</a></li>
+					<li><a href='#'>@DG1-13</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -152,7 +151,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>10</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -177,8 +176,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Academics Module</span>
-						<span class='test-time'>Aug 15, 2022 05:12:28 PM</span>
+						<span class='test-name'>Student Admission unique admission number</span>
+						<span class='test-time'>Aug 15, 2022 10:53:11 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -188,33 +187,71 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='test-desc'>Feature Description</div>
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label'>@academic</span>
-		<span class='category label'>@DG1-8</span>
+		<span class='category label'>@DG1-13</span>
 	</div>
-	<span class='duration right label'>0h 0m 3s+967ms</span>
+	<span class='duration right label'>0h 0m 8s+713ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Navigating to the Academics module</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: CTSMS - Student Admission unique admission number</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='4' class='node given pass' status='pass'>
-			<div class="step-name" title="Expenses.user_has_logged_in_with_valid_credentials()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has logged in with valid credentials</div>
+			<div class="step-name" title="Modules.is_on_the_CTSMS_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given is on the CTSMS login page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='5' class='node when pass' status='pass'>
+			<div class="step-name" title="Modules.user_logs_in_with_username_and_password_and_logs_in(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user logs in with username "general@teacher.com" and password "123456" and logs in</div>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_171230.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_225313.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='5' class='node and pass' status='pass'>
-			<div class="step-name" title="Academic.clicks_on_the_Academics_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks on the Academics module</div>
+		<li test-id='6' class='node and pass' status='pass'>
+			<div class="step-name" title="StudentAdmission.clicks_on_the_Student_Information_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks on the Student Information module</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_225315.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='6' class='node then pass' status='pass'>
-			<div class="step-name" title="Academic.academics_module_will_be_displayed()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Academics module will be displayed</div>
+		<li test-id='7' class='node and pass' status='pass'>
+			<div class="step-name" title="StudentAdmission.clicks_on_Student_Admission_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks on Student Admission module</div>
 			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_171232.png"><i class='material-icons'>panorama</i></a></li>
+				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_225315.png"><i class='material-icons'>panorama</i></a></li>
 			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='8' class='node and pass' status='pass'>
+			<div class="step-name" title="StudentAdmission.fills_in_all_required_Information(String,String,String,String,String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And fills in all required Information "3729","SDET","Testing Fundamentals","Billy","Male","02/05/1980","Bob","309-492-4982"</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_225316.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='9' class='node and pass' status='pass'>
+			<div class="step-name" title="StudentAdmission.clicks_Save()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks Save</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='10' class='node when pass' status='pass'>
+			<div class="step-name" title="StudentAdmissionUniqueNumber.on_the_Student_Admission_Page_user_will_enter_in_an_exisiting_studnet_Information(String,String,String,String,String,String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When on the Student Admission Page user will enter in an exisiting studnet Information "3729","SDET","Testing Fundamentals","Billy","Male","02/05/1980","Bob","309-492-4982"</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_225318.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='11' class='node and pass' status='pass'>
+			<div class="step-name" title="StudentAdmissionUniqueNumber.clicks_save()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And clicks save</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='12' class='node then pass' status='pass'>
+			<div class="step-name" title="StudentAdmissionUniqueNumber.the_user_will_get_a_message_saying(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the user will get a message saying "The Admission No field must contain a unique value."</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="C:\Users\Victo\Desktop\ChromaTechWork\Dreamers-Group-One/test-output/screenshots/image_15082022_225319.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='13' class='node and pass' status='pass'>
+			<div class="step-name" title="StudentAdmission.user_deletes_student_records_with_class_and_section_and_admission_no(String,String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user deletes student records with class "SDET" and section "Testing Fundamentals" and admission no "1343456"</div>
 			<div class="node-step"></div>
 		</li>
 	</ul>
@@ -261,7 +298,7 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@academic</span>
+						<span class='category-name'>@DG1-13</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -283,41 +320,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 15, 2022 05:12:28 PM</td>
-										<td class='linked' test-id='2'>Navigating to the Academics module</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@DG1-8</span>
-						<span class='category-status right'>
-						<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Aug 15, 2022 05:12:28 PM</td>
-										<td class='linked' test-id='2'>Navigating to the Academics module</td>
+										<td>Aug 15, 2022 10:53:11 PM</td>
+										<td class='linked' test-id='2'>CTSMS - Student Admission unique admission number</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -354,25 +358,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>10</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 15, 2022 05:12:26 PM</div>
+					<div class='panel-lead'>Aug 15, 2022 10:53:09 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 15, 2022 05:12:32 PM</div>
+			 		<div class='panel-lead'>Aug 15, 2022 10:53:20 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 6s+472ms</div>
+					<div class='panel-lead'>0h 0m 11s+78ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -388,16 +392,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@academic</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@DG1-8</td>
+							<td>@DG1-13</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -434,8 +429,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 3,
-				passGrandChild: 3,
+				grandChildCount: 10,
+				passGrandChild: 10,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -448,7 +443,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Academics Module":3.967
+			        "Student Admission unique admission number":8.713
 			};
 		</script>
 	

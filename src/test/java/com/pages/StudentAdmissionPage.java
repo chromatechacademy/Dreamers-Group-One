@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class StudentAdmissionPage { 
+public class StudentAdmissionPage {
 
     /* Student Information Module */
     @FindBy(xpath = "//a[normalize-space()='Student Information']")
-    public  WebElement studentInformationModule;
+    public WebElement studentInformationModule;
 
     /* Student Admission Module */
     @FindBy(xpath = "//a[normalize-space()='Student Admission']")
