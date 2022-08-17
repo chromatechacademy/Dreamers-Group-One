@@ -27,6 +27,7 @@ public class AcademicsSectionPage {
     // @FindBy(xpath = "//*[@class='btn btn-default btn-xs']")
     // public List<WebElement> allSectionRemoveButtons;
 
+    // List of all section names
     @FindBy(xpath = "//*[@class='mailbox-name']")
     public List<WebElement> allSectionNames;
 
@@ -44,8 +45,8 @@ public class AcademicsSectionPage {
 
     }
 
+    // CONSTRUCTOR USING PAGE FACTORY TO INITIALIZE ELEMENTS
     public AcademicsSectionPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 }
-

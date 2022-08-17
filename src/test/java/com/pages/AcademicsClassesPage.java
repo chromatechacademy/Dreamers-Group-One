@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.web.WebDriverUtils;
 
 public class AcademicsClassesPage {
-    
+
     // Class text box
     @FindBy(xpath = "//input[@name='class']")
     public WebElement classTextBox;
@@ -26,9 +26,11 @@ public class AcademicsClassesPage {
     @FindBy(xpath = "//tbody/tr[1]/td[3]/a[2]/i[1]")
     public WebElement removeClassButton;
 
+    // List of all class names
     @FindBy(xpath = "//*[@class='mailbox-name']")
-    public List<WebElement> allClassNames; 
+    public List<WebElement> allClassNames;
 
+    // CONSTRUCTOR USING PAGE FACTORY TO INITIALIZE ELEMENTS
     public AcademicsClassesPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }

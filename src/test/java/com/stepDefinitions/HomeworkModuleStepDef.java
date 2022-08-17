@@ -13,19 +13,22 @@ import cucumber.api.java.en.When;
 
 public class HomeworkModuleStepDef {
 
+    // CREATING OBJECTS OF PAGE CLASSES TO ACCESS ELEMENTS
     HomePage homePage = new HomePage();
 
     @When("the user clicks Homework on the sidebar navigation menu")
     public void the_user_clicks_Homework_on_the_sidebar_navigation_menu() throws IOException, InterruptedException {
-       
+
         // Wait for sidenav to become clickable
         CommonUtils.waitForClickability(homePage.HomeworkModuleNavButton);
 
-        // // Click "Income" on sidenav
+        // Click "Homework" on sidenav
         homePage.HomeworkModuleNavButton.click();
 
-        Thread.sleep(3000);
-        
+        // Wait for Homework module to expand
+        CommonUtils.getWaitObject();
+
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
@@ -33,10 +36,10 @@ public class HomeworkModuleStepDef {
     @Then("the page displays the following menu buttons: {string}")
     public void the_page_displays_the_following_menu_buttons(String addHomework) throws IOException {
 
-        addHomework = homePage.AddHomeWorkButton.getText();
+        // Check if the actual text matches the expected text
+        Assert.assertTrue(homePage.AddHomeWorkButton.getText().contentEquals("Add Homework"));
 
-        Assert.assertTrue(addHomework.contentEquals("Add Homework"));
-
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
 

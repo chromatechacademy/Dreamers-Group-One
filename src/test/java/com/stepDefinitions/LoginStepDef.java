@@ -16,6 +16,7 @@ import cucumber.api.java.en.When;
 
 public class LoginStepDef {
 
+    // CREATING OBJECTS OF PAGE CLASSES TO ACCESS ELEMENTS
     LoginPage loginPage = new LoginPage();
 
     @Given("a user is on the CTSMS login page")
@@ -23,6 +24,7 @@ public class LoginStepDef {
 
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
 
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
@@ -38,7 +40,8 @@ public class LoginStepDef {
         } catch (Exception e) {
             e.printStackTrace();
         }
-       
+        
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
@@ -52,7 +55,8 @@ public class LoginStepDef {
 
         // Assertion to check if actual page title is the same as expected page title
         Assert.assertTrue(actualPageTitle.contentEquals(ApplicationConstants.EXPECTED_PAGE_TITLE));
-
+        
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
 

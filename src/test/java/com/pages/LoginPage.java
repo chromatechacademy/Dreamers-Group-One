@@ -24,6 +24,7 @@ public class LoginPage {
     @FindBy(xpath = "//div[normalize-space()='Invalid Username or Password']")
     public WebElement invalidUsernameOrPasswordMessage;
 
+    // CONSTRUCTOR USING PAGE FACTORY TO INITIALIZE ELEMENTS
     public LoginPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }

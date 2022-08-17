@@ -17,22 +17,24 @@ import cucumber.api.java.en.When;
 
 public class IncomeModuleStepDef {
 
+    // CREATING OBJECTS OF PAGE CLASSES TO ACCESS ELEMENTS
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
-
 
     @Given("a user is logged into the CTSMS portal")
     public void a_user_is_logged_into_the_CTSMS_portal() throws IOException {
 
+        // Navigate to CTSMS
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
 
+        // Send username and password then click 'Sign In'
         loginPage.usernameTextBox.sendKeys(ApplicationConstants.USERNAME);
         loginPage.passwordTextBox.sendKeys(ApplicationConstants.PASSWORD);
         loginPage.signInButton.click();
 
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
-
 
     }
 
@@ -44,10 +46,10 @@ public class IncomeModuleStepDef {
         // Assertion to check if actual page title is the same as expected page title
         Assert.assertTrue(actualPageTitle.contentEquals(ApplicationConstants.EXPECTED_PAGE_TITLE));
 
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
 
-       
     }
 
     @When("the user clicks Income on the sidebar navigation menu")
@@ -56,25 +58,28 @@ public class IncomeModuleStepDef {
         // Wait for sidenav to become clickable
         CommonUtils.waitForClickability(homePage.IncomeModuleNavButton);
 
-        // // Click "Income" on sidenav
+        // Click "Income" on sidenav
         homePage.IncomeModuleNavButton.click();
 
-        Thread.sleep(3000);
-        
+        // Wait for "Income" module to expand
+        CommonUtils.getWaitObject();
+
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
-        
+
     }
 
     @Then("the page displays the following menu buttons: {string}, {string}, {string}")
-    public void the_page_displays_the_following_menu_buttons(String addIncome, String searchIncome, String incomeHead) throws IOException {
-    
-        addIncome = homePage.AddIncomeButton.getText();
+    public void the_page_displays_the_following_menu_buttons(String addIncome, String searchIncome, String incomeHead)
+            throws IOException {
 
-        Assert.assertTrue(addIncome.contentEquals("Add Income"));
-        Assert.assertTrue(searchIncome.contentEquals("Search Income"));
-        Assert.assertTrue(incomeHead.contentEquals("Income Head"));
+        // Check if the actual text matches the expected text
+        Assert.assertTrue(homePage.AddIncomeButton.getText().contentEquals(addIncome));
+        Assert.assertTrue(homePage.SearchIncomeButton.getText().contentEquals(searchIncome));
+        Assert.assertTrue(homePage.IncomeHeadButton.getText().contentEquals(incomeHead));
 
+        // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
 
