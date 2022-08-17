@@ -1,6 +1,6 @@
 Feature: Fees Collection Module 
 
-@DG1-5
+@feesAndCollection @Anzalla @Regression
 Scenario: In the CTSMS Dashboard, Fees Collection module contains the following modules listed below: 
 
 # Collect Fees, 

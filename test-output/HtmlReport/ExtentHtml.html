@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 16, 2022 10:06:56 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 16, 2022 10:36:20 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -80,9 +80,9 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@classAndSections</a></li>
-					<li><a href='#'>@Anzalla</a></li>
-					<li><a href='#'>@Regression</a></li>
+					<li><a href='#'>@anzallaLogin</a></li>
+					<li><a href='#'>@anzalla</a></li>
+					<li><a href='#'>@regression</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -153,7 +153,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -178,8 +178,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Class and Sections</span>
-						<span class='test-time'>Aug 16, 2022 10:06:58 PM</span>
+						<span class='test-name'>MOBILE - Login with valid credentials</span>
+						<span class='test-time'>Aug 16, 2022 10:36:43 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -191,13 +191,13 @@
 </div>
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label'>@classAndSections</span>
-		<span class='category label'>@Anzalla</span>
-		<span class='category label'>@Regression</span>
+		<span class='category label'>@anzallaLogin</span>
+		<span class='category label'>@anzalla</span>
+		<span class='category label'>@regression</span>
 	</div>
-	<span class='duration right label'>0h 0m 10s+903ms</span>
+	<span class='duration right label'>0h 0m 10s+397ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Two classes, SDET and Cyber Security should be displayed with sections:</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: As a Chroma Tech faculty member, I want to be able to login to the Chroma Tech Academy School management system via a mobile device</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='4' class='node given pass' status='pass'>
@@ -205,19 +205,11 @@
 			<div class="node-step"></div>
 		</li>
 		<li test-id='5' class='node when pass' status='pass'>
-			<div class="step-name" title="ClassAndSectionsTest.the_user_selects_Academics_module()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When the user selects Academics module</div>
+			<div class="step-name" title="Login.a_Chroma_Tech_faculty_member_logs_in_with_valid_credentials_via_a_mobile_device()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When a Chroma Tech faculty member logs in with valid credentials via a mobile device</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='6' class='node and pass' status='pass'>
-			<div class="step-name" title="ClassAndSectionsTest.the_user_selects_Class()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And the user selects Class</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='7' class='node then pass' status='pass'>
-			<div class="step-name" title="ClassAndSectionsTest.the_Class_for_Cyber_Security_will_display_the_following_Sections(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then the Class for Cyber Security will display the following Sections:</div>
-			<div class="node-step"></div>
-		</li>
-		<li test-id='8' class='node and pass' status='pass'>
-			<div class="step-name" title="ClassAndSectionsTest.the_Class_for_SDET_will_display_the_following_Sections(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And the Class for SDET will display the following Sections:</div>
+		<li test-id='6' class='node then pass' status='pass'>
+			<div class="step-name" title="Login.chroma_Tech_faculty_member_has_no_issues_and_is_successfully_logged_in_to_Chroma_Tech_Academy_School_management_system()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then Chroma Tech faculty member has no issues and is successfully logged in to Chroma Tech Academy School management system</div>
 			<div class="node-step"></div>
 		</li>
 	</ul>
@@ -264,7 +256,7 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@classAndSections</span>
+						<span class='category-name'>@anzallaLogin</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -286,8 +278,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 16, 2022 10:06:58 PM</td>
-										<td class='linked' test-id='2'>Two classes, SDET and Cyber Security should be displayed with sections:</td>
+										<td>Aug 16, 2022 10:36:43 PM</td>
+										<td class='linked' test-id='2'>As a Chroma Tech faculty member, I want to be able to login to the Chroma Tech Academy School management system via a mobile device</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -297,7 +289,7 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Anzalla</span>
+						<span class='category-name'>@anzalla</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -319,8 +311,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 16, 2022 10:06:58 PM</td>
-										<td class='linked' test-id='2'>Two classes, SDET and Cyber Security should be displayed with sections:</td>
+										<td>Aug 16, 2022 10:36:43 PM</td>
+										<td class='linked' test-id='2'>As a Chroma Tech faculty member, I want to be able to login to the Chroma Tech Academy School management system via a mobile device</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -330,7 +322,7 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@Regression</span>
+						<span class='category-name'>@regression</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
 						</span>
@@ -352,8 +344,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 16, 2022 10:06:58 PM</td>
-										<td class='linked' test-id='2'>Two classes, SDET and Cyber Security should be displayed with sections:</td>
+										<td>Aug 16, 2022 10:36:43 PM</td>
+										<td class='linked' test-id='2'>As a Chroma Tech faculty member, I want to be able to login to the Chroma Tech Academy School management system via a mobile device</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -390,25 +382,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 16, 2022 10:06:56 PM</div>
+					<div class='panel-lead'>Aug 16, 2022 10:36:20 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 16, 2022 10:07:10 PM</div>
+			 		<div class='panel-lead'>Aug 16, 2022 10:36:55 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 13s+622ms</div>
+					<div class='panel-lead'>0h 0m 34s+298ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -424,7 +416,7 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@classAndSections</td>
+							<td>@anzallaLogin</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -433,7 +425,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@Anzalla</td>
+							<td>@anzalla</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -442,7 +434,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@Regression</td>
+							<td>@regression</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -479,8 +471,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 5,
-				passGrandChild: 5,
+				grandChildCount: 3,
+				passGrandChild: 3,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -493,7 +485,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Class and Sections":10.903
+			        "MOBILE - Login with valid credentials":10.397
 			};
 		</script>
 	

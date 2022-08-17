@@ -1,6 +1,6 @@
 Feature: MOBILE - Login with valid credentials
 
-@DG1-21
+@anzallaLogin @anzalla @regression 
 Scenario: As a Chroma Tech faculty member, I want to be able to login to the Chroma Tech Academy School management system via a mobile device 
 
 
