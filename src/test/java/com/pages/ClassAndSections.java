@@ -38,39 +38,39 @@ public class ClassAndSections {
 
     /** SDLC Methodologies */
     @FindBy(xpath = "//div[contains(text(),'SDLC Methodologies')]")
-    public WebElement sdlcMethodologies; 
+    public WebElement sdlcMethodologies;
 
     /** Selenium Test Automation */
     @FindBy(xpath = "//div[contains(text(),'Selenium Test Automation')]")
-    public WebElement seleniumTestAutomation; 
+    public WebElement seleniumTestAutomation;
 
     /** Cucumber Fundamentals */
     @FindBy(xpath = "//div[contains(text(),'Cucumber Fundamentals')]")
-    public WebElement cucumberFundamentals; 
+    public WebElement cucumberFundamentals;
 
     /** API Testing */
     @FindBy(xpath = "//div[contains(text(),'API Testing')]")
-    public WebElement apiTesting; 
+    public WebElement apiTesting;
 
     /** Git/Github */
-    @FindBy (xpath = "//div[contains(text(),'Git/GitHub')]")
-    public WebElement gitGithub; 
+    @FindBy(xpath = "//div[contains(text(),'Git/GitHub')]")
+    public WebElement gitGithub;
 
     /** Java 11 for Cool People */
-    @FindBy (xpath = "//div[contains(text(),'Java 11 for Cool People')]")
-    public WebElement java11ForCoolPeople; 
+    @FindBy(xpath = "//div[contains(text(),'Java 11 for Cool People')]")
+    public WebElement java11ForCoolPeople;
 
     /** Mobile Test Automation */
-    @FindBy (xpath = "//div[contains(text(),'Mobile Test Automation')]")
-    public WebElement mobileTestAutomation; 
+    @FindBy(xpath = "//div[contains(text(),'Mobile Test Automation')]")
+    public WebElement mobileTestAutomation;
 
     /** Accessibility Testing */
     @FindBy(xpath = "//div[contains(text(),'Accessibility Testing')]")
-    public WebElement accessibilityTesting; 
+    public WebElement accessibilityTesting;
 
     /** Database Testing */
     @FindBy(xpath = "//div[contains(text(),'Database Testing')]")
-    public WebElement databaseTesting; 
+    public WebElement databaseTesting;
 
     public ClassAndSections() {
         PageFactory.initElements(WebDriverUtils.driver, this);

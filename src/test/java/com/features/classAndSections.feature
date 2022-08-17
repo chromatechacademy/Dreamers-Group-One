@@ -1,6 +1,6 @@
 Feature: Class and Sections
 
-    @DG1-11
+    @classAndSections @Anzalla @Regression 
     Scenario: Two classes, SDET and Cyber Security should be displayed with sections:
 
         #SDET:
