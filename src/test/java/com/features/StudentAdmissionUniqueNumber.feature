@@ -1,7 +1,7 @@
 Feature: Student Admission unique admission number
 
 
-    @Victor @DG1-13 @Regression
+    @Victor @DG1-13 @Regression @Smoke
     Scenario: CTSMS - Student Admission unique admission number
         Given is on the CTSMS login page
         When user logs in with username "general@teacher.com" and password "123456" and logs in
