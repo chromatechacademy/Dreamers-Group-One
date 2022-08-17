@@ -1,6 +1,6 @@
 Feature: Class and Sections
 
-    @classAndSections @Anzalla @Regression 
+    @classAndSections @Anzalla @Smoke 
     Scenario: Two classes, SDET and Cyber Security should be displayed with sections:
 
         #SDET:
