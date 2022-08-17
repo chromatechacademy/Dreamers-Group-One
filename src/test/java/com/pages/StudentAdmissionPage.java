@@ -32,9 +32,29 @@ public class StudentAdmissionPage {
     @FindBy(xpath = "//input[@name='dob']")
     public WebElement dateOfBirthCalendar;
 
+    /* Father Name */
+    @FindBy(xpath = "//input[@name='father_name']")
+    public WebElement fatherNameTextbox;
+
+    /* Father Phone */
+    @FindBy(xpath = "//input[@name='father_phone']")
+    public WebElement fatherPhoneTextbox;
+
+    /* Mother Name */
+    @FindBy(xpath = "//input[@name='mother_name']")
+    public WebElement motherNameTextbox;
+
+    /* Mother Phone */
+    @FindBy(xpath = "//input[@name='mother_phone']")
+    public WebElement motherPhoneTextbox;
+
     /* Father Guardian Radio Button */
     @FindBy(xpath = "//input[@value='father']")
     public WebElement fatherGuardianRadioButton;
+
+    /* Other Guardian Radio Button */
+    @FindBy(xpath = "//input[@value='other']")
+    public WebElement otherGuardianRadioButton;
 
     /* Guardian Name Textbox */
     @FindBy(xpath = "//input[@name='guardian_name']")

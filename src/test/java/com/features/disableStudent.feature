@@ -1,6 +1,6 @@
 Feature: Disable and Enable Student
 
-    @Angel @DG1-15a @Progression
+    @Angel @DG1-15a @Smoke @Regression
     Scenario: Create Student scenario
         Given a user is on the CTSMS web page
         When the user logs in with username and password
@@ -18,14 +18,14 @@ Feature: Disable and Enable Student
         And user clicks on the save button
         Then sucessful student admission message will display "Record Saved Successfully"
 
-    @Angel @DG1-15b @Progression
+    @Angel @DG1-15b @Smoke @Regression
     Scenario: Create Disable Reason
         Given a teacher is on the Disable Reason page
         When a teacher enters disable reason name "Test Reason" into the add name textbox
         And clicks on the add reason save button
         Then a Disable Reason is created "Test Reason" and will display the added test reason "Test Reason"
 
-    @Angel @DG1-15c @Progression
+    @Angel @DG1-15c @Smoke @Regression
     Scenario: Disable Student scenario
         Given a teacher is on the Student Details page
         When the teacher enters student name "Test Student" into the keyword search textbox
@@ -37,7 +37,7 @@ Feature: Disable and Enable Student
         And clicks on the disable student save button
         Then the student record will be disabled and display Disable Reason "Test Reason"
 
-    @Angel @DG1-16 @Progression
+    @Angel @DG1-16 @Smoke @Regression
     Scenario: Enable Student scenario
         Given a teacher is on the Disabled Students page
         When a teacher enters disabled student "Test Student" into the keyword textbox
