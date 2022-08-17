@@ -32,16 +32,15 @@ public class SearchingStudentDetailStepDef {
         SearchingStudentPage.admissionNumberTextBox.sendKeys(admissionNo);
 
         SearchingStudentPage.classTextBox.sendKeys(clasS);
-
+        Thread.sleep(200);
         SearchingStudentPage.sectionTextBox.sendKeys(section);
-
-        CommonUtils.waitForVisibility(SearchingStudentPage.sectionTextBox);
 
         SearchingStudentPage.firstNameTextBox.sendKeys(firstName);
 
         SearchingStudentPage.genderTextBox.sendKeys(gender);
 
         SearchingStudentPage.dataOfBirthTextBox.sendKeys(dateOfBirth);
+        Thread.sleep(2000);
 
         CommonUtils.waitForVisibility(SearchingStudentPage.dataOfBirthTextBox);
 
@@ -50,14 +49,12 @@ public class SearchingStudentDetailStepDef {
         SearchingStudentPage.guardianNameTextBox.sendKeys(guardianName);
 
         SearchingStudentPage.guardianPhoneTextBox.sendKeys(guardianPhone);
-
     }
 
     @When("User click on a button SAVE")
     public void user_click_on_a_button_SAVE() throws IOException, InterruptedException {
         SearchingStudentPage.buttonSave.click();
-        CommonUtils.waitForVisibility(SearchingStudentPage.dataOfBirthTextBox);
-
+        // CommonUtils.waitForVisibility(SearchingStudentPage.dataOfBirthTextBox);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
     }
@@ -66,25 +63,23 @@ public class SearchingStudentDetailStepDef {
     public void user_click_on_a_searching_and_enters_firstName(String firstName)
             throws InterruptedException, IOException {
         SearchingStudentPage.searchTextBox.sendKeys(firstName);
-
+        CucumberLogUtils.logExtentScreenshot();
+        CucumberLogUtils.logScreenShot();
     }
 
     @When("User click on search button")
     public void user_click_on_search_button() throws IOException, InterruptedException {
 
         SearchingStudentPage.searchButton.click();
-        CommonUtils.waitForVisibility(SearchingStudentPage.dataOfBirthTextBox);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
-        Thread.sleep(3000);
     }
 
-    @When("User click on Edit button")
-    public void user_click_on_Edit_button() throws IOException, InterruptedException {
-        SearchingStudentPage.editButton.click();
+    @When("User click on a pencil")
+    public void user_click_on_a_pencil() throws IOException {
+        SearchingStudentPage.pencilButton.click();
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
-        Thread.sleep(2000);
 
     }
 
@@ -93,7 +88,6 @@ public class SearchingStudentDetailStepDef {
         SearchingStudentPage.admissionNew.sendKeys(number);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
-        Thread.sleep(2000);
 
     }
 

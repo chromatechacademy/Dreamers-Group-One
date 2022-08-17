@@ -37,24 +37,24 @@ public class SearchingStudentPage {
 
     @FindBy(xpath = "//input[@name='guardian_phone']")
     public static WebElement guardianPhoneTextBox;
-    
+
     @FindBy(xpath = "//button[@type='submit'][normalize-space()='Save']")
     public static WebElement buttonSave;
 
     @FindBy(xpath = "//input[@name='search_text1']")
     public static WebElement searchTextBox;
 
-    @FindBy(xpath = "//button[@class='btn btn-flat topsidesearchbtn']//i[@class='fa fa-search']")
+    @FindBy(xpath = "//button[@class='btn btn-flat topsidesearchbtn']")
     public static WebElement searchButton;
 
-    @FindBy(xpath = "//tbody//a[2]")
-    public static WebElement editButton;
+    @FindBy(xpath = "//td[@class='pull-right']//a[@title='Edit']")
+    public static WebElement pencilButton;
 
     @FindBy(xpath = "//input[@name='admission_no']")
     public static WebElement admissionNew;
 
-
     public SearchingStudentPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
+
     }
 }

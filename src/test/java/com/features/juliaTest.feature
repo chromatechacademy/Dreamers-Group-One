@@ -27,12 +27,24 @@ Feature: JuliaSimpleTest
     And User click on a button SAVE
     And User click on a searching and enters firstName "Julia"
     And User click on search button
-    And User click on Edit button
+    And User click on a pencil
     And User changes admission number "123098"
-    Then User click on a button SAVE
+    And User click on a button SAVE
+    And User click on a searching and enters firstName "Julia"
+    Then User click on search button
+
+
+
 
 
     Examples:
       | admissionNo | class | section    | firstName | gender | dateOfBirth | ifGuardianIs | guardianName | guardianPhone |
-      | 123678      | SDET  | Git/GitHub | Julia     | female | 06/18/1992  | Other        | Katja        | 1234567       |
+      | 123678      | SDET  | API Testing | Julia     | female | 06/18/1992  | Other        | Katja        | 1234567       |
+
+
+    @Julia @DG1-24 @Mobile
+Scenario: Navigation modules to be displayed on porta
+    Given User is on the home page
+    When User enters username "general@teacher.com" and password "123456"
+    #And User click on a button SingIn
 
