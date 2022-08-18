@@ -9,12 +9,16 @@ Feature: JuliaSimpleTest
     And User click on Student information item on left navigation menu
     Then User collect Student information items to list and verify them
 
-  @Julia @DG1-9 @Smoke
+  @Julia @DG1-9 @Smoke 
   Scenario:  Verify that Human Resource Module list is reflected properly
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"
     And User click on a button SingIn
-    Then User click on Human Resource Module item on left navigation menu
+    And User click on Human Resource Module item on left navigation menu
+    Then the Human Resources have to display the following "Staff Directory", "Staff Attendance", "Payroll", "Approve Leave Request", "Apply Leave", "Leave Type", "Teachers Rating", "Department", "Designation"
+
+
+    
 
   @Julia @DG1-14 @Smoke
   Scenario Outline:Chroma Tech faculty user, should be able to edit student records by searching student details.
@@ -34,17 +38,24 @@ Feature: JuliaSimpleTest
     Then User click on search button
 
 
-
-
-
     Examples:
-      | admissionNo | class | section    | firstName | gender | dateOfBirth | ifGuardianIs | guardianName | guardianPhone |
+      | admissionNo | class | section     | firstName | gender | dateOfBirth | ifGuardianIs | guardianName | guardianPhone |
       | 123678      | SDET  | API Testing | Julia     | female | 06/18/1992  | Other        | Katja        | 1234567       |
 
 
-    @Julia @DG1-24 @Mobile
-Scenario: Navigation modules to be displayed on porta
+  @Julia @DG1-24 @Mobile
+  Scenario: Navigation modules to be displayed on portal
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"
-    #And User click on a button SingIn
+    And User click on a button SingIn
+    Then On left navigation menu user can see modules
+      """"
+      Student Information
+      Fees Collection
+      Income
+      Expenses
+      Academics
+      Human Resource
+      """"
+
 

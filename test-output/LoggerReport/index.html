@@ -51,6 +51,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -94,12 +102,12 @@
 									</span>
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
+										
+										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -113,8 +121,8 @@
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
 						    	        <a class="dropdown-item" href="#"><span class="cf">@Julia</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@DG1-14</span></a>
-						    	        <a class="dropdown-item" href="#"><span class="cf">@Smoke</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@DG1-24</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@Mobile</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -131,25 +139,25 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
+											<div class="tsc" status="fail">
+											<div class="st fail test l0" 
 												tags=""
 												devices="">
-												<span class="tt">08.17.2022 12:52:00</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tt">08.18.2022 12:26:14</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">[JuliaSimpleTest] started</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags="@Julia @DG1-14 @Smoke"
+											<div class="st fail test l1" 
+												tags="@Julia @DG1-24 @Mobile"
 												devices="">
-												<span class="tt">08.17.2022 12:52:00</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[Chroma Tech faculty user, should be able to edit student records by searching student details.] started</span>
+												<span class="tt">08.18.2022 12:26:14</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">|---[Navigation modules to be displayed on portal] started</span>
 												<span class="category-list">
 													<span class="category badge"><i class="fa fa-tag"></i> @Julia</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @DG1-14</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Smoke</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @DG1-24</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @Mobile</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -157,231 +165,194 @@
 												</span>
 												
 											</div>
-											<div class="st pass test l2" 
-												tags="@Julia @DG1-14 @Smoke"
-												devices="">
-												<span class="tt">08.17.2022 12:52:00</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Chroma Tech faculty user, should be able to edit student records by searching student details.] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @Julia</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @DG1-14</span>
-													<span class="category badge"><i class="fa fa-tag"></i> @Smoke</span>
-												</span>
-												<span class="author-list">
-												</span>
-												<span class="device-list">
-												</span>
-												
-											</div>
-											<div class="st pass test l3" 
+											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.17.2022 12:52:00</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the home page] started</span>
+												<span class="tt">08.18.2022 12:26:14</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.start(Scenario)] started</span>
 												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:02</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the home page]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded1.png' src='test-output/embedded1.png'></span>
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.17.2022 12:52:02</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com" and password "123456"] started</span>
-												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:03</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com" and password "123456"]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded2.png' src='test-output/embedded2.png'></span>
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.17.2022 12:52:03</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SingIn] started</span>
-												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:06</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SingIn]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded3.png' src='test-output/embedded3.png'></span>
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.17.2022 12:52:06</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on Student information item on left navigation menu] started</span>
-												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:08</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on Student information item on left navigation menu]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded4.png' src='test-output/embedded4.png'></span>
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.17.2022 12:52:08</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on Student Addmission Section] started</span>
-												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:09</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on Student Addmission Section]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded5.png' src='test-output/embedded5.png'></span>
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.17.2022 12:52:09</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User enters his data "123678","SDET","API Testing","Julia","female","06/18/1992","Other","Katja","1234567"] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.17.2022 12:52:13</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User enters his data "123678","SDET","API Testing","Julia","female","06/18/1992","Other","Katja","1234567"]</span>
+												<div class="st fail">
+													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.start(Scenario)]</span>
 													
-													<span class="td"></span>
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'MacBook-Pro-macbook.local', ip: '2600:1000:b141:e0e5:602e:6263:aab2:78c5%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.4', java.version: '18.0.1.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, browserName=Chrome, appium:deviceName=Pixel_4_API_31, platformName=ANDROID}], desiredCapabilities=Capabilities {automationName: UiAutomator2, browserName: Chrome, deviceName: Pixel_4_API_31, platformName: ANDROID}}]
+Capabilities {}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:126)
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:146)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:224)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:179)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:79)
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:87)
+	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:116)
+	at com.web.WebDriverUtils.setUp(WebDriverUtils.java:79)
+	at com.stepDefinitions.Hooks.start(Hooks.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
+	at cucumber.runner.TestStep.run(TestStep.java:50)
+	at cucumber.runner.TestCase.run(TestCase.java:42)
+	at cucumber.runner.Runner.runPickle(Runner.java:49)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:123)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at cucumber.api.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:147)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea></span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.17.2022 12:52:13</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SAVE] started</span>
+												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the home page] started</span>
 												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:14</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SAVE]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded6.png' src='test-output/embedded6.png'></span>
-													<span class="td"></span>
+												<div class="st skip">
+													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the home page]</span>
+													
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.17.2022 12:52:14</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a searching and enters firstName "Julia"] started</span>
+												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com" and password "123456"] started</span>
 												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:15</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a searching and enters firstName "Julia"]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded7.png' src='test-output/embedded7.png'></span>
-													<span class="td"></span>
+												<div class="st skip">
+													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com" and password "123456"]</span>
+													
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.17.2022 12:52:15</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on search button] started</span>
+												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SingIn] started</span>
 												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:16</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on search button]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded8.png' src='test-output/embedded8.png'></span>
-													<span class="td"></span>
+												<div class="st skip">
+													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SingIn]</span>
+													
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.17.2022 12:52:16</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a pencil] started</span>
+												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then On left navigation menu user can see modules] started</span>
 												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:18</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a pencil]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded9.png' src='test-output/embedded9.png'></span>
-													<span class="td"></span>
+												<div class="st skip">
+													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then On left navigation menu user can see modules]</span>
+													
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.17.2022 12:52:18</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User changes admission number "123098"] started</span>
+												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+												<span class="ts">fail</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.end(Scenario)] started</span>
 												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:19</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User changes admission number "123098"]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded10.png' src='test-output/embedded10.png'></span>
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.17.2022 12:52:19</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SAVE] started</span>
-												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:21</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SAVE]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded11.png' src='test-output/embedded11.png'></span>
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.17.2022 12:52:21</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a searching and enters firstName "Julia"] started</span>
-												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:21</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a searching and enters firstName "Julia"]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded12.png' src='test-output/embedded12.png'></span>
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.17.2022 12:52:21</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User click on search button] started</span>
-												
-												<div class="st info">
-													<span class="tt">08.17.2022 12:52:23</span>&nbsp;
-													<span class="ts">info</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then User click on search button]</span>
-													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded13.png' src='test-output/embedded13.png'></span>
-													<span class="td"></span>
+												<div class="st fail">
+													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+													<span class="ts">fail</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.end(Scenario)]</span>
+													
+													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "com.web.WebDriverUtils.driver" is null
+	at com.web.WebDriverUtils.tearDown(WebDriverUtils.java:92)
+	at com.stepDefinitions.Hooks.end(Hooks.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
+	at cucumber.runner.TestStep.run(TestStep.java:50)
+	at cucumber.runner.TestCase.run(TestCase.java:50)
+	at cucumber.runner.Runner.runPickle(Runner.java:49)
+	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:123)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at cucumber.api.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:147)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+</textarea></span>
 												</div>
 											</div>
 											</div>
