@@ -48,14 +48,8 @@ Feature: JuliaSimpleTest
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"
     And User click on a button SingIn
-    Then On left navigation menu user can see modules
-      """"
-      Student Information
-      Fees Collection
-      Income
-      Expenses
-      Academics
-      Human Resource
-      """"
+    And User click on a button Chroma Tech 
+    Then On left navigation menu user can see modules "Student Information" ,"Fees Collection","Income","Expenses","Academics","Human Resource","Homework","Reports"
+    
 
 

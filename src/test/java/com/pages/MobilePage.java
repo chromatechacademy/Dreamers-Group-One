@@ -8,6 +8,9 @@ import com.web.WebDriverUtils;
 
 public class MobilePage {
     
+@FindBy(xpath = "//a[@role='button']")
+public WebElement menuButton;
+
 @FindBy(xpath = "//span[normalize-space()='Student Information']")
 public WebElement moduleMenu;
 
@@ -23,6 +26,14 @@ public WebElement moduleMenuFour;
 @FindBy(xpath = "//span[normalize-space()='Academics']")
 public WebElement moduleMenuFive;
 
+@FindBy(xpath = "//span[normalize-space()='Human Resource']")
+public WebElement moduleMenuSix;
+
+@FindBy(xpath = "//span[normalize-space()='Homework']")
+public WebElement moduleSeven;
+
+@FindBy(xpath = "//span[normalize-space()='Reports']")
+public WebElement moduleOne;
 
 
     public MobilePage() {

@@ -3,6 +3,7 @@ package com.runners;
 
 
 
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -18,7 +19,7 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/java/com/features", 
 		glue = "com.stepDefinitions", 
 		tags = "@DG1-24", 
-		dryRun = false, 
+		dryRun = true, 
 		monochrome = true, 
 		strict = true
 )
