@@ -102,12 +102,12 @@
 									</span>
 									</a>
 									<div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="pass"><i class="fa fa-dot-circle-o text-success"></i>Pass</span></a>
 										<a class="dropdown-item" href="#"><span class="tf" status="fail"><i class="fa fa-dot-circle-o text-danger"></i>Fail</span></a>
 										
 										
 										
-										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
+										
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -143,7 +143,7 @@
 											<div class="st fail test l0" 
 												tags=""
 												devices="">
-												<span class="tt">08.18.2022 12:26:14</span>&nbsp;
+												<span class="tt">08.18.2022 13:09:50</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">[JuliaSimpleTest] started</span>
 												
@@ -151,7 +151,7 @@
 											<div class="st fail test l1" 
 												tags="@Julia @DG1-24 @Mobile"
 												devices="">
-												<span class="tt">08.18.2022 12:26:14</span>&nbsp;
+												<span class="tt">08.18.2022 13:09:50</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
 												<span class="tn">|---[Navigation modules to be displayed on portal] started</span>
 												<span class="category-list">
@@ -165,193 +165,74 @@
 												</span>
 												
 											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.18.2022 13:09:50</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the home page] started</span>
+												
+												<div class="st info">
+													<span class="tt">08.18.2022 13:09:57</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the home page]</span>
+													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded1.png' src='test-output/embedded1.png'></span>
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.18.2022 13:09:57</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com" and password "123456"] started</span>
+												
+												<div class="st info">
+													<span class="tt">08.18.2022 13:10:02</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com" and password "123456"]</span>
+													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded2.png' src='test-output/embedded2.png'></span>
+													<span class="td"></span>
+												</div>
+											</div>
+											<div class="st pass test l2" 
+												tags=""
+												devices="">
+												<span class="tt">08.18.2022 13:10:02</span>&nbsp;
+												<span class="ts">pass</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SingIn] started</span>
+												
+												<div class="st info">
+													<span class="tt">08.18.2022 13:10:09</span>&nbsp;
+													<span class="ts">info</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SingIn]</span>
+													<span class="tm"><img class='r-img' onerror='this.style.display="none"' data-featherlight='test-output/embedded3.png' src='test-output/embedded3.png'></span>
+													<span class="td"></span>
+												</div>
+											</div>
 											<div class="st fail test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.18.2022 12:26:14</span>&nbsp;
+												<span class="tt">08.18.2022 13:10:09</span>&nbsp;
 												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.start(Scenario)] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then On left navigation menu user can see modules] started</span>
 												
 												<div class="st fail">
-													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
+													<span class="tt">08.18.2022 13:10:45</span>&nbsp;
 													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.start(Scenario)]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then On left navigation menu user can see modules]</span>
 													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 404. Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+													<span class="td">threw an exception<br><textarea disabled class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[AndroidDriver: Chrome on ANDROID (8eded40a-f839-45bc-9f49-714f15517c19)] -> xpath: //span[normalize-space()='Student Information']] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
 System info: host: 'MacBook-Pro-macbook.local', ip: '2600:1000:b141:e0e5:602e:6263:aab2:78c5%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.4', java.version: '18.0.1.1'
 Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{appium:automationName=UiAutomator2, browserName=Chrome, appium:deviceName=Pixel_4_API_31, platformName=ANDROID}], desiredCapabilities=Capabilities {automationName: UiAutomator2, browserName: Chrome, deviceName: Pixel_4_API_31, platformName: ANDROID}}]
-Capabilities {}
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:126)
-	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:146)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:224)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:179)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:79)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:87)
-	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:116)
-	at com.web.WebDriverUtils.setUp(WebDriverUtils.java:79)
-	at com.stepDefinitions.Hooks.start(Hooks.java:25)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at cucumber.runtime.Utils$1.call(Utils.java:26)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:20)
-	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
-	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
-	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
-	at cucumber.runner.TestStep.run(TestStep.java:50)
-	at cucumber.runner.TestCase.run(TestCase.java:42)
-	at cucumber.runner.Runner.runPickle(Runner.java:49)
-	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:123)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at cucumber.api.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:147)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
-</textarea></span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the home page] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is on the home page]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com" and password "123456"] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When User enters username "general@teacher.com" and password "123456"]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SingIn] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And User click on a button SingIn]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st skip test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-												<span class="ts">skip</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then On left navigation menu user can see modules] started</span>
-												
-												<div class="st skip">
-													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-													<span class="ts">skip</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then On left navigation menu user can see modules]</span>
-													
-													<span class="td">Step skipped</span>
-												</div>
-											</div>
-											<div class="st fail test l2" 
-												tags=""
-												devices="">
-												<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-												<span class="ts">fail</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.end(Scenario)] started</span>
-												
-												<div class="st fail">
-													<span class="tt">08.18.2022 12:26:16</span>&nbsp;
-													<span class="ts">fail</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Hooks.end(Scenario)]</span>
-													
-													<span class="td">threw an exception<br><textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "com.web.WebDriverUtils.driver" is null
-	at com.web.WebDriverUtils.tearDown(WebDriverUtils.java:92)
-	at com.stepDefinitions.Hooks.end(Hooks.java:31)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
-	at cucumber.runtime.Utils$1.call(Utils.java:26)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:20)
-	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
-	at cucumber.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:16)
-	at cucumber.runner.TestStep.executeStep(TestStep.java:65)
-	at cucumber.runner.TestStep.run(TestStep.java:50)
-	at cucumber.runner.TestCase.run(TestCase.java:50)
-	at cucumber.runner.Runner.runPickle(Runner.java:49)
-	at cucumber.runtime.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:146)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:68)
-	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:23)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:73)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:123)
-	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:65)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at cucumber.api.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:147)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:40)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:529)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:756)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:452)
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210)
+Capabilities {appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, browserName: Chrome, deviceName: Pixel_4_API_31, platformName: android}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2280, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 83, appium:takesScreenshot: true, appium:viewportRect: {height: 2065, left: 0, top: 83, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: Chrome, platformName: ANDROID}
+Session ID: 8eded40a-f839-45bc-9f49-714f15517c19
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.web.CommonUtils.waitForVisibility(CommonUtils.java:295)
+	at com.stepDefinitions.MobileStepDef.on_left_navigation_menu_user_can_see_modules(MobileStepDef.java:28)
+	at ✽.On left navigation menu user can see modules(file:src/test/java/com/features/JuliaSimpleTest.feature:51)
 </textarea></span>
 												</div>
 											</div>

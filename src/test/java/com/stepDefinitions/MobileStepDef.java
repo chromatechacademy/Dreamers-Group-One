@@ -24,7 +24,7 @@ public class MobileStepDef {
         mobilePage.moduleNameThree.getText();
         mobilePage.moduleMenuFour.getText();
         mobilePage.moduleMenuFive.getText();
-
+        Thread.sleep(2000);
         CommonUtils.waitForVisibility(mobilePage.moduleMenu);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.getScreenShot();

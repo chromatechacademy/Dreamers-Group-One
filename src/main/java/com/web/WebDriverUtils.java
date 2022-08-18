@@ -76,7 +76,7 @@ public class WebDriverUtils {
                     cap.setCapability("app", System.getProperty("user.dir")+"/src/test/resources/APK/ApiDemos-debug.apk");
                  }
                 try {
-                    driver = new AndroidDriver(new URL("http://127.0.0.1:4723//wd/hub"), cap);
+                    driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }
