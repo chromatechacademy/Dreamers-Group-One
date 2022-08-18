@@ -1,11 +1,12 @@
 package com.web;
 
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
+
 import com.utils.ConfigReader;
 import com.utils.FrameworkConstants;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,7 +18,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.github.bonigarcia.wdm.config.OperatingSystem;
-
 
 public class WebDriverUtils {
 
@@ -36,7 +36,7 @@ public class WebDriverUtils {
             } else if (osName.contains("Mac")) {
                 WebDriverManager.chromedriver().operatingSystem(OperatingSystem.MAC).setup();
                 driver = new ChromeDriver();
-                driver.manage().window().maximize();
+                // driver.manage().window().maximize();
             } else if (osName.contains("Linux")) {
                 WebDriverManager.chromedriver().operatingSystem(OperatingSystem.LINUX).setup();
                 ChromeOptions options = new ChromeOptions();
@@ -55,28 +55,29 @@ public class WebDriverUtils {
 
         } else if (ConfigReader.getPropertyValue("browser").equalsIgnoreCase("mobile")) {
             DesiredCapabilities cap = new DesiredCapabilities();
-            if(ConfigReader.getPropertyValue("platformName").equalsIgnoreCase("iOS")){
+            if (ConfigReader.getPropertyValue("platformName").equalsIgnoreCase("iOS")) {
                 cap.setCapability("platformName", ConfigReader.getPropertyValue("platformName"));
                 cap.setCapability("deviceName", ConfigReader.getPropertyValue("deviceName"));
                 cap.setCapability("automationName", "XCUITest");
                 cap.setCapability(CapabilityType.BROWSER_NAME, "Safari");
                 try {
-                    driver = new IOSDriver(new URL("http://127.0.0.1:4723"), cap);
+                    driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }
-             } else{
+            } else {
                 cap.setCapability("platformName", ConfigReader.getPropertyValue("platformName"));
                 cap.setCapability("deviceName", ConfigReader.getPropertyValue("deviceName"));
                 cap.setCapability("automationName", "UiAutomator2");
-                if(ConfigReader.getPropertyValue("mobileTesting").equalsIgnoreCase("mobileBrowser")){
-                     cap.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
+                if (ConfigReader.getPropertyValue("mobileTesting").equalsIgnoreCase("mobileBrowser")) {
+                    cap.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
                 }
-                if(ConfigReader.getPropertyValue("mobileTesting").equalsIgnoreCase("native")){
-                    cap.setCapability("app", System.getProperty("user.dir")+"/src/test/resources/APK/ApiDemos-debug.apk");
-                 }
+                if (ConfigReader.getPropertyValue("mobileTesting").equalsIgnoreCase("native")) {
+                    cap.setCapability("app",
+                            System.getProperty("user.dir") + "/src/test/resources/APK/ApiDemos-debug.apk");
+                }
                 try {
-                    driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), cap);
+                    driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }

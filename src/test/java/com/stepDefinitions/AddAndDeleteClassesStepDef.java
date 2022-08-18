@@ -41,7 +41,7 @@ public class AddAndDeleteClassesStepDef {
         // Click save button
         academicsClassesPage.saveClassButton.click();
 
-        CommonUtils.getWaitObject(60);
+        CommonUtils.getWaitObject();
 
         // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logScreenShot();
@@ -58,7 +58,7 @@ public class AddAndDeleteClassesStepDef {
         // Accept alert to confirm class deletion
         CommonUtils.acceptAlert();
 
-        CommonUtils.getWaitObject(60);
+        CommonUtils.getWaitObject();
 
         // Adding Screenshots to Extent and Maven report
         CucumberLogUtils.logScreenShot();

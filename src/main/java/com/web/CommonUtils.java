@@ -27,7 +27,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonUtils extends WebDriverUtils {
 
-
 	/**
 	 * Use this method in need of clicking on a WebElement by selenium WebDriver.
 	 * 
@@ -272,18 +271,8 @@ public class CommonUtils extends WebDriverUtils {
 	 * 
 	 * @return WebDriverWait
 	 */
-    public static WebDriverWait getWaitObject() {
+	public static WebDriverWait getWaitObject() {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		return wait;
-	}
-
-	/**
-	 * This method will create an Object of WebDriverWait with specified duration
-	 * 
-	 * @return WebDriverWait
-	 */
-    public static WebDriverWait getWaitObject(int timeSeconds) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeSeconds));
 		return wait;
 	}
 
@@ -419,9 +408,11 @@ public class CommonUtils extends WebDriverUtils {
 
 	/**
 	 * Use this method to select a checkbox value
+	 * 
 	 * @throws InterruptedException
 	 */
-	public static void selectCheckbox(List<WebElement> checkboxList, String attribute, String value) throws InterruptedException {
+	public static void selectCheckbox(List<WebElement> checkboxList, String attribute, String value)
+			throws InterruptedException {
 		for (WebElement checkbox : checkboxList) {
 			if (checkbox.isEnabled()) {
 				String checkboxText = checkbox.getAttribute(attribute);
@@ -437,10 +428,12 @@ public class CommonUtils extends WebDriverUtils {
 	/**
 	 * Use this method to select a checkbox value & to check that checkbox is
 	 * displayed
+	 * 
 	 * @throws InterruptedException
 	 */
 
-	public static void selectCheckboxDisplayed(List<WebElement> checkboxList, String attribute, String value) throws InterruptedException {
+	public static void selectCheckboxDisplayed(List<WebElement> checkboxList, String attribute, String value)
+			throws InterruptedException {
 		for (WebElement checkbox : checkboxList) {
 
 			if (checkbox.isEnabled() && checkbox.isDisplayed()) {
@@ -492,21 +485,18 @@ public class CommonUtils extends WebDriverUtils {
 			throw e;
 		}
 	}
-	
 
-/*
- * 
- * Use below method to assert actual String value with an expected String value	
- */
+	/*
+	 * 
+	 * Use below method to assert actual String value with an expected String value
+	 */
 	public static void assertEquals(String expected, String actual) {
-		
+
 		try {
-		Assert.assertEquals(expected, actual);
-		}
-		catch(AssertionError e) {
+			Assert.assertEquals(expected, actual);
+		} catch (AssertionError e) {
 
 			e.printStackTrace();
 		}
 	}
 }
-
