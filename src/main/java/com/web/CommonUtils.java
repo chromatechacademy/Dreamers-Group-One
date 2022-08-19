@@ -268,7 +268,6 @@ public class CommonUtils extends WebDriverUtils {
 
 	/**
 	 * This method will create an Object of WebDriverWait
-	 * 
 	 * @return WebDriverWait
 	 */
 	public static WebDriverWait getWaitObject() {

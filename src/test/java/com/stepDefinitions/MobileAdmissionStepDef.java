@@ -21,7 +21,9 @@ public class MobileAdmissionStepDef {
 
     @Given("clicks on the Student Information module")
     public void clicks_on_the_Student_Information_module() throws IOException {
-        
+
+        CommonUtils.waitForClickability(mobileStudentAdmissionPage.hamburgerMenu);
+
         // Clicking hamburger menu to expand sidenav
         mobileStudentAdmissionPage.hamburgerMenu.click();
 
@@ -48,17 +50,39 @@ public class MobileAdmissionStepDef {
             String Gender, String DoB, String GuardianName, String GuardianPhoneNumber) throws IOException {
 
         mobileStudentAdmissionPage.admissionNoTextBox.sendKeys(AdmissionNo);
+
+        CommonUtils.waitForVisibility(mobileStudentAdmissionPage.classDropDown);
+        CommonUtils.waitForClickability(mobileStudentAdmissionPage.classDropDown);
+
+
         mobileStudentAdmissionPage.classDropDown.click();
+
         CommonUtils.selectDropDownValue(SDETClass, mobileStudentAdmissionPage.classDropDown);
+
+        CommonUtils.waitForVisibility(mobileStudentAdmissionPage.sectionDropDown);
+        CommonUtils.waitForClickability(mobileStudentAdmissionPage.sectionDropDown);
+        CommonUtils.getWaitObject();
+
         mobileStudentAdmissionPage.sectionDropDown.click();
+
         CommonUtils.selectDropDownValue(TestingSection, mobileStudentAdmissionPage.sectionDropDown);
+
         mobileStudentAdmissionPage.firstNameTextBox.sendKeys(FirstName);
+
         mobileStudentAdmissionPage.genderDropDown.click();
+
         CommonUtils.selectDropDownValue(Gender, mobileStudentAdmissionPage.genderDropDown);
+
         mobileStudentAdmissionPage.dateOfBirthTextBox.sendKeys(DoB);
+
+        CommonUtils.waitForClickability(mobileStudentAdmissionPage.guardianNameTextBox);
+        
         mobileStudentAdmissionPage.guardianSelect.click();
+
         mobileStudentAdmissionPage.guardianNameTextBox.sendKeys(GuardianName);
+
         mobileStudentAdmissionPage.guardianPhoneTextBox.sendKeys(GuardianPhoneNumber);
+        
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
 
@@ -67,27 +91,36 @@ public class MobileAdmissionStepDef {
     @Given("clicks Save")
     public void clicks_Save() {
 
+        CommonUtils.waitForClickability(mobileStudentAdmissionPage.saveButton);
+
         mobileStudentAdmissionPage.saveButton.click();
 
     }
 
     @Then("user will have created a Student and user will see {string}")
-    public void user_will_have_created_a_Student_and_user_will_see(String RecordSaved) throws IOException, InterruptedException {
+    public void user_will_have_created_a_Student_and_user_will_see(String RecordSaved)
+            throws IOException, InterruptedException {
 
-        // CommonUtils.getWaitObject();
-
-        Thread.sleep(3000);
+        CommonUtils.getWaitObject();
+        
+        // Thread.sleep(3000);
+        CommonUtils.waitForVisibility(mobileStudentAdmissionPage.studentSavedSuccessfully);
 
         String AcutalStudentSavedSuccessfully = mobileStudentAdmissionPage.studentSavedSuccessfully.getText();
 
-        Thread.sleep(3000);
+        // Thread.sleep(3000);
+
+        CommonUtils.getWaitObject();
 
         System.out.println(mobileStudentAdmissionPage.studentSavedSuccessfully.getText());
 
-        Thread.sleep(3000);
+        CommonUtils.getWaitObject();
 
+        // Thread.sleep(3000);
 
         String ExpectedStudentSavedSuccessfully = RecordSaved;
+
+        // Assertion verifying student saved successfully
         Assert.assertEquals(AcutalStudentSavedSuccessfully, ExpectedStudentSavedSuccessfully);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
@@ -97,31 +130,52 @@ public class MobileAdmissionStepDef {
     @Then("user deletes student records with class {string} and section {string} and admission no {string}")
     public void user_deletes_student_records_with_class_and_section_and_admission_no(String Class, String Section,
             String AdmissionNo) throws InterruptedException {
+
         
+        CommonUtils.waitForClickability(mobileStudentAdmissionPage.hamburgerMenu);
+
         // Clicking hamburger menu to expand sidenav
         mobileStudentAdmissionPage.hamburgerMenu.click();
-
+        
         CommonUtils.waitForVisibility(bulkDeletePage.bulkDelete);
         CommonUtils.waitForClickability(bulkDeletePage.bulkDelete);
         bulkDeletePage.bulkDelete.click();
+        
+        // Thread.sleep(3000);
+
         CommonUtils.waitForVisibility(bulkDeletePage.classNameDropDown);
         CommonUtils.selectDropDownValue(Class, bulkDeletePage.classNameDropDown);
+        
+        // Thread.sleep(3000);
+
+
         CommonUtils.waitForVisibility(bulkDeletePage.sectionNameDropDown);
         CommonUtils.selectDropDownValue(Section, bulkDeletePage.sectionNameDropDown);
+        
+        // Thread.sleep(3000);
 
         CommonUtils.waitForClickability(bulkDeletePage.searchButton);
         bulkDeletePage.searchButton.click();
+        
         Thread.sleep(3000);
+
+        CommonUtils.getWaitObject();
+        CommonUtils.waitForVisibility(bulkDeletePage.bulkDeletePageDynamicXpath(AdmissionNo));
         CommonUtils.waitForClickability(bulkDeletePage.bulkDeletePageDynamicXpath(AdmissionNo));
-        Thread.sleep(3000);
+        CommonUtils.getWaitObject();
+        
+        // Thread.sleep(3000);
+        CommonUtils.scrollIntoView(bulkDeletePage.bulkDeletePageDynamicXpath(AdmissionNo));
         bulkDeletePage.bulkDeletePageDynamicXpath(AdmissionNo).click();
-        Thread.sleep(3000);
+        CommonUtils.getWaitObject();
+        
+        // Thread.sleep(3000);
+
         CommonUtils.waitForClickability(bulkDeletePage.deleteButton);
         bulkDeletePage.deleteButton.click();
-        Thread.sleep(3000);
+        
+        CommonUtils.getWaitObject();
         CommonUtils.acceptAlert();
-
-        // Verify student is delete, assertFalse(StudentAdmission)
 
     }
 
