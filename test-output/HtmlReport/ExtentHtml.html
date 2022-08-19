@@ -53,7 +53,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 18, 2022 03:57:43 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 19, 2022 11:12:21 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -68,7 +68,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -123,10 +123,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -137,12 +137,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -153,12 +153,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>7</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -176,11 +176,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>JuliaSimpleTest</span>
-						<span class='test-time'>Aug 18, 2022 03:57:43 PM</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='test-name'>MOBILE - Navigation modules</span>
+						<span class='test-time'>Aug 19, 2022 11:12:39 AM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -189,44 +189,51 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='skip'>
+<div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
 		<span class='category label'>@Julia</span>
 		<span class='category label'>@DG1-24</span>
 		<span class='category label'>@Mobile</span>
 	</div>
-	<span class='duration right label'>0h 0m 0s+51ms</span>
+	<span class='duration right label'>0h 0m 17s+138ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span> Scenario: Navigation modules to be displayed on portal</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Navigation modules to be displayed on portal</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node * skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.start(Scenario)</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='4' class='node given pass' status='pass'>
+			<div class="step-name" title="StudentInfoModuleStepDef.openSiteLoginPage()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is on the home page</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/macbook/Desktop/Dreamers-Group-One/test-output/screenshots/image_19082022_111243.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='4' class='node given skip' status='skip'>
-			<div class="step-name" title="StudentInfoModuleStepDef.openSiteLoginPage()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Given User is on the home page</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='5' class='node when pass' status='pass'>
+			<div class="step-name" title="StudentInfoModuleStepDef.user_enters_username_and_password(String,String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When User enters username "general@teacher.com" and password "123456"</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/macbook/Desktop/Dreamers-Group-One/test-output/screenshots/image_19082022_111246.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='5' class='node when skip' status='skip'>
-			<div class="step-name" title="StudentInfoModuleStepDef.user_enters_username_and_password(String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When User enters username "general@teacher.com" and password "123456"</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='6' class='node and pass' status='pass'>
+			<div class="step-name" title="StudentInfoModuleStepDef.user_click_on_a_button_SingIn()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User click on a button SingIn</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/macbook/Desktop/Dreamers-Group-One/test-output/screenshots/image_19082022_111251.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='6' class='node and skip' status='skip'>
-			<div class="step-name" title="StudentInfoModuleStepDef.user_click_on_a_button_SingIn()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And User click on a button SingIn</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='7' class='node and pass' status='pass'>
+			<div class="step-name" title="MobileStepDef.user_click_on_a_hamburger_menu_on_left()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And User click on a hamburger menu on left</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/macbook/Desktop/Dreamers-Group-One/test-output/screenshots/image_19082022_111255.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='7' class='node and skip' status='skip'>
-			<div class="step-name" title="MobileStepDef.user_click_on_a_button_Chroma_Tech()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And User click on a button Chroma Tech</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='8' class='node then skip' status='skip'>
-			<div class="step-name" title="MobileStepDef.on_left_navigation_menu_user_can_see_modules(String,String,String,String,String,String,String,String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then On left navigation menu user can see modules "Student Information" ,"Fees Collection","Income","Expenses","Academics","Human Resource","Homework","Reports"</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='9' class='node * skip' status='skip'>
-			<div class="step-name" title=""><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Hooks.end(Scenario)</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='8' class='node then pass' status='pass'>
+			<div class="step-name" title="MobileStepDef.on_left_navigation_menu_user_can_see_modules(String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then On left navigation menu user can see modules</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="/Users/macbook/Desktop/Dreamers-Group-One/test-output/screenshots/image_19082022_111256.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
 		</li>
 	</ul>
 </div>
@@ -274,14 +281,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Julia</span>
 						<span class='category-status right'>
-						<span class='label others'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
-							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -294,9 +301,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 18, 2022 03:57:43 PM</td>
+										<td>Aug 19, 2022 11:12:39 AM</td>
 										<td class='linked' test-id='2'>Navigation modules to be displayed on portal</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -307,14 +314,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@DG1-24</span>
 						<span class='category-status right'>
-						<span class='label others'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
-							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -327,9 +334,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 18, 2022 03:57:43 PM</td>
+										<td>Aug 19, 2022 11:12:39 AM</td>
 										<td class='linked' test-id='2'>Navigation modules to be displayed on portal</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -340,14 +347,14 @@
 					<div class='category-heading'>
 						<span class='category-name'>@Mobile</span>
 						<span class='category-status right'>
-						<span class='label others'>1</span>
+						<span class='label pass'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
+							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
 							
 							
-							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -360,9 +367,9 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 18, 2022 03:57:43 PM</td>
+										<td>Aug 19, 2022 11:12:39 AM</td>
 										<td class='linked' test-id='2'>Navigation modules to be displayed on portal</td>
-										<td><span class='test-status skip'>skip</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -398,25 +405,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>7</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 18, 2022 03:57:43 PM</div>
+					<div class='panel-lead'>Aug 19, 2022 11:12:21 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 18, 2022 03:57:43 PM</div>
+			 		<div class='panel-lead'>Aug 19, 2022 11:12:57 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 0s+521ms</div>
+					<div class='panel-lead'>0h 0m 36s+529ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -433,29 +440,29 @@
 						</tr>
 						<tr>
 							<td>@Julia</td>
-							<td>0</td>
-							<td>0</td>
 							<td>1</td>
+							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 						<tr>
 							<td>@DG1-24</td>
-							<td>0</td>
-							<td>0</td>
 							<td>1</td>
+							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 						<tr>
 							<td>@Mobile</td>
-							<td>0</td>
-							<td>0</td>
 							<td>1</td>
+							<td>0</td>
+							<td>0</td>
 							<td>
-									0%
+									100%
 							</td>
 						</tr>
 					</table>
@@ -470,38 +477,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
+				passParent: 1,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 1,
-				exceptionsParent: 1,
+				skipParent: 0,
+				exceptionsParent: 0,
 				childCount: 1,
-				passChild: 0,
+				passChild: 1,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 1,
+				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 1,
-				grandChildCount: 7,
-				passGrandChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 5,
+				passGrandChild: 5,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 7,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 7,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "JuliaSimpleTest":0.051
+			        "MOBILE - Navigation modules":17.138
 			};
 		</script>
 	
