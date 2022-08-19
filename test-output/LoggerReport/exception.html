@@ -108,12 +108,12 @@
 				<div class="p-2 px-3 text-muted text-sm">Tags</div>
 					<div class="list-item attr">
 						<div class="list-body">
-							<a href="#" class="item-title _500">org.openqa.selenium.ElementNotInteractableException</a>
+							<a href="#" class="item-title _500">org.openqa.selenium.NoSuchElementException</a>
 							<div class="item-except text-sm text-muted h-1x">
 								1 tests
 							</div>
 							<div class="tc d-none">
-								<h5 class="mb-4">org.openqa.selenium.ElementNotInteractableException</h5>
+								<h5 class="mb-4">org.openqa.selenium.NoSuchElementException</h5>
 								<table class="table">
 									<thead><tr>
 										<th id="status-col"></th>
@@ -125,10 +125,10 @@
 									</tr></thead>
 									<tbody>
 	
-<tr class="s-fail" test-id="6" parent-id="1">
+<tr class="s-fail" test-id="10" parent-id="1">
 	<td><span class="w-32 avatar circle fail"><span class="badge">fail</span></span></td>
-	<td class="_600">And clicks on the Student Information module <br/><span class="text-muted text-sm">CTSMS - Student Admission</span></td>
-	<td>0h 0m 20s+28msc</td>
+	<td class="_600">Then user will have created a Student and user will see "Record Saved Successfully" <br/><span class="text-muted text-sm">CTSMS - Student Admission</span></td>
+	<td>0h 0m 3s+47msc</td>
 	<td></td>
 	<td>
 	</td>
@@ -137,15 +137,15 @@
 <tr class="details">
 	<td colspan="5">
 		
-		<textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=104.0.5112.101)
+		<textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='alert alert-success']"}
+  (Session info: chrome=91.0.4472.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.3.0', revision: 'a4995e2c09*'
 System info: host: 'DESKTOP-UAB4HEA', ip: '192.168.1.56', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.15'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e9e2c6af6625cbbcdbbdc88f49e0607f, clickElement {id=4f9b2e3d-dc4e-45fb-a44e-cb31583fa53c}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.101, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\jomir\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64194/devtoo..., se:cdpVersion: 104.0.5112.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (e9e2c6af6625cbbcdbbdc88f49e0607f)] -> xpath: //a[normalize-space()='Student Information']]
-Session ID: e9e2c6af6625cbbcdbbdc88f49e0607f
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [e3d05920-3ab9-49e2-a824-041b086b4755, findElement {using=xpath, value=//div[@class='alert alert-success']}]
+Capabilities {appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {automationName: UiAutomator2, browserName: Chrome, deviceName: Pixel_3a_API_31, platformName: android}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:viewportRect: {height: 2022, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: Chrome, platformName: ANDROID}
+Session ID: e3d05920-3ab9-49e2-a824-041b086b4755
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -154,19 +154,17 @@ Session ID: e9e2c6af6625cbbcdbbdc88f49e0607f
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at com.sun.proxy.$Proxy21.click(Unknown Source)
-	at com.stepDefinitions.StudentAdmissionStepDef.clicks_on_the_Student_Information_module(StudentAdmissionStepDef.java:23)
-	at ?.clicks on the Student Information module(file:src/test/java/com/features/mobileStudentAdmission.feature:8)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy21.getText(Unknown Source)
+	at com.stepDefinitions.MobileAdmissionStepDef.user_will_have_created_a_Student_and_user_will_see(MobileAdmissionStepDef.java:81)
+	at ?.user will have created a Student and user will see "Record Saved Successfully"(file:src/test/java/com/features/mobileAdmission.feature:12)
 </textarea>
 	</td>
 </tr>
@@ -194,7 +192,7 @@ Session ID: e9e2c6af6625cbbcdbbdc88f49e0607f
 						            </div>
 									<ul class="nav nav-xs flex-row no-border pull-right">
 <li><a href="#" class="b-l"><span class="badge badge-pull">ExtentReports</span></a></li>
-<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 18, 2022 03:49:26 PM</span></a></li>
+<li><a href="#" class="b-l"><span class="badge badge-pull">Aug 18, 2022 11:23:14 PM</span></a></li>
 <li><a href="#" class="b-l"><span class="badge badge-pull">4.0</span></a></li>
 								    </ul>
 								</div>

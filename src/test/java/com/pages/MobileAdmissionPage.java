@@ -6,7 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class StudentAdmissionPage {
+public class MobileAdmissionPage {
+
+    // Hamburger menu link
+    @FindBy(xpath = "//a[@role='button']")
+    public WebElement hamburgerMenu;
 
     /* Student Information Module */
     @FindBy(xpath = "//a[normalize-space()='Student Information']")
@@ -64,7 +68,7 @@ public class StudentAdmissionPage {
     @FindBy(xpath = "//div[@class='alert alert-success']")
     public WebElement studentSavedSuccessfully;
 
-    public StudentAdmissionPage() {
+    public MobileAdmissionPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 }
