@@ -84,7 +84,9 @@ public class AddAndDeleteSectionsStepDef {
     }
 
     @Then("the {string} section should be deleted")
-    public void the_section_should_be_deleted(String sectionName) throws IOException {
+    public void the_section_should_be_deleted(String sectionName) throws IOException, InterruptedException {
+
+        Thread.sleep(1000);
 
         // Iterate through a list of all section names
         for (int i = 0; i < academicsSectionPage.allSectionNames.size(); i++) {

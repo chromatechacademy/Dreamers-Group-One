@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class MobileAdmissionPage {
+public class StudentAdmissionPage {
 
     // Hamburger menu link
     @FindBy(xpath = "//a[@role='button']")
@@ -68,7 +68,7 @@ public class MobileAdmissionPage {
     @FindBy(xpath = "//div[@class='alert alert-success']")
     public WebElement studentSavedSuccessfully;
 
-    public MobileAdmissionPage() {
+    public StudentAdmissionPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 }

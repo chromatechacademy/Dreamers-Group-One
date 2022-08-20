@@ -28,7 +28,10 @@ public class AcademicsSectionPage {
     // public List<WebElement> allSectionRemoveButtons;
 
     // List of all section names
-    @FindBy(xpath = "//*[@class='mailbox-name']")
+    // @FindBy(xpath = "//*[@class='mailbox-name']")
+    // public List<WebElement> allSectionNames;
+
+    @FindBy(xpath= "//tr[@role='row']")
     public List<WebElement> allSectionNames;
 
     /**

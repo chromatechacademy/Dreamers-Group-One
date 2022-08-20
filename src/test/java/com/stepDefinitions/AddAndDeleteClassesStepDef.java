@@ -67,11 +67,17 @@ public class AddAndDeleteClassesStepDef {
     }
 
     @Then("the {string} class should be deleted")
-    public void the_class_should_be_deleted(String newClassName) throws IOException {
+    public void the_class_should_be_deleted(String newClassName) throws IOException, InterruptedException {
+
+        Thread.sleep(1000);
 
         // Iterate through a list of all class names
         for (int i = 0; i < academicsClassesPage.allClassNames.size(); i++) {
             
+            Thread.sleep(1000);
+            
+            CommonUtils.getWaitObject();
+
             // Get the newly created class name
             academicsClassesPage.allClassNames.get(i);
 

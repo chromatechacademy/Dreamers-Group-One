@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 
 import com.pages.BulkDeletePage;
-import com.pages.MobileAdmissionPage;
+import com.pages.StudentAdmissionPage;
 import com.utils.CucumberLogUtils;
 import com.web.CommonUtils;
 
@@ -13,23 +13,23 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class MobileAdmissionStepDef {
+public class StudentAdmissionStepDef {
 
     // Instantiating Page objects
-    MobileAdmissionPage mobileStudentAdmissionPage = new MobileAdmissionPage();
+    StudentAdmissionPage studentAdmissionPage = new StudentAdmissionPage();
     BulkDeletePage bulkDeletePage = new BulkDeletePage();
 
     @Given("clicks on the Student Information module")
     public void clicks_on_the_Student_Information_module() throws IOException {
 
-        CommonUtils.waitForClickability(mobileStudentAdmissionPage.hamburgerMenu);
+        CommonUtils.waitForClickability(studentAdmissionPage.hamburgerMenu);
 
         // Clicking hamburger menu to expand sidenav
-        mobileStudentAdmissionPage.hamburgerMenu.click();
+        studentAdmissionPage.hamburgerMenu.click();
 
         // Clicking student information module
-        CommonUtils.waitForClickability(mobileStudentAdmissionPage.studentInformationModule);
-        mobileStudentAdmissionPage.studentInformationModule.click();
+        CommonUtils.waitForClickability(studentAdmissionPage.studentInformationModule);
+        studentAdmissionPage.studentInformationModule.click();
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
 
@@ -38,7 +38,7 @@ public class MobileAdmissionStepDef {
     @Given("clicks on Student Admission module")
     public void clicks_on_Student_Admission_module() throws IOException {
 
-        mobileStudentAdmissionPage.studentAdmissionModule.click();
+        studentAdmissionPage.studentAdmissionModule.click();
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
 
@@ -49,39 +49,39 @@ public class MobileAdmissionStepDef {
             String FirstName,
             String Gender, String DoB, String GuardianName, String GuardianPhoneNumber) throws IOException {
 
-        mobileStudentAdmissionPage.admissionNoTextBox.sendKeys(AdmissionNo);
+        studentAdmissionPage.admissionNoTextBox.sendKeys(AdmissionNo);
 
-        CommonUtils.waitForVisibility(mobileStudentAdmissionPage.classDropDown);
-        CommonUtils.waitForClickability(mobileStudentAdmissionPage.classDropDown);
+        CommonUtils.waitForVisibility(studentAdmissionPage.classDropDown);
+        CommonUtils.waitForClickability(studentAdmissionPage.classDropDown);
 
 
-        mobileStudentAdmissionPage.classDropDown.click();
+        studentAdmissionPage.classDropDown.click();
 
-        CommonUtils.selectDropDownValue(SDETClass, mobileStudentAdmissionPage.classDropDown);
+        CommonUtils.selectDropDownValue(SDETClass, studentAdmissionPage.classDropDown);
 
-        CommonUtils.waitForVisibility(mobileStudentAdmissionPage.sectionDropDown);
-        CommonUtils.waitForClickability(mobileStudentAdmissionPage.sectionDropDown);
+        CommonUtils.waitForVisibility(studentAdmissionPage.sectionDropDown);
+        CommonUtils.waitForClickability(studentAdmissionPage.sectionDropDown);
         CommonUtils.getWaitObject();
 
-        mobileStudentAdmissionPage.sectionDropDown.click();
+        studentAdmissionPage.sectionDropDown.click();
 
-        CommonUtils.selectDropDownValue(TestingSection, mobileStudentAdmissionPage.sectionDropDown);
+        CommonUtils.selectDropDownValue(TestingSection, studentAdmissionPage.sectionDropDown);
 
-        mobileStudentAdmissionPage.firstNameTextBox.sendKeys(FirstName);
+        studentAdmissionPage.firstNameTextBox.sendKeys(FirstName);
 
-        mobileStudentAdmissionPage.genderDropDown.click();
+        studentAdmissionPage.genderDropDown.click();
 
-        CommonUtils.selectDropDownValue(Gender, mobileStudentAdmissionPage.genderDropDown);
+        CommonUtils.selectDropDownValue(Gender, studentAdmissionPage.genderDropDown);
 
-        mobileStudentAdmissionPage.dateOfBirthTextBox.sendKeys(DoB);
+        studentAdmissionPage.dateOfBirthTextBox.sendKeys(DoB);
 
-        CommonUtils.waitForClickability(mobileStudentAdmissionPage.guardianNameTextBox);
+        CommonUtils.waitForClickability(studentAdmissionPage.guardianNameTextBox);
         
-        mobileStudentAdmissionPage.guardianSelect.click();
+        studentAdmissionPage.guardianSelect.click();
 
-        mobileStudentAdmissionPage.guardianNameTextBox.sendKeys(GuardianName);
+        studentAdmissionPage.guardianNameTextBox.sendKeys(GuardianName);
 
-        mobileStudentAdmissionPage.guardianPhoneTextBox.sendKeys(GuardianPhoneNumber);
+        studentAdmissionPage.guardianPhoneTextBox.sendKeys(GuardianPhoneNumber);
         
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
@@ -91,9 +91,9 @@ public class MobileAdmissionStepDef {
     @Given("clicks Save")
     public void clicks_Save() {
 
-        CommonUtils.waitForClickability(mobileStudentAdmissionPage.saveButton);
+        CommonUtils.waitForClickability(studentAdmissionPage.saveButton);
 
-        mobileStudentAdmissionPage.saveButton.click();
+        studentAdmissionPage.saveButton.click();
 
     }
 
@@ -103,9 +103,9 @@ public class MobileAdmissionStepDef {
 
         CommonUtils.getWaitObject();
         
-        CommonUtils.waitForVisibility(mobileStudentAdmissionPage.studentSavedSuccessfully);
+        CommonUtils.waitForVisibility(studentAdmissionPage.studentSavedSuccessfully);
 
-        String ActualStudentSavedSuccessfully = mobileStudentAdmissionPage.studentSavedSuccessfully.getText();
+        String ActualStudentSavedSuccessfully = studentAdmissionPage.studentSavedSuccessfully.getText();
 
         CommonUtils.getWaitObject();
 
@@ -123,10 +123,10 @@ public class MobileAdmissionStepDef {
             String AdmissionNo) throws InterruptedException {
 
         
-        CommonUtils.waitForClickability(mobileStudentAdmissionPage.hamburgerMenu);
+        CommonUtils.waitForClickability(studentAdmissionPage.hamburgerMenu);
 
         // Clicking hamburger menu to expand sidenav
-        mobileStudentAdmissionPage.hamburgerMenu.click();
+        studentAdmissionPage.hamburgerMenu.click();
         
         CommonUtils.waitForVisibility(bulkDeletePage.bulkDelete);
         CommonUtils.waitForClickability(bulkDeletePage.bulkDelete);
