@@ -47,15 +47,16 @@ public class StudentAdmissionStepDef {
     @When("fills in all required Information {string},{string},{string},{string},{string},{string},{string},{string}")
     public void fills_in_all_required_Information(String AdmissionNo, String SDETClass, String TestingSection,
             String FirstName,
-            String Gender, String DoB, String GuardianName, String GuardianPhoneNumber) throws IOException {
+            String Gender, String DoB, String GuardianName, String GuardianPhoneNumber) throws IOException, InterruptedException {
 
         studentAdmissionPage.admissionNoTextBox.sendKeys(AdmissionNo);
 
         CommonUtils.waitForVisibility(studentAdmissionPage.classDropDown);
         CommonUtils.waitForClickability(studentAdmissionPage.classDropDown);
 
-
         studentAdmissionPage.classDropDown.click();
+        
+        // Thread.sleep(1000);
 
         CommonUtils.selectDropDownValue(SDETClass, studentAdmissionPage.classDropDown);
 
@@ -64,7 +65,9 @@ public class StudentAdmissionStepDef {
         CommonUtils.getWaitObject();
 
         studentAdmissionPage.sectionDropDown.click();
-
+        
+        Thread.sleep(1000);
+        
         CommonUtils.selectDropDownValue(TestingSection, studentAdmissionPage.sectionDropDown);
 
         studentAdmissionPage.firstNameTextBox.sendKeys(FirstName);
@@ -138,12 +141,13 @@ public class StudentAdmissionStepDef {
         
 
         CommonUtils.waitForVisibility(bulkDeletePage.sectionNameDropDown);
+        Thread.sleep(1000);
         CommonUtils.selectDropDownValue(Section, bulkDeletePage.sectionNameDropDown);
         
         CommonUtils.waitForClickability(bulkDeletePage.searchButton);
         bulkDeletePage.searchButton.click();
         
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         CommonUtils.getWaitObject();
         CommonUtils.waitForVisibility(bulkDeletePage.bulkDeletePageDynamicXpath(AdmissionNo));
