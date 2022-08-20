@@ -103,25 +103,16 @@ public class MobileAdmissionStepDef {
 
         CommonUtils.getWaitObject();
         
-        // Thread.sleep(3000);
         CommonUtils.waitForVisibility(mobileStudentAdmissionPage.studentSavedSuccessfully);
 
-        String AcutalStudentSavedSuccessfully = mobileStudentAdmissionPage.studentSavedSuccessfully.getText();
-
-        // Thread.sleep(3000);
+        String ActualStudentSavedSuccessfully = mobileStudentAdmissionPage.studentSavedSuccessfully.getText();
 
         CommonUtils.getWaitObject();
-
-        System.out.println(mobileStudentAdmissionPage.studentSavedSuccessfully.getText());
-
-        CommonUtils.getWaitObject();
-
-        // Thread.sleep(3000);
 
         String ExpectedStudentSavedSuccessfully = RecordSaved;
 
         // Assertion verifying student saved successfully
-        Assert.assertEquals(AcutalStudentSavedSuccessfully, ExpectedStudentSavedSuccessfully);
+        Assert.assertEquals(ActualStudentSavedSuccessfully, ExpectedStudentSavedSuccessfully);
         CucumberLogUtils.logScreenShot();
         CucumberLogUtils.logExtentScreenshot();
 
@@ -141,19 +132,14 @@ public class MobileAdmissionStepDef {
         CommonUtils.waitForClickability(bulkDeletePage.bulkDelete);
         bulkDeletePage.bulkDelete.click();
         
-        // Thread.sleep(3000);
 
         CommonUtils.waitForVisibility(bulkDeletePage.classNameDropDown);
         CommonUtils.selectDropDownValue(Class, bulkDeletePage.classNameDropDown);
         
-        // Thread.sleep(3000);
-
 
         CommonUtils.waitForVisibility(bulkDeletePage.sectionNameDropDown);
         CommonUtils.selectDropDownValue(Section, bulkDeletePage.sectionNameDropDown);
         
-        // Thread.sleep(3000);
-
         CommonUtils.waitForClickability(bulkDeletePage.searchButton);
         bulkDeletePage.searchButton.click();
         
@@ -164,12 +150,10 @@ public class MobileAdmissionStepDef {
         CommonUtils.waitForClickability(bulkDeletePage.bulkDeletePageDynamicXpath(AdmissionNo));
         CommonUtils.getWaitObject();
         
-        // Thread.sleep(3000);
         CommonUtils.scrollIntoView(bulkDeletePage.bulkDeletePageDynamicXpath(AdmissionNo));
         bulkDeletePage.bulkDeletePageDynamicXpath(AdmissionNo).click();
         CommonUtils.getWaitObject();
         
-        // Thread.sleep(3000);
 
         CommonUtils.waitForClickability(bulkDeletePage.deleteButton);
         bulkDeletePage.deleteButton.click();
