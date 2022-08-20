@@ -31,22 +31,29 @@ public class AddingMultipleStudentsStepDef {
             String gender,
             String section, String dateOfBirth) {
 
+        /* Enter Admission No */
         studentAdmissionPage.admissionNoTextbox.sendKeys(admissionNumber);
 
+        /* Enter Student First Name */
         studentAdmissionPage.firstNameTextbox.sendKeys(firstName);
 
+        /* Select Student Class */
         CommonUtils.selectDropDownValue(studentClass, studentAdmissionPage.classDropdown);
 
+        /* Select Student Gender */
         CommonUtils.selectDropDownValue(gender, studentAdmissionPage.genderDropdown);
 
+        /* Select Student Section */
         CommonUtils.selectDropDownValue(section, studentAdmissionPage.sectionDropdown);
 
+        /* Enter Date of Birth */
         studentAdmissionPage.dateOfBirthCalendar.sendKeys(dateOfBirth);
     }
 
     @When("selects other for guardian")
     public void selects_other_for_guardian() {
 
+        /* Select other for Guardian */
         studentAdmissionPage.otherGuardianRadioButton.click();
     }
 
@@ -55,22 +62,29 @@ public class AddingMultipleStudentsStepDef {
             String motherPhone,
             String guardianName, String guardianRelation, String guardianPhone) throws IOException {
 
+        /* Enter Father First Name */
         studentAdmissionPage.fatherNameTextbox.sendKeys(fatherName);
 
+        /* Enter Father Phone No */
         studentAdmissionPage.fatherPhoneTextbox.sendKeys(fatherPhone);
 
+        /* Enter Mother First Name */
         studentAdmissionPage.motherNameTextbox.sendKeys(motherName);
 
+        /* Enter Mother Phone No */
         studentAdmissionPage.motherPhoneTextbox.sendKeys(motherPhone);
 
+        /* Enter Guardian Name */
         studentAdmissionPage.guardianNameTextbox.sendKeys(guardianName);
 
+        /* Enter Guardian Phone No */
         studentAdmissionPage.guardianPhoneTextbox.sendKeys(guardianPhone);
 
+        /* Take Screenshot */
         CucumberLogUtils.logScreenShot();
-
         CucumberLogUtils.logExtentScreenshot();
 
+        /* Click on Save Button */
         studentAdmissionPage.saveButton.click();
 
     }
@@ -78,12 +92,12 @@ public class AddingMultipleStudentsStepDef {
     @Then("student is succefully admitted and user sees message {string}")
     public void student_is_succefully_admitted_and_user_sees_message(String expectedResult) throws IOException {
 
+        /* Take Screenshot */
         CucumberLogUtils.logScreenShot();
-
         CucumberLogUtils.logExtentScreenshot();
 
+        /* Assertion */
         String actualResult = studentAdmissionPage.sucessfulStudentAdmissionMessage.getText();
-
         Assert.assertTrue(actualResult.contentEquals(expectedResult));
 
     }
@@ -93,22 +107,29 @@ public class AddingMultipleStudentsStepDef {
             String studentSection,
             String admissionNumber) throws IOException {
 
+        /* Click on Bulk Delete Tab */
         homePage.bulkDeleteTab.click();
 
+        /* Select Student Class */
         CommonUtils.selectDropDownValue(studentClass, bulkDeletePage.bulkDeleteClassDropdown);
 
+        /* Select Student Section */
         CommonUtils.selectDropDownValue(studentSection, bulkDeletePage.bulkDeleteSectionDropdown);
 
+        /* Click on Search Button */
         bulkDeletePage.bulkDeleteSearchButton.click();
 
+        /* Click Checkbox Associated to Admission No */
         bulkDeletePage.bulkDeleteDynamicXpath(admissionNumber).click();
 
+        /* Take Screenshot */
         CucumberLogUtils.logScreenShot();
-
         CucumberLogUtils.logExtentScreenshot();
 
+        /* Click on Delete Button */
         bulkDeletePage.deleteButton.click();
 
+        /* Accept Alert */
         CommonUtils.acceptAlert();
     }
 
