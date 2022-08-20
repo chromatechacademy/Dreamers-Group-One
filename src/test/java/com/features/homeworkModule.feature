@@ -1,7 +1,7 @@
 Feature: CTSMS - Homework module
 
     Description: This feature file contains Chroma Tech School Management System Homework Module Menu Buttons
-    @jomir @DG1-10 @Smoke
+    @Jomir @DG1-10 @Regression
     Scenario: Homework Module to include:
             """
             - Add Homework

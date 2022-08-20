@@ -1,7 +1,7 @@
 Feature: Ability to add and delete classes
 
     Description: This feature file contains scenario to add and delete classes
-    @jomir @DG1-18 @Smoke
+    @Jomir @DG1-18 @Regression
     Scenario: CTSMS - Ability to add and delete classes
         Given a user is logged into the CTSMS portal
         And the user is on the CTSMS home page

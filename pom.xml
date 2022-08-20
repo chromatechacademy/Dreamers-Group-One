@@ -107,7 +107,7 @@
 				<configuration>
 					<includes>
 						<include>
-							RunProgressionTest.java
+							RunRegressionTest.java
 						</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore> <!-- to get report even when fails -->

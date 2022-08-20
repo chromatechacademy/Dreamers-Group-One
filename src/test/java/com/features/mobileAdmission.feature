@@ -1,7 +1,7 @@
 Feature: Student Admission
 
 
-    @jomir @DG1-23 @Progression @Regression
+    @Jomir @DG1-23 @Mobile
     Scenario: CTSMS - Student Admission
         Given a user is logged into the CTSMS portal
         And the user is on the CTSMS home page

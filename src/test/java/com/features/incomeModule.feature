@@ -1,7 +1,7 @@
 Feature: CTSMS - Income module
 
     Description: This feature file contains Chroma Tech School Management System Income Module Menu Buttons
-    @jomir @DG1-6 @Smoke
+    @Jomir @DG1-6 @Regression
     Scenario: Income Module to include:
             """
             - Add Income

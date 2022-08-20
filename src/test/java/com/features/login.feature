@@ -3,7 +3,7 @@ Feature: Login Scenarios
     Description: This feature file contains Chroma Tech School Management System Login Scenarios
 
 
-    @jomir @DG1-1 @Smoke
+    @Jomir @DG1-1 @Smoke @Regression
     Scenario: Login with valid credentials
         Given a user is on the CTSMS login page
         When the user logs in with username "general@teacher.com" and password "123456"

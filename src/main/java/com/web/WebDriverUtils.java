@@ -31,7 +31,7 @@ public class WebDriverUtils {
             if (osName.contains("Window")) {
                 WebDriverManager.chromedriver().operatingSystem(OperatingSystem.WIN).setup();
                 driver = new ChromeDriver();
-                driver.manage().window().maximize();
+                // driver.manage().window().maximize();
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
             } else if (osName.contains("Mac")) {
                 WebDriverManager.chromedriver().operatingSystem(OperatingSystem.MAC).setup();

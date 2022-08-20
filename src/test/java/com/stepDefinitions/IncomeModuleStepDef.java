@@ -74,8 +74,12 @@ public class IncomeModuleStepDef {
     public void the_page_displays_the_following_menu_buttons(String addIncome, String searchIncome, String incomeHead)
             throws IOException {
 
-        // Wait for "Income" module to expand
-        CommonUtils.getWaitObject();
+        // Wait for nav menu button visibility
+        CommonUtils.waitForVisibility(homePage.AddIncomeButton);
+        CommonUtils.waitForVisibility(homePage.SearchIncomeButton);
+        CommonUtils.waitForVisibility(homePage.IncomeHeadButton);
+
+
         // Check if the actual text matches the expected text
         Assert.assertTrue(homePage.AddIncomeButton.getText().contentEquals(addIncome));
         Assert.assertTrue(homePage.SearchIncomeButton.getText().contentEquals(searchIncome));
