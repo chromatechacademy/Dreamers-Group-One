@@ -12,6 +12,7 @@ public class StudentAdmissionPage {
     @FindBy(xpath = "//a[@role='button']")
     public WebElement hamburgerMenu;
 
+
     /* Student Information Module */
     @FindBy(xpath = "//a[normalize-space()='Student Information']")
     public WebElement studentInformationModule;
@@ -72,4 +73,3 @@ public class StudentAdmissionPage {
         PageFactory.initElements(WebDriverUtils.driver, this);
     }
 }
-

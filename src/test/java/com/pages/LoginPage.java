@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage {
 
     /** Username text box */
-    @FindBy(xpath = "//input[@placeholder='Username']") 
+    @FindBy(xpath = "//input[@placeholder='Username']")
     public WebElement usernameTextBox;
 
     /** Password text box */
