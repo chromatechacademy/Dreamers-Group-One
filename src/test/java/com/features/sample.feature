@@ -8,9 +8,9 @@ Feature: Sample
     @SampleRun
     Scenario: Sample scenario
         Given this step can be used to specify a pre-condition
-        # When an action is made
-        # Then this is where you write the expected result
-        # And you can use this wherever needed to make your scenario make sense
+        When an action is made
+        Then this is where you write the expected result
+        And you can use this wherever needed to make your scenario make sense
 
     #USE SCENARIOS/SCENARIO OUTLINES TO HARDCODE
     Scenario: Example of hardcoding in scenario
@@ -34,6 +34,5 @@ Feature: Sample
             | general1@teacher.com | 123456   |
             | general@teacher.com  | 123456   |
             | general1@teacher.com | 123456   |
-
 
 
