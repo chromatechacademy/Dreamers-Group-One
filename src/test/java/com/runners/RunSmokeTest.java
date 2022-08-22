@@ -5,7 +5,6 @@ package com.runners;
 
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.junit.runner.RunWith;
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
@@ -17,8 +16,8 @@ import cucumber.api.junit.Cucumber;
 		"junit:target/cucumber.xml", "rerun:target/failed.txt",
 		"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  }, 
 		features = "src/test/java/com/features", 
-		glue = "com.stepDefinitions",
-		tags = "@DG1-4", 
+		glue = "com.stepDefinitions", 
+		tags = "@Smoke", 
 		dryRun = false, 
 		monochrome = true, 
 		strict = true
