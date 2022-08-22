@@ -3,6 +3,7 @@ package com.runners;
 
 
 
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
@@ -17,7 +18,7 @@ import cucumber.api.junit.Cucumber;
 		"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"  }, 
 		features = "src/test/java/com/features", 
 		glue = "com.stepDefinitions",
-		tags = "@Mobile", 
+		tags = "@DG1-4", 
 		dryRun = false, 
 		monochrome = true, 
 		strict = true

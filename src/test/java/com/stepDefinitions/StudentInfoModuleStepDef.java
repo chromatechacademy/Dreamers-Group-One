@@ -24,7 +24,6 @@ public class StudentInfoModuleStepDef {
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
 
-
     @Given("User is on the home page")
     public void openSiteLoginPage() throws IOException {
         WebDriverUtils.driver.get(ApplicationConstants.APPLICATION_URL);
@@ -38,7 +37,7 @@ public class StudentInfoModuleStepDef {
         loginPage.passwordTextBox.sendKeys(password);
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
- 
+
     }
 
     @When("User click on a button SingIn")
@@ -66,15 +65,13 @@ public class StudentInfoModuleStepDef {
     }
 
     @Then("User collect Student information items to list and verify them")
-    public void iCollectStudentInformationItemsToList() throws IOException {
-        List<String> expected = Arrays.asList("Student Details", "Student Admission", "Disabled Students",
-                "Bulk Delete", "Student Categories", "Student House", "Disable Reason");
-        List<String> studentInfoItems = dashboardPage.getStudentInfoItems(driver);
-        System.out.println(studentInfoItems);
-        Assert.assertEquals("Student items size should be equal to 7", 7, studentInfoItems.size());
-        Assert.assertEquals(expected, studentInfoItems);
+    public void user_collect_Student_information_items_to_list_and_verify_them(String studInfMenu) throws IOException {
+        Assert.assertTrue(DashboardPage.studentMenu.getText().contentEquals(studInfMenu));
+
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
+
+
     }
-  
+
 }

@@ -8,8 +8,15 @@ Feature:student information list
     And User wait while dashboard page loaded
     And User click on Student information item on left navigation menu
     Then User collect Student information items to list and verify them
-    Then the Human Resources have to display the following "Staff Directory", "Staff Attendance", "Payroll", "Approve Leave Request", "Apply Leave", "Leave Type", "Teachers Rating", "Department", "Designation"
-
+      """"
+      Student Details
+      Student Admission
+      Disabled Students
+      Bulk Delete
+      Student Categories
+      Student House
+      Disable Reason
+      """"
 
 
 

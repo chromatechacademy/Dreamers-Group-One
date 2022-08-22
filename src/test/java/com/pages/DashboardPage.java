@@ -19,17 +19,13 @@ public class DashboardPage {
     @FindBy(xpath = "//*[@id=\"sibe-box\"]/ul[2]/li[1]/a/span")
     public WebElement studentInfoItem;
 
+    @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
+    public static WebElement studentMenu;
 
 
-    public List<String> getStudentInfoItems(WebDriver driver) {
-        List<String> items = new ArrayList<>();
-        for (WebElement element : driver.findElements(By.xpath("//*[@id=\"sibe-box\"]/ul[2]/li[1]/ul/li"))) {
-            items.add(element.getText());
-        }
-        return items;
 
     
-    }
+    
 
     public DashboardPage() {
         PageFactory.initElements(WebDriverUtils.driver, this);
