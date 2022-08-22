@@ -1,6 +1,6 @@
 Feature:MOBILE - Navigation modules
 
-  @Julia @DG1-24 @Mobile
+  @Julia @DG1-24 @Mobile @Regression
   Scenario: Navigation modules to be displayed on portal
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"

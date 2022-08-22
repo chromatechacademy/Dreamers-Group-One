@@ -1,6 +1,6 @@
 Feature:student information list
 
-  @Julia @DG1-4 @Smoke
+  @Julia @DG1-4 @Regression @Smoke
   Scenario: Verify that student information list is reflected properly
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"
@@ -14,7 +14,7 @@ Feature:student information list
 
 
 
-  @Julia @DG1-14 @Smoke
+  @Julia @DG1-14 @Regression @Smoke
   Scenario Outline:Chroma Tech faculty user, should be able to edit student records by searching student details.
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"

@@ -1,7 +1,7 @@
 Feature: Human Resource module
  
  
- @Julia @DG1-9 @Smoke
+ @Julia @DG1-9 @Regression @Smoke
   Scenario:  Verify that Human Resource Module list is reflected properly
     Given User is on the home page
     When User enters username "general@teacher.com" and password "123456"
