@@ -20,7 +20,7 @@ public class DashboardPage {
     public WebElement studentInfoItem;
 
     @FindBy(xpath = "//ul[@class='treeview-menu menu-open']")
-    public static WebElement studentMenu;
+    public WebElement studentMenu;
 
 
 

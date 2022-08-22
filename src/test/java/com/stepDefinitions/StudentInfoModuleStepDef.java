@@ -66,7 +66,7 @@ public class StudentInfoModuleStepDef {
 
     @Then("User collect Student information items to list and verify them")
     public void user_collect_Student_information_items_to_list_and_verify_them(String studInfMenu) throws IOException {
-        Assert.assertTrue(DashboardPage.studentMenu.getText().contentEquals(studInfMenu));
+        Assert.assertTrue(dashboardPage.studentMenu.getText().contentEquals(studInfMenu));
 
         CucumberLogUtils.logExtentScreenshot();
         CucumberLogUtils.logScreenShot();
