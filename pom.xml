@@ -107,7 +107,7 @@
 				<configuration>
 					<includes>
 						<include>
-							RunRegressionTest.java
+							RunSmokeTest.java
 						</include>
 					</includes>
 					<testFailureIgnore>true</testFailureIgnore> <!-- to get report even when fails -->
