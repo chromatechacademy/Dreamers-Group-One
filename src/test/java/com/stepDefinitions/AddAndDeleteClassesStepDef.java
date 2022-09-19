@@ -25,6 +25,8 @@ public class AddAndDeleteClassesStepDef {
     @Given("navigates to class module")
     public void navigates_to_class_module() {
         
+        CommonUtils.waitForClickability(homePage.classModuleLink);
+
         // Click 'Class' in 'Academics' module
         homePage.classModuleLink.click();
     }
